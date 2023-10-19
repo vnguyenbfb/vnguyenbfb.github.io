@@ -20,9 +20,9 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "README.md", title: About, icon: address-card}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:vnguyen.rit@gmail.com"}
+  - {title: Email, icon: envelope, url: "mailto:vnguyen.rit@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/vnguyenbfb"}
-  - {title: LinkedIn, icon: linkedin, url: "linkedin.com/in/van-nguyen-2b8b5817"}
+  - {title: LinkedIn, icon: in, url: "https://linkedin.com/in/van-nguyen-2b8b5817"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
