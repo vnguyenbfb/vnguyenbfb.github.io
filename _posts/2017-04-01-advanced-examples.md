@@ -5,7 +5,7 @@ layout: post
 categories: media
 ---
 
-<img style="float:left" src="/assets/images/image1.png">
+<img style="float:left" src="/assets/images/image1_2.png">
 
 
 ## MathJax
