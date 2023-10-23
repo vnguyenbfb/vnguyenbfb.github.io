@@ -1,5 +1,5 @@
 ---
-title:  "Advanced examples"
+title:  "SQL Project - Movie DVD Rental Database"
 mathjax: true
 layout: post
 categories: media
