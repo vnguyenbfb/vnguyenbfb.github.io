@@ -5,7 +5,10 @@ layout: post
 categories: media
 ---
 
-<img style="float:left" src="/assets/images/Image1_2.png">
+<img style="float:left" src="/assets/images/Image1_small.png">
+
+Markdown is awesome. It’s a fantastic way to write content quickly without the overhead of formatting with a WYSIWYG editor. 
+If you are unfamiliar with .md files checkout the basics here & here.
 
 
 ## MathJax
