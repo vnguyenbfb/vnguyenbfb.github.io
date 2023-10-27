@@ -1,7 +1,9 @@
 ---
-title:  "Countries and Energy Use"
+title:  "Energy Usage among Countries"
 layout: post
 ---
+
+<img style="float:left" src="/assets/images/Image3_small.png">
 
 In this project we will use use Python to cleanse and prepare the dataset before running analysis on it. We will look into four areas of interest: by GDP, Energy Supply, Renewable Supply and continent.  
 
