@@ -1,6 +1,8 @@
 ---
 title: "US Bikeshare Statistics"
+mathjax: true
 layout: post
+categories: media
 ---
 <img style="float:left" src="/assets/images/Image2_small.png">
 
