@@ -7,5 +7,4 @@ categories: media
 
 <img style="float:left" src="/assets/images/Image8_small.png">
 
-Markdown is awesome. It’s a fantastic way to write content quickly without the overhead of formatting with a WYSIWYG editor. 
-If you are unfamiliar with .md files checkout the basics here & here.
+Superstore dataset is a detailed information of a fabricated company’s sales. We will analyze the dataset and use Tableau to develop a story line for visualization.
