@@ -6,6 +6,7 @@ categories: media
 ---
 
 ### Work Experience 
+____
 
 |      |                                           |                                                                |
 |:---|:---|:---|
@@ -15,21 +16,24 @@ categories: media
 | 05/2012 - 03/2014 | C&S Wholesale Grocers                     | Meat Wholesale Buyer                                           |
 | 03/2007 - 04/2009 | The Nielsen Market Research Company       | Project Executive - Quantitative & Retail Research Integration |  
 | 07/2006 - 03/2007 | Maersk Shipping & Logistics               | Account Executive, Import-Export Department                    |
-
+<br>
+<br>
 ### Education
-
+___
 *2009 - 2011* <br>
 **Fulbright Scholar - MBA, dual degree in Finance and Marketing** <br>
-ROCHESTER INSTITUTE OF TECHNOLOGY	- Rochester, NY, USA <br>
-  E. Philip Saunders College of Business         
+Rochester Institute of Technology - Rochester, NY, USA <br>
+E. Philip Saunders College of Business         
 
 *2002 - 2006* <br>
 **BA, English Linguistics and Literature** <br>
-UNIVERSITY OF SOCIAL SCIENCES AND HUMANITIES - Ho Chi Minh City, Vietnam
-
+University of Social Sciences and Humanities - Ho Chi Minh City, Vietnam
+<br>
+<br>
 ### Certifications
+___
 #### *Udacity* <br>
-  * Programming for Data Science with Python – NanoDegree Program (12/2022 – 5/2023) <br>
+  * Programming for Data Science with Python – NanoDegree Program (12/2022 – 5/2023) 
 #### *Coursera* <br>
   * Introduction to Data Science in Python - University of Michigan (6/2023)
   * Applied Plotting, Charting & Data Representation in Python - University of Michigan (8/2023)
@@ -38,6 +42,7 @@ UNIVERSITY OF SOCIAL SCIENCES AND HUMANITIES - Ho Chi Minh City, Vietnam
   * Data Structures & Algorithms Specialization - University of California San Diego (in progress of completion)
 
 ### Selected Awards
+___
 02/2013 <br>
 **Employee of the Month, C&S (MA, USA)** <br>
 Best demonstration of inventory analysis and vendor management
