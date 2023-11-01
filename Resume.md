@@ -16,8 +16,7 @@ categories: media
 | 03/2007 - 04/2009 | The Nielsen Market Research Company       | Project Executive - Quantitative & Retail Research Integration |  
 | 07/2006 - 03/2007 | Maersk Shipping & Logistics               | Account Executive, Import-Export Department                    |
 
-<br>
-<br>
+<br> <br>
 
 ## Education <br>
 ___ 
@@ -29,9 +28,9 @@ E. Philip Saunders College of Business
 *2002 - 2006* <br>
 **BA, English Linguistics and Literature** <br>
 University of Social Sciences and Humanities - Ho Chi Minh City, Vietnam
-<br>
-<br>
-<br>
+
+<br> <br>
+
 ## Certifications <br>
 ___ 
 #### *Udacity* <br>
@@ -43,8 +42,8 @@ ___
   * Data Visualization with Tableau Specialization - University of California, Davis (9/2023)
   * Introduction to Git and GitHub – Google (10/2023)
   * Data Structures & Algorithms Specialization - University of California San Diego (in progress of completion)
-<br>
-<br>
+
+<br> <br>
 
 ## Selected Awards <br>
 ___ 
@@ -68,5 +67,5 @@ Inter-university competition for final-year students in HCM city. One of 20 fina
 **Scholarship from TNS/Kantar Market Research Group** <br>
 Competition for final-year students among multiple university in HCM city. Only 5 winners, won 2nd prize.  
 
-**Black Belt in Taekwondo (1995) / Yellow Belt in Karate (2011)** <br>
+**Black Belt in Taekwondo** (1995) / **Yellow Belt in Karate** (2011) <br>
 Practiced 4 years in Taekwondo, won mutiple medals in city tournaments for freestyle sparring and sequence performance. Also one year training in Karate.
