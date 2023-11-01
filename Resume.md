@@ -5,9 +5,9 @@ layout: post
 categories: media
 ---
 
+### Work Experience 
 
-
-|### Work Experience                |                                           |                                                                |
+|               |                                           |                                                                |
 |:---|:---|:---|
 | 12/2011 – Present |        My Translation Business            | Owner                                                          |
 | 06/2021 - 01/2022 | Vietnamese Stand Together Project         | Co-founder of Fund raising Project during COVID-19             | 
@@ -18,45 +18,45 @@ categories: media
 
 ### Education
 
-##### 2009 - 2011
-##### **Fulbright Scholar - MBA, dual degree in Finance and Marketing** 
-##### ROCHESTER INSTITUTE OF TECHNOLOGY	- Rochester, NY, USA
-#####     E. Philip Saunders College of Business         
+2009 - 2011
+**Fulbright Scholar - MBA, dual degree in Finance and Marketing** 
+ROCHESTER INSTITUTE OF TECHNOLOGY	- Rochester, NY, USA
+  E. Philip Saunders College of Business         
 
-##### 2002 - 2006
-##### **BA, English Linguistics and Literature**
-##### UNIVERSITY OF SOCIAL SCIENCES AND HUMANITIES - Ho Chi Minh City, Vietnam
+2002 - 2006
+**BA, English Linguistics and Literature**
+UNIVERSITY OF SOCIAL SCIENCES AND HUMANITIES - Ho Chi Minh City, Vietnam
 
 ### Certifications
 #### Udacity
-⋅⋅* Programming for Data Science with Python – NanoDegree Program (12/2022 – 5/2023)
+  * Programming for Data Science with Python – NanoDegree Program (12/2022 – 5/2023)
 #### Coursera
-⋅⋅* Introduction to Data Science in Python - University of Michigan (6/2023)
-⋅⋅* Applied Plotting, Charting & Data Representation in Python - University of Michigan (8/2023)
-⋅⋅* Data Visualization with Tableau Specialization - University of California, Davis (9/2023)
-⋅⋅* Introduction to Git and GitHub – Google (10/2023)
-⋅⋅* Data Structures & Algorithms Specialization - University of California San Diego (in progress of completion)
+  * Introduction to Data Science in Python - University of Michigan (6/2023)
+  * Applied Plotting, Charting & Data Representation in Python - University of Michigan (8/2023)
+  * Data Visualization with Tableau Specialization - University of California, Davis (9/2023)
+  * Introduction to Git and GitHub – Google (10/2023)
+  * Data Structures & Algorithms Specialization - University of California San Diego (in progress of completion)
 
 ### Selected Awards
-##### 02/2013 
-##### Employee of the Month, C&S (MA, USA)
-##### Best demonstration of inventory analysis and vendor management
+02/2013 
+**Employee of the Month, C&S (MA, USA)**
+Best demonstration of inventory analysis and vendor management
 
-##### 09/2009 - 02/2011
-##### Fulbright Scholarship for MBA Degree (NY, USA)
-##### Full 2-year MBA program scholarship in the U.S. One of 22 finalists selected from 1,300 professionals across Vietnam in 2009 
+09/2009 - 02/2011
+**Fulbright Scholarship for MBA Degree (NY, USA)**
+Full 2-year MBA program scholarship in the U.S. One of 22 finalists selected from 1,300 professionals across Vietnam in 2009 
 
-##### 07/2008, 08/2008 & 12/2008
-##### Excellent Performance Award - Nielsen Vietnam
-##### Best performance in project management and data analysis demonstrating insight intergration from multiple departments. 
+07/2008, 08/2008 & 12/2008
+**Excellent Performance Award - Nielsen Vietnam**
+Best performance in project management and data analysis demonstrating insight intergration from multiple departments. 
 
-##### 12/2005 
-##### Amcham Scholarship
-##### Inter-university competition for final-year students in HCM city. One of 20 finalists out of thousands of candidates.  
+12/2005 
+**Amcham Scholarship**
+Inter-university competition for final-year students in HCM city. One of 20 finalists out of thousands of candidates.  
 
-##### 06/2005
-##### Scholarship from TNS/Kantar Market Research Group  
-##### Competition for final-year students among multiple university in HCM city. Only 5 winners, won 2nd prize.  
+06/2005
+**Scholarship from TNS/Kantar Market Research Group**
+Competition for final-year students among multiple university in HCM city. Only 5 winners, won 2nd prize.  
 
-##### Black belt in Taekwondo (1995) / Yellow belt in Karate (2011)
-##### Practiced 4 years in Taekwondo, won mutiple medals in city tournaments for freestyle sparring and sequence performance. Also trained 1 year in Karate.
+**Black belt in Taekwondo (1995) / Yellow belt in Karate (2011)**
+Practiced 4 years in Taekwondo, won mutiple medals in city tournaments for freestyle sparring and sequence performance. Also trained 1 year in Karate.
