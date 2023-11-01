@@ -6,7 +6,7 @@ categories: media
 ---
 
 ### Work Experience <br>
-____ <br>
+____ 
 
 
 |      |                                           |                                                                |
@@ -19,8 +19,9 @@ ____ <br>
 | 07/2006 - 03/2007 | Maersk Shipping & Logistics               | Account Executive, Import-Export Department                    |
 <br>
 <br>
+
 ### Education <br>
-___ <br>
+___ 
 *2009 - 2011* <br>
 **Fulbright Scholar - MBA, dual degree in Finance and Marketing** <br>
 Rochester Institute of Technology - Rochester, NY, USA <br>
@@ -32,7 +33,7 @@ University of Social Sciences and Humanities - Ho Chi Minh City, Vietnam
 <br>
 <br>
 ### Certifications <br>
-___ <br>
+___ 
 #### *Udacity* <br>
   * Programming for Data Science with Python – NanoDegree Program (12/2022 – 5/2023) 
 
@@ -46,7 +47,7 @@ ___ <br>
 <br>
 
 ### Selected Awards <br>
-___ <br>
+___ 
 02/2013 <br> 
 **Employee of the Month, C&S (MA, USA)** <br>
 Best demonstration of inventory analysis and vendor management
