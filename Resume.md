@@ -7,7 +7,7 @@ categories: media
 
 ### Work Experience
 | 12/2011 – Present |        My Translation Business            | Owner                                                          |
-| ----------------- | ----------------------------------------- | -------------------------------------------------------------- |
+|---|---|---|
 | 06/2021 - 01/2022 | Vietnamese Stand Together Project         | Co-founder of Fund raising Project during COVID-19             | 
 | 06/2016 - 12/2021 | Freelance Retail Investor                 | Daytrader                                                      |
 | 05/2012 - 03/2014 | C&S Wholesale Grocers                     | Meat Wholesale Buyer                                           |
