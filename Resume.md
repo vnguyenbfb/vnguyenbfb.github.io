@@ -10,11 +10,11 @@ categories: media
 |      |                                           |                                                                |
 |:---|:---|:---|
 | 12/2011 – Present | My Translation Business            | Owner                                                          |
-| 06/2021 - 01/2022 | Vietnamese Stand Together Project         | Co-founder of Fund raising Project during COVID-19             | 
+| 06/2021 - 01/2022 | Vietnamese Stand Together - Voluntary Project        | Co-founder - Fund Raising during COVID 19             | 
 | 06/2016 - 12/2021 | Freelance Retail Investor                 | Daytrader                                                      |
 | 05/2012 - 03/2014 | C&S Wholesale Grocers                     | Meat Wholesale Buyer                                           |
-| 03/2007 - 04/2009 | The Nielsen Market Research Company       | Project Executive - Quantitative & Retail Research Integration |  
-| 07/2006 - 03/2007 | Maersk Shipping & Logistics               | Account Executive, Import-Export Department                    |
+| 03/2007 - 04/2009 | The Nielsen Company     | Project Executive - Quantitative & Retail Research Integration Dept.  |  
+| 07/2006 - 03/2007 | Maersk Shipping & Logistics               | Account Executive, Import-Export Dept.                    |
 
 <br> <br>
 
