@@ -3,8 +3,9 @@ layout: page
 title: Hi, I'm Van Nguyen!
 ---
 
-> DATA ENTHUSIAST, SELF MOTIVATED MARKET RESEARCHER AND INSPIRING ENTERPRENEUR <br>
 <img style="float:right" src="/assets/images/Profile_pic_RESIZE2.png">
+
+> DATA ENTHUSIAST, SELF MOTIVATED MARKET RESEARCHER AND INSPIRING ENTERPRENEUR
 
 I came from a multidiscipline background, with a bachelor degree in English linguistics and literature from the University of Social Sciences and Humanities in Vietnam, and a dual-major MBA degree (under Fulbright scholarship) in Marketing and Finance from the Rochester Institute of Technology in New York. I have 17+ years of experience in market research and data analysis, supply chain, day trading and running my translation business serving the U.S. and Asian markets.
 
