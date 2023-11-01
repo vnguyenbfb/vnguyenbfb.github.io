@@ -5,7 +5,7 @@ layout: post
 categories: media
 ---
 
-### Work Experience
+## Work Experience
 
 |      |                                           |                                                                |
 |:---|:---|:---|
@@ -19,7 +19,7 @@ categories: media
 <br>
 <br>
 
-### Education <br>
+## Education <br>
 ___ 
 *2009 - 2011* <br>
 **Fulbright Scholar - MBA, dual degree in Finance and Marketing** <br>
@@ -31,7 +31,8 @@ E. Philip Saunders College of Business
 University of Social Sciences and Humanities - Ho Chi Minh City, Vietnam
 <br>
 <br>
-### Certifications <br>
+<br>
+## Certifications <br>
 ___ 
 #### *Udacity* <br>
   * Programming for Data Science with Python – NanoDegree Program (12/2022 – 5/2023) 
@@ -45,7 +46,7 @@ ___
 <br>
 <br>
 
-### Selected Awards <br>
+## Selected Awards <br>
 ___ 
 02/2013 <br> 
 **Employee of the Month, C&S (MA, USA)** <br>
