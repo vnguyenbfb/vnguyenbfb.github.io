@@ -6,8 +6,6 @@ categories: media
 ---
 
 ### Work Experience
-____ 
-
 
 |      |                                           |                                                                |
 |:---|:---|:---|
@@ -17,6 +15,7 @@ ____
 | 05/2012 - 03/2014 | C&S Wholesale Grocers                     | Meat Wholesale Buyer                                           |
 | 03/2007 - 04/2009 | The Nielsen Market Research Company       | Project Executive - Quantitative & Retail Research Integration |  
 | 07/2006 - 03/2007 | Maersk Shipping & Logistics               | Account Executive, Import-Export Department                    |
+
 <br>
 <br>
 
