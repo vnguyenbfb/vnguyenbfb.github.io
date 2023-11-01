@@ -8,6 +8,7 @@ categories: media
 ### Work Experience 
 ____
 
+
 |      |                                           |                                                                |
 |:---|:---|:---|
 | 12/2011 – Present | My Translation Business            | Owner                                                          |
@@ -34,13 +35,15 @@ University of Social Sciences and Humanities - Ho Chi Minh City, Vietnam
 ___
 #### *Udacity* <br>
   * Programming for Data Science with Python – NanoDegree Program (12/2022 – 5/2023) 
+
 #### *Coursera* <br>
   * Introduction to Data Science in Python - University of Michigan (6/2023)
   * Applied Plotting, Charting & Data Representation in Python - University of Michigan (8/2023)
   * Data Visualization with Tableau Specialization - University of California, Davis (9/2023)
   * Introduction to Git and GitHub – Google (10/2023)
   * Data Structures & Algorithms Specialization - University of California San Diego (in progress of completion)
-
+<br>
+<br>
 ### Selected Awards
 ___
 02/2013 <br>
@@ -63,5 +66,5 @@ Inter-university competition for final-year students in HCM city. One of 20 fina
 **Scholarship from TNS/Kantar Market Research Group** <br>
 Competition for final-year students among multiple university in HCM city. Only 5 winners, won 2nd prize.  
 
-**Black belt in Taekwondo (1995) / Yellow belt in Karate (2011)** <br>
+**Black Belt in Taekwondo (1995) / Yellow Belt in Karate (2011)** <br>
 Practiced 4 years in Taekwondo, won mutiple medals in city tournaments for freestyle sparring and sequence performance. Also one year training in Karate.
