@@ -5,7 +5,7 @@ title: My Career Path
 ___
 
 #### Nike Logistics Coordinator, Maersk Shipping and Logistics (2006-2007) <br>
-My first job as a fresh graduate was with Maersk Shipping and Logistics as a Nike Logistics Coordinator. Based on the data of forecast inbound shipments from Nike vendors in Vietnam, I planned for the shipment capacity and schedule for the month, utilizing the container loading process to maximize our shipping profits. It was a satisfying job because it was like solving your puzzles with weights and dimensions of the shipments for loading utilization. <br><br>
+My first job as a fresh graduate was with Maersk Shipping and Logistics as a Nike Logistics Coordinator. Based on the data of forecast inbound shipments from Nike vendors in Vietnam, I planned for the shipment capacity and schedule for the month, utilizing the container loading process to maximize our shipping profits. It was a satisfying job because it was like solving your puzzles with weights and dimensions of the shipments for loading optimization. <br><br>
 
 #### Market Research Executive, Nielsen Market Reseach Company (2007-2009) <br>
 I wanted to take on a bigger scope with projects that required end-to-end responsibility, from requirement understanding, data analysis and insight discovery, to decision recommendation. Thus I applied to be a Market Research Executive at the Nielsen Market Reseach Company.<br>
