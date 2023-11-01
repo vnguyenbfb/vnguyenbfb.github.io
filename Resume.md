@@ -5,8 +5,8 @@ layout: post
 categories: media
 ---
 
-### Work Experience 
-____
+### Work Experience <br>
+____ <br>
 
 
 |      |                                           |                                                                |
@@ -19,8 +19,8 @@ ____
 | 07/2006 - 03/2007 | Maersk Shipping & Logistics               | Account Executive, Import-Export Department                    |
 <br>
 <br>
-### Education
-___
+### Education <br>
+___ <br>
 *2009 - 2011* <br>
 **Fulbright Scholar - MBA, dual degree in Finance and Marketing** <br>
 Rochester Institute of Technology - Rochester, NY, USA <br>
@@ -31,8 +31,8 @@ E. Philip Saunders College of Business
 University of Social Sciences and Humanities - Ho Chi Minh City, Vietnam
 <br>
 <br>
-### Certifications
-___
+### Certifications <br>
+___ <br>
 #### *Udacity* <br>
   * Programming for Data Science with Python – NanoDegree Program (12/2022 – 5/2023) 
 
@@ -44,9 +44,10 @@ ___
   * Data Structures & Algorithms Specialization - University of California San Diego (in progress of completion)
 <br>
 <br>
-### Selected Awards
-___
-02/2013 <br>
+
+### Selected Awards <br>
+___ <br>
+02/2013 <br> 
 **Employee of the Month, C&S (MA, USA)** <br>
 Best demonstration of inventory analysis and vendor management
 
