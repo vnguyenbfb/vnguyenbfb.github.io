@@ -8,7 +8,7 @@ categories: media
 <img style="float:left" src="/assets/images/Image1_small.png">
 
 In this project, we are going to use SQL to query the database to gain insights and build a full picture of the company’s business with recommendations of how we can take this analysis further. 
-
+<br> <br> <br> <br> <br>
 ### Overview
    * Executive summary <br>
    * Schema Diagram <br>
@@ -16,7 +16,6 @@ In this project, we are going to use SQL to query the database to gain insights 
    * Analysis: Source Code, Visualization and Findings <br>
    * Summary of main findings & Recommendations <br>
    * Reference <br> <br>
-
 
 ### Executive summary
 The Sakila Database is about a movie DVDs rental company. The database consists of 15 tables:
@@ -41,7 +40,7 @@ The schema for the DVD Rental database is provided as below.
 <br> <br>
 ### Schema Diagram
 <image src="/assets/images/dvd-rental-erd-2.png"/>
-<br> <br>
+
 ### Business Objectives
 1. Compare numbers of rental orders by store
 2. Numbers of movies in each rental duration category
@@ -49,6 +48,7 @@ The schema for the DVD Rental database is provided as below.
 4. Difference across the monthly payments during 2007 among the top 10 paying customers
 5. Count the times each film category has been rented and their average rental duration
 <br> <br>
+
 ### Analysis: Source Code, Visualization and Findings
 #### 1. Compare numbers of rental orders by store
 ```
@@ -159,7 +159,8 @@ It is quite interesting that the most rented category (Animation) has the shorte
    * Eleanor H. ($64.9) had the most increase in payment and that happened in March 2007. Closely following are Curtis I. ($63.9) and Rhonda K. ($54.9). All of those records are observed in March 2007. Besides those best increases, we also need to look into those customers who are paying less such as Mike W. (-$80.83), Marcia E. (-$72.8) and Ana B. (-$69.9). These are noticed in May 2007.
    * Animation is the most frequently rented category (1166 times). Family came as a close second (1096 times) and Children came third (945 times). Music is the least rented category (830 times).
    * It is worth mentioning that the most rented category (Animation) has the shortest average rental duration (4.89 days) while the least rented category (Music) has the longest average rental duration (5.24 days). More research should be done to understand the nature of each film category to understand what drives the rental duration. For example, average length of each film category, customers’ behavoir and profiles, ect…
-<br> <br>     
+<br> <br>
+
 ### Reference:
-https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/
+[https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/](https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/)
 
