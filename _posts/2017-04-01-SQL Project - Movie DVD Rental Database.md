@@ -11,7 +11,7 @@ categories: media
 
 In this project, we are going to use SQL to query the database to gain insights and build a full picture of the company’s business with recommendations of how we can take this analysis further. 
 
-<br> <br> 
+
 
 ### Overview
    * Executive summary <br>
