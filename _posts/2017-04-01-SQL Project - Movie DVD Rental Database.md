@@ -8,7 +8,7 @@ categories: media
 <img style="float:left" src="/assets/images/Image1_small.png">
 
 In this project, we are going to use SQL to query the database to gain insights and build a full picture of the company’s business with recommendations of how we can take this analysis further. 
-<br> <br> <br> <br> <br>
+<br> <br> <br> <br> <br> <br> <br>
 ### Overview
    * Executive summary <br>
    * Schema Diagram <br>
