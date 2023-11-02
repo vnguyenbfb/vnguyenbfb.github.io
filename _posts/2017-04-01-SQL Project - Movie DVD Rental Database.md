@@ -7,13 +7,15 @@ categories: media
 
 <img style="float:left" src="/assets/images/Image1_small.png">
 
+In this project, we are going to use SQL to query the database to gain insights and build a full picture of the company’s business with recommendations of how we can take this analysis further. 
+
 ### Overview
-Executive summary
-Schema Diagram
-Business Objectives
-Analysis: Source Code, Visualization and Findings
-Summary of main findings & Recommendations
-Reference
+   * Executive summary <br>
+   * Schema Diagram <br>
+   * Business Objectives <br>
+   * Analysis: Source Code, Visualization and Findings <br>
+   * Summary of main findings & Recommendations <br>
+   * Reference <br> <br>
 
 
 ### Executive summary
@@ -35,18 +37,18 @@ The Sakila Database is about a movie DVDs rental company. The database consists 
 
 The movie DVDs rental database can be downloaded [here](https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip). The database file is in zipformat ( dvdrental.zip) so you need to extract it to  dvdrental.tar before loading the sample database into the PostgreSQL database server. <br>
 Printable ER diagram can be found [here](https://www.postgresqltutorial.com/wp-content/uploads/2018/03/printable-postgresql-sample-database-diagram.pdf). <br>
-We are going to use SQL to query the database to gain understanding of the company’s business. The schema for the DVD Rental database is provided as below.
-
+The schema for the DVD Rental database is provided as below.
+<br> <br>
 ### Schema Diagram
 <image src="/assets/images/dvd-rental-erd-2.png"/>
-
+<br> <br>
 ### Business Objectives
 1. Compare numbers of rental orders by store
 2. Numbers of movies in each rental duration category
 3. Payments by the top 10 paying customers on a monthly basis during 2007
 4. Difference across the monthly payments during 2007 among the top 10 paying customers
 5. Count the times each film category has been rented and their average rental duration
-
+<br> <br>
 ### Analysis: Source Code, Visualization and Findings
 #### 1. Compare numbers of rental orders by store
 ```
@@ -58,7 +60,8 @@ JOIN store ON staff.store_id = store.store_id
 GROUP BY rental_month, rental_year, storeid
 ORDER BY count_rentals DESC;
 ```
-<img style="float:left" src="/assets/images/P1_1.png">
+<img src="/assets/images/P1_1.png">
+
 Over the recorded months, the 2 stores have quite similar numbers of rental orders. The chart shows highest numbers in July 2005 and lowest numbers in February 2006. 
 
 #### 2. Numbers of movies in each rental duration category
@@ -77,7 +80,8 @@ FROM table1
 GROUP BY name, quartile
 ORDER BY name, quartile;   
 ```
-<img style="float:left" src="/assets/images/P1_2.png">
+<img src="/assets/images/P1_2.png">
+
 Most film categories have even distribution among the quartiles, except for Classics and Music. Classics has large difference between quartiles 1, 4 and quartiles 2, 3 while Music has large difference between quartile 1 and 3.
 
 #### 3.	Payments by the top 10 paying customers on a monthly basis during 2007
@@ -97,7 +101,8 @@ WHERE payment.customer_id IN (SELECT customer_id FROM table1)
 GROUP BY pay_mon, fullname
 ORDER BY fullname; 
 ```
-<img style="float:left" src="/assets/images/P1_3.png">
+<img src="/assets/images/P1_3.png">
+
 The top 10 paying customers made the most payment amounts in April 2007 and least payment amounts in May 2007. There is an uptrend in terms of payment amounts from February to April 2007 in 8 out of 10 top payment customers.
 
 #### 4.	Difference across the monthly payments during 2007 among the top 10 paying customers
@@ -126,7 +131,8 @@ FROM table3
 WHERE fullname = next_fullname
 ORDER BY diff_fr_last_month DESC;
 ```
-<img style="float:left" src="/assets/images/P1_4.png">
+<img src="/assets/images/P1_4.png">
+
 Eleanor H. ($64.9) had the most increase in payment. Closely following are Curtis I. ($63.9) and Rhonda K. ($54.9). All of those records are observed in March 2007.
 
 #### 5.	Count the times each film category has been rented and their average rental duration
@@ -144,7 +150,7 @@ ORDER BY rental_count;
 <img style="float:left" src="/assets/images/P1_5.png">
 Animation is the most frequently rented category (1166 times). Family came as a close second (1096 times) and Children came third (945 times). Music is the least rented category (830 times).
 It is quite interesting that the most rented category (Animation) has the shortest average rental duration (4.89 days) while the least rented category (Music) has the longest average rental duration (5.24 days).
-
+<br> <br>
 ### Summary of main findings and Recommendations
 
    * There is not much difference in terms of number of rental orders between the two stores. The most counts are observed in July 2005 and the least in February 2006. The dataset only provides monthly data from May to August 2005 and February 2006. If there is more continuous monthly data, we could look at trends in terms of rental orders on a monthly basis.
@@ -153,6 +159,7 @@ It is quite interesting that the most rented category (Animation) has the shorte
    * Eleanor H. ($64.9) had the most increase in payment and that happened in March 2007. Closely following are Curtis I. ($63.9) and Rhonda K. ($54.9). All of those records are observed in March 2007. Besides those best increases, we also need to look into those customers who are paying less such as Mike W. (-$80.83), Marcia E. (-$72.8) and Ana B. (-$69.9). These are noticed in May 2007.
    * Animation is the most frequently rented category (1166 times). Family came as a close second (1096 times) and Children came third (945 times). Music is the least rented category (830 times).
    * It is worth mentioning that the most rented category (Animation) has the shortest average rental duration (4.89 days) while the least rented category (Music) has the longest average rental duration (5.24 days). More research should be done to understand the nature of each film category to understand what drives the rental duration. For example, average length of each film category, customers’ behavoir and profiles, ect…
+<br> <br>     
 ### Reference:
 https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/
 
