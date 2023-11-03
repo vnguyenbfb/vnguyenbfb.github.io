@@ -1,4 +1,4 @@
----
+![image](https://github.com/vnguyenbfb/vnguyenbfb.github.io/assets/114741418/6acbc743-08f9-40be-af99-21e3d1cc1170)---
 title:  "Countries and Energy Usage Stats"
 mathjax: true
 layout: post
@@ -162,36 +162,34 @@ avg_supply_per_capita()
 
 ```
 
-We've got the output of *101.13 (Gigajoules)*. How is this average of all countries compared with the average of biggest 5 and smallest 5 countries in terms of GDP within the top 15 ranking of GDP?  
+We've got the output of *101.13 (Gigajoules)*. How is this average of all countries compared with the average of the top 15 ranking in terms of GDP?  
 
 ```
-def avg_supply_per_capita_top_and_bottom5():
+def avg_supply_per_capita_top15():
     df = adding_avgGDP()
-    avgEnergySupplyPerCapita_top5 = df.iloc[:5, 8].mean()
-    avgEnergySupplyPerCapita_bottom5 = df.iloc[-5:, 8].mean()
-    return avgEnergySupplyPerCapita_top5, avgEnergySupplyPerCapita_bottom5                                    
-avg_supply_per_capita_topandbottom5()
+    df = df.iloc[:15]
+    avgEnergySupplyPerCapita_top15 = df['Energy Supply per Capita'].mean()
+    return avgEnergySupplyPerCapita_top15                    
+avg_supply_per_capita_top15()
 ```
 
-Running the above function, we've got the average energy supply per capita for the top 5 countries is *171.80 (Gigajoules)* and *167.2 (Gigajoules)* for the bottom 5 countries. The numbers show such a wide difference between the top 5 and bottom 5 countries. It is surprising that the top and bottom 5 groups have more energy supply than the average of 15 top ranking GDPs. <br>
+Running the above function, we've got the average energy supply per capita for the top 15 countries is *153.93 (Gigajoules)*, which is 152% that of all countries. This gap can be explained by the higher living standard in those larger economies. <br>
 
-We will next review the correlation between GDP and the energy supply per capita in the datasets we have.
+We will next review the correlation between GDP and the energy supply per capita among those top 15 GDP ranking countries.
 
 ```
 import scipy.stats as stats
 
-def correlation():
-    df = cleansed_df()
+def correlation_check():
+    df = adding_avgGDP()
+    df = df.iloc[:15]  
+    corr, pval = stats.pearsonr(df['avgGDP'], df['Energy Supply per Capita'])
+    return corr, pval
 
-    df['EstimatedPop'] = df['Energy Supply'] / df['Energy Supply per Capita'] 
-    df['EstimatedCitableDocPerCapita'] = df['Citable documents'] / df['EstimatedPop']
-    
-    corr, pval = stats.pearsonr(df['EstimatedCitableDocPerCapita'], df['Energy Supply per Capita'])
-    return corr
-    #raise NotImplementedError()
-
-answer_nine()
+correlation_check()
 ```
+Output: (0.3334943060771735, 0.22447212657513463) <br>
+Correlation coefficient of 0.3334943060771735 is telling us that the two variables are not in a strong direct relationship and p-value of 0.22447212657513463 means the correlation is not statistically significant either. So these variables do not affect each other when one changes.  
 
 #### 3. Renewable Supply
 
