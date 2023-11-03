@@ -1,5 +1,5 @@
 ---
-title:  "SQL Project - Movie DVD Rental Database"
+title:  "Countries and Energy Usage Stats"
 mathjax: true
 layout: post
 categories: media 
@@ -23,9 +23,9 @@ In this project we will use use Python to cleanse and prepare the dataset before
    * Summary <br> <br>
    
 ### Introduction
-    a. The energy datafile “Energy Indicators” is a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013, we will put the information into a DataFrame with the variable name of Energy. This datafile is in Excel format. 
-    b. The GDP data is a csv containing countries' GDP from 1960 to 2015 from World Bank. We name this DataFrame GDP.
-    c. The Sciamgo Journal and Country Rank data for Energy Engineering and Power Technology, which ranks countries based on their journal contributions in the aforementioned area. We call this DataFrame ScimEn.
+    a. The energy datafile “Energy Indicators” is a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013, we will put the information into a DataFrame with the variable name of Energy. This datafile is in Excel format and available [here](http://unstats.un.org/unsd/environment/excel_file_tables/2013/Energy%20Indicators.xls).
+    b. The GDP data is a csv containing countries' GDP from 1960 to 2015 from World Bank. We name this DataFrame GDP. The GDP datafile can be found [here](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD).
+    c. The Sciamgo Journal and Country Rank data for Energy Engineering and Power Technology, which ranks countries based on their journal contributions in the aforementioned area. We call this DataFrame **ScimEn**. The datafile can be found [here](https://www.scimagojr.com/countryrank.php?category=2102).
 
 ### Data Cleansing and Preparation
 The first task we need to do is to change some of the column names and country names for easy recognition and alignment. Some countries have different names on the dataframes. For example, South Korea is named "Republic of Korea" in the Energy Dataframe and "Korea, Rep." in the GDP Dataframe, or Hong Kong is called "China, Hong Kong Special Administrative Region" in the Energy Dataframe and "Hong Kong SAR, China" in the GDP Dataframe, ect. And for all countries which have missing data (e.g. data with "..."), missing data will be reflected as np.NaN values.<br>
@@ -39,8 +39,7 @@ import numpy as np
 import re
 
 def cleansing():
-    # YOUR CODE HERE
-    #energy dataframe
+    # Energy dataframe
     energy = pd.read_excel('assets/Energy Indicators.xls', header=0, index_col=False, keep_default_na=True, skiprows=17)
     energy = energy.iloc[:227]
     energy = energy.drop(energy.columns[[0, 1]], axis = 1)
@@ -49,9 +48,10 @@ def cleansing():
     energy['Energy Supply'] = energy['Energy Supply'] * 1000000
     energy = energy.replace('\s\([\w ]*\)', '', regex=True)
     energy = energy.replace('[0-9]+$', '', regex=True)
-    energy = energy.replace(['Republic of Korea', 'United States of America', 'United Kingdom of Great Britain and Northern Ireland', 'China, Hong Kong Special Administrative Region', '...'], ['South Korea', 'United States', 'United Kingdom', 'Hong Kong', np.nan])
+    energy = energy.replace(['Republic of Korea', 'United States of America', 'United Kingdom of Great Britain and Northern Ireland', 'China, Hong Kong Special Administrative Region', 
+                            '...'], ['South Korea', 'United States', 'United Kingdom', 'Hong Kong', np.nan])
     
-    # gdp dataframe
+    # GDP dataframe
     gdp = pd.read_csv("assets/world_bank.csv", skiprows=4)                          
     gdp.rename(columns={'Country Name':'Country'}, inplace=True)
     gdp['Country'] = gdp['Country'].replace(['Korea, Rep.', 'Iran, Islamic Rep.', 'Hong Kong SAR, China'], ['South Korea', 'Iran', 'Hong Kong'])
@@ -61,12 +61,14 @@ def cleansing():
     ScimEn = pd.read_excel('assets/scimagojr-3.xlsx', header=0, index_col=False, keep_default_na=True)  
     ScimEn = ScimEn.iloc[:15]
     
-    #Join dataframes                                        
+    # Join dataframes                                        
     df = ScimEn.merge(energy, on = 'Country').merge(gdp, on = 'Country')
-    column_titles = ['Country', 'Rank', 'Documents', 'Citable documents', 'Citations', 'Self-citations', 'Citations per document', 'H index', 'Energy Supply', 'Energy Supply per Capita', '% Renewable', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015']                                             
+    column_titles = ['Country', 'Rank', 'Documents', 'Citable documents', 'Citations', 'Self-citations', 'Citations per document', 'H index', 'Energy Supply', 'Energy Supply per Capita', 
+                     '% Renewable', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015']                                             
     df = df[column_titles]
     df = df.set_index('Country')
     return df     
+
 cleansing()
 ```                
 <img src="/assets/images/P3_Q1.png">
@@ -80,16 +82,14 @@ import numpy as np
 import re
 
 def top_15_countries():
-    # YOUR CODE HERE
     df = cleansing()
     #list of 15 countries with highest average GDP
     df['avgGDP'] = df[['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015']].mean(axis=1)
     df = df.sort_values(by='avgGDP', ascending=False)
-    
-    #return df
-    return df.iloc[:, -1]
+    return df
 
-top_15_countries()
+df = top_15_countries()
+df.iloc[:, -1]
 ```
 
 Below is the list of the top 15 countries with highest average GDP over the last 10 years(2006-2015). United States ranks first, China comes second and third is Japan. We can see that the next 3 countries (Germany, France and United Kingdom) belong to Euroupe.
@@ -113,11 +113,40 @@ South Korea           1.106715e+12
 Iran                  4.441558e+11
 Name: avgGDP, dtype: float64
 ```
-
-As of now we have known those top countries, so by how much had the GDP changed over the 10 year span for the country within the 15 top ranking?
-
+As of now we have found those top countries, so by how much had the GDP changed over the 10 year span for the country within the 15 top ranking?
+```
+def pct_GDP_change():
+    df = top_15_countries()
+    df['%GDPchange'] = (df['2015'] - df['2006'])/df['2006']
+    df = df.sort_values(by='%GDPchange', ascending=False)
+    df.iloc[:-1, -1] = df.iloc[:-1, -1].map(lambda n: '{:,.2%}'.format(n))
+    return df['%GDPchange']
+pct_GDP_change()
+```
+The output:
+```
+Country
+China                 120.37%
+India                  87.00%
+South Korea            34.60%
+Australia              27.33%
+Brazil                 25.71%
+Russian Federation     16.62%
+Canada                 14.58%
+United States          11.87%
+Germany                10.58%
+United Kingdom         10.20%
+France                  5.88%
+Japan                   3.15%
+Spain                   0.35%
+Italy                  -6.94%
+Iran                      NaN
+Name: %GDPchange, dtype: object
+```
+Compared to 2006, China's GDP has impressively gained 120.37% in 2015. Paired with the magnitude of its GDP, China's economy is growing strongest over the years. Aside from China, the other countries in top 5 of highest average GDP are not seeing their GPD gaining that much. It is worth noticing that the top 3 are Asian countries, with India in the second place and South Korea in the third place. Spain's GDP is the same as 10 years ago and Italy's GDP actually shrinks. The dataset does not include Iran's GDP in 2015, we are showing its change percent as NaN.
 
 #### 2. Energy Supply
+In this part, we will take a look into the Energy supply data in the 
         
 #### 3. Renewable Supply
 
