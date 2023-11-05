@@ -1,4 +1,4 @@
-![image](https://github.com/vnguyenbfb/vnguyenbfb.github.io/assets/114741418/6acbc743-08f9-40be-af99-21e3d1cc1170)---
+---
 title:  "Countries and Energy Usage Stats"
 mathjax: true
 layout: post
@@ -20,7 +20,7 @@ In this project we will use use Python to cleanse and prepare the dataset before
         - GDP
         - Energy Supply
         - Renewable Supply
-   * Summary <br> <br>
+   * Summary of Findings <br> <br>
    
 ### Introduction
 i.The energy datafile “Energy Indicators” is a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013, we will put the information into a DataFrame with the variable name of **Energy**. This datafile is in Excel format and available [here](http://unstats.un.org/unsd/environment/excel_file_tables/2013/Energy%20Indicators.xls). <br>
@@ -193,72 +193,13 @@ Correlation coefficient of 0.3334943060771735 is telling us that the two variabl
 
 #### 3. Renewable Supply
 
-##### Heading Five (h5)
+#### 4. Analysis by Continent
 
-###### Heading Six (h6)
+### Summary of Findings
 
 
-## Blockquotes
 
-### Single line
 
-> My mom always said life was like a box of chocolates. You never know what you're gonna get.
 
-### Multiline
 
-> What do you get when you cross an insomniac, an unwilling agnostic and a dyslexic?
->
-> You get someone who stays up all night torturing himself mentally over the question of whether or not there's a dog.
->
-> – _Hal Incandenza_
 
-## Horizontal Rule
-
----
-
-## Table
-
-| Title 1          | Title 2          | Title 3         | Title 4         |
-|------------------|------------------|-----------------|-----------------|
-| First entry      | Second entry     | Third entry     | Fourth entry    |
-| Fifth entry      | Sixth entry      | Seventh entry   | Eight entry     |
-| Ninth entry      | Tenth entry      | Eleventh entry  | Twelfth entry   |
-| Thirteenth entry | Fourteenth entry | Fifteenth entry | Sixteenth entry |
-
-## Code
-
-Source code can be included by fencing the code with three backticks. Syntax highlighting works automatically when specifying the language after the backticks.
-
-````
-```javascript
-function foo () {
-    return "bar";
-}
-```
-````
-
-This would be rendered as:
-
-```javascript
-function foo () {
-    return "bar";
-}
-```
-
-## Lists
-
-### Unordered
-
-* First item
-* Second item
-* Third item
-    * First nested item
-    * Second nested item
-
-### Ordered
-
-1. First item
-2. Second item
-3. Third item
-    1. First nested item
-    2. Second nested item
