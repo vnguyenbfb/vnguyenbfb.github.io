@@ -173,9 +173,8 @@ def avg_supply_per_capita_top15():
 avg_supply_per_capita_top15()
 ```
 
-Running the above function, we've got the average energy supply per capita for the top 15 countries is *153.93 (Gigajoules)*, which is 152% that of all countries. This gap can be explained by the higher living standard in those larger economies. <br>
-
-We will next review the correlation between GDP and the energy supply per capita among those top 15 GDP ranking countries.
+Running the above function, we've got the average energy supply per capita for the top 15 countries is *153.93 (Gigajoules)*, which is 152% that of all countries. <br>
+This gap leads to our next question: Is there any correlation between average energy supply per capita and GDP? Because the Energy Data is only for the year 2013, we are going to use GDP for the year 2013 as well for the correlation test. We will review this for only the top 15 GDP ranking countries, given that some other countries do not have GDP data for 2013. <br>
 
 ```
 import scipy.stats as stats
@@ -183,17 +182,134 @@ import scipy.stats as stats
 def correlation_check():
     df = adding_avgGDP()
     df = df.iloc[:15]  
-    corr, pval = stats.pearsonr(df['avgGDP'], df['Energy Supply per Capita'])
+    corr, pval = stats.pearsonr(df['2013'], df['Energy Supply per Capita'])
     return corr, pval
 
 correlation_check()
 ```
-Output: (0.3334943060771735, 0.22447212657513463) <br>
-Correlation coefficient of 0.3334943060771735 is telling us that the two variables are not in a strong direct relationship and p-value of 0.22447212657513463 means the correlation is not statistically significant either. So these variables do not affect each other when one changes.  
+Output: (0.30674695967590515, 0.26612100439533454) <br>
+Correlation coefficient of 0.30674695967590515 is telling us that the two variables are not in a strong direct relationship and p-value of 0.26612100439533454 means the correlation is not statistically significant either.   
 
 #### 3. Renewable Supply
+Which country among the top 15 GDP ranking has the maximum and minimum % Renewable? 
+```
+def check_Renewable():
+    df = adding_avgGDP()
+    df = df.iloc[:15]
+    df = df.sort_values(by='% Renewable', ascending=False)
+    max_renewable = (df.index[0], round(df['% Renewable'][0], 2))
+    min_renewable = (df.index[14], round(df['% Renewable'][14], 2))
+    US_renewable = ('United States', round(df._get_value('United States', '% Renewable'), 2)) 
+    China_renewable = ('China', round(df._get_value('China', '% Renewable'), 2)) 
+    return max_renewable, min_renewable, China_renewable, US_renewable
+
+check_Renewable()
+```
+Output: 
+(('Brazil', 69.65),
+ ('South Korea', 2.28),
+ ('China', 19.75),
+ ('United States', 11.57))
+ 
+Brazil impressively has the maximum % Renewable Energy (69.65%) while South Korea has the minimum % Renewable Energy (2.28%) out the top 15 GDP ranking countries.
+Brazil's percent Renewable is quite far ahead of those of the two biggest economies the U.S and China.
+
+We will find the mean of percent Renewable of the top 15 GDP ranking and compare their percent Renewable to that value.
+```
+def Compare_Renewable ():
+    df = adding_avgGDP()
+    df = df.iloc[:15]
+    df = df.round({'% Renewable':2})
+    mean_value = df['% Renewable'].mean()
+    df['Compare % Renewable'] = df['% Renewable'].apply(lambda x: 'Below' if x < mean_value else 'Above')
+    result = df[['% Renewable', 'Compare % Renewable']]
+    return mean_value, result
+    
+Compare_Renewable ()
+```
+Output: 
+(23.30466666666667)                    
+Country  |                % Renewable |Compare % Renewable
+---|---|---                                         
+ United States      |       11.57      |         Below <br>
+ China              |       19.75      |         Below <br>
+ Japan              |       10.23      |         Below <br>
+ Germany            |       17.90      |         Below <br>
+ France             |       17.02      |         Below <br>
+ United Kingdom     |       10.60      |         Below <br>
+ Brazil             |       69.65      |         **Above** <br>
+ Italy              |       33.67      |         **Above** <br>
+ India              |       14.97      |         Below <br>
+ Canada             |       61.95      |         **Above** <br>
+ Russian Federation |       17.29      |         Below <br>
+ Spain              |       37.97      |         **Above** <br>
+ Australia          |       11.81      |         Below <br>
+ South Korea        |        2.28      |         Below <br>
+ Mexico             |       12.91      |         Below <br>
+
+Only 4 out of 15 countries are above the mean value of % Renewable value for the top 15 countries. Most "below" countries are in the teen-ish range which is significantly low compared to the "above" countries.
 
 #### 4. Analysis by Continent
+##### * Population
+
+We are going to use the following dictionary to group the top 15 countries by continent, creating a DataFrame that displays the sample size (the number of countries in each continent bin), and the sum, mean, and std deviation for the estimated population of each country. 
+
+ContinentDict  = {'United States':'North America', <br>
+                  'China':'Asia', <br>
+                  'Japan':'Asia', <br>
+                  'Germany':'Europe', <br>
+                  'France':'Europe', <br>
+                  'United Kingdom':'Europe', <br>
+                  'Brazil':'South America', <br>
+                  'Italy':'Europe', <br>
+                  'India':'Asia', <br>
+                  'Canada':'North America', <br>
+                  'Russian Federation':'Europe', <br>
+                  'Spain':'Europe', <br>
+                  'Australia':'Australia', <br>
+                  'South Korea':'Asia', <br>
+                  'Mexico':'North America'}
+
+```
+def description_stats():
+    df = adding_avgGDP()
+    df = df.iloc[:15]
+    df['EstimatedPop'] = df['Energy Supply'] / df['Energy Supply per Capita']
+
+    #dict_dataframe
+    dict_df = pd.DataFrame(list(ContinentDict.items()))
+    dict_df.columns = ['Country', 'Continent']
+    dict_df = dict_df.set_index('Country')
+    new_df = pd.merge(dict_df, df, left_index=True, right_on= ['Country'], how = 'left')
+    new_df = new_df.drop(['Rank', 'Documents', 'Citable documents', 'Citations', 'Self-citations', 'Citations per document', 'H index', 'Energy Supply', 'Energy Supply per Capita', '% 
+                         Renewable', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', 'avgGDP'], axis=1)
+        
+    #Calculations
+    size = new_df.groupby(['Continent'])['Continent'].count()
+    total = new_df.groupby(['Continent'])['EstimatedPop'].sum()  
+    mean = new_df.groupby(['Continent'])['EstimatedPop'].mean()
+    std = new_df.groupby(['Continent'])['EstimatedPop'].std()
+    joined_df = pd.concat([size, total, mean, std], axis=1) 
+    joined_df.columns = ['size', 'sum', 'mean', 'std']
+    joined_df['sum'] = pd.to_numeric(joined_df['sum'])
+    return joined_df
+
+description_stats()
+```
+Output: 
+
+Continent			|	size|	sum|	mean|	std
+---|---|---|--|---
+Asia|	4|	2.821591e+09|	7.053977e+08	|7.138779e+08
+Australia|	1|	2.331602e+07|	2.331602e+07|	NaN
+Europe|	6|	4.579297e+08|	7.632161e+07|	3.464767e+07
+North America	|3	|4.769802e+08|	1.589934e+08	|1.443809e+08
+South America|	1|	2.059153e+08|	2.059153e+08|	NaN
+<br>
+Asia is the most populous continent with the most average and total population per country. Because there is only 1 country in Australia and South America continent within the 15 top ranking countries, std shows NaN for these 2 continents.
+
+##### * Renewable Energy
+We are Cut % Renewable into 5 bins. Group Top15 by the Continent, as well as these new % Renewable bins. How many countries are in each of these groups? 
 
 ### Summary of Findings
 
