@@ -20,7 +20,7 @@ In this project we will use use Python to cleanse and prepare the dataset before
         - GDP
         - Energy Supply
         - Renewable Supply
-   * Summary of Findings <br> <br>
+
    
 ### Introduction
 i.The energy datafile “Energy Indicators” is a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013, we will put the information into a DataFrame with the variable name of **Energy**. This datafile is in Excel format and available [here](http://unstats.un.org/unsd/environment/excel_file_tables/2013/Energy%20Indicators.xls). <br>
@@ -238,12 +238,12 @@ Country  |                % Renewable |Compare % Renewable
  Germany            |       17.90      |         Below <br>
  France             |       17.02      |         Below <br>
  United Kingdom     |       10.60      |         Below <br>
- Brazil             |       69.65      |         **Above** <br>
- Italy              |       33.67      |         **Above** <br>
+ Brazil             |       69.65      |         *Above* <br>
+ Italy              |       33.67      |         *Above* <br>
  India              |       14.97      |         Below <br>
- Canada             |       61.95      |         **Above** <br>
+ Canada             |       61.95      |         *Above* <br>
  Russian Federation |       17.29      |         Below <br>
- Spain              |       37.97      |         **Above** <br>
+ Spain              |       37.97      |         *Above* <br>
  Australia          |       11.81      |         Below <br>
  South Korea        |        2.28      |         Below <br>
  Mexico             |       12.91      |         Below <br>
@@ -273,30 +273,30 @@ ContinentDict  = {'United States':'North America', <br>
                   'Mexico':'North America'}
 
 ```
-def description_stats():
+def dict_dataframe():
     df = adding_avgGDP()
     df = df.iloc[:15]
     df['EstimatedPop'] = df['Energy Supply'] / df['Energy Supply per Capita']
+    
+    continent_df = pd.DataFrame(list(ContinentDict.items()))
+    continent_df.columns = ['Country', 'Continent']
+    continent_df = continent_df.set_index('Country')
+    merged_df = pd.merge(continent_df, df, left_index=True, right_on= ['Country'], how = 'left')
+    merged_df = merged_df.drop(['Rank', 'Documents', 'Citable documents', 'Citations', 'Self-citations', 'Citations per document', 'H index', 'Energy Supply', 'Energy Supply per Capita', '% Renewable', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', 'avgGDP'], axis=1)
+    return merged_df
 
-    #dict_dataframe
-    dict_df = pd.DataFrame(list(ContinentDict.items()))
-    dict_df.columns = ['Country', 'Continent']
-    dict_df = dict_df.set_index('Country')
-    new_df = pd.merge(dict_df, df, left_index=True, right_on= ['Country'], how = 'left')
-    new_df = new_df.drop(['Rank', 'Documents', 'Citable documents', 'Citations', 'Self-citations', 'Citations per document', 'H index', 'Energy Supply', 'Energy Supply per Capita', '% 
-                         Renewable', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', 'avgGDP'], axis=1)
-        
-    #Calculations
-    size = new_df.groupby(['Continent'])['Continent'].count()
-    total = new_df.groupby(['Continent'])['EstimatedPop'].sum()  
-    mean = new_df.groupby(['Continent'])['EstimatedPop'].mean()
-    std = new_df.groupby(['Continent'])['EstimatedPop'].std()
-    joined_df = pd.concat([size, total, mean, std], axis=1) 
-    joined_df.columns = ['size', 'sum', 'mean', 'std']
-    joined_df['sum'] = pd.to_numeric(joined_df['sum'])
-    return joined_df
+def stats_calculations ():
+    merged_df = dict_dataframe()
+    size = merged_df.groupby(['Continent'])['Continent'].count()
+    total = merged_df.groupby(['Continent'])['EstimatedPop'].sum()  
+    mean = merged_df.groupby(['Continent'])['EstimatedPop'].mean()
+    std = merged_df.groupby(['Continent'])['EstimatedPop'].std()
+    stats_df = pd.concat([size, total, mean, std], axis=1) 
+    stats_df.columns = ['size', 'sum', 'mean', 'std']
+    stats_df['sum'] = pd.to_numeric(stats_df['sum'])
+    return stats_df
 
-description_stats()
+stats_calculations ()
 ```
 Output: 
 
@@ -313,9 +313,70 @@ Asia is the most populous continent with the most average and total population p
 
 
 ##### * Renewable Energy
-we are going to Cut % Renewable into 5 bins and group Top 15 GDP ranking by Continent, as well as these new % Renewable bins and find out how many countries are in each of these groups? 
+we are going to Cut % Renewable into 5 bins and group Top 15 GDP ranking by Continent, as well as these new % Renewable bins and find out how many countries are in each of these groups. 
 
-### Summary of Findings
+```
+ContinentDict  = {'United States':'North America', 
+                  'China':'Asia', 
+                  'Japan':'Asia', 
+                  'Germany':'Europe', 
+                  'France':'Europe', 
+                  'United Kingdom':'Europe', 
+                  'Brazil':'South America',
+                  'Italy':'Europe', 
+                  'India':'Asia',
+                  'Canada':'North America', 
+                  'Russian Federation':'Europe', 
+                  'Spain':'Europe', 
+                  'Australia':'Australia', 
+                  'South Korea':'Asia', 
+                  'Mexico':'North America'}
+
+merged_df = dict_dataframe()
+
+def Renewable_bins():
+    
+    merged_df = dict_dataframe()
+    
+    new_df['bins'] = pd.cut(df['% Renewable'], bins=5)
+    my_series = new_df.groupby(['Continent', 'bins'])['Continent'].count()
+    return my_series
+
+Renewable_bins()
+```
+Output
+
+```
+Continent      bins         
+Asia           (-0.1, 20.0]     4
+               (20.0, 40.0]     0
+               (40.0, 60.0]     0
+               (60.0, 80.0]     0
+               (80.0, 100.0]    0
+Australia      (-0.1, 20.0]     1
+               (20.0, 40.0]     0
+               (40.0, 60.0]     0
+               (60.0, 80.0]     0
+               (80.0, 100.0]    0
+Europe         (-0.1, 20.0]     4
+               (20.0, 40.0]     2
+               (40.0, 60.0]     0
+               (60.0, 80.0]     0
+               (80.0, 100.0]    0
+North America  (-0.1, 20.0]     2
+               (20.0, 40.0]     0
+               (40.0, 60.0]     0
+               (60.0, 80.0]     1
+               (80.0, 100.0]    0
+South America  (-0.1, 20.0]     0
+               (20.0, 40.0]     0
+               (40.0, 60.0]     0
+               (60.0, 80.0]     1
+               (80.0, 100.0]    0
+Name: Continent, dtype: int64
+```
+
+
 
 
 
