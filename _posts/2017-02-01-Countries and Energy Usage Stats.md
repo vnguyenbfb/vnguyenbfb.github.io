@@ -307,11 +307,12 @@ Output:
 
 Continent			|	size|	sum|	mean|	std
 ---|---|---|--|---
-Asia|	4|	2.821591e+09|	7.053977e+08	|7.138779e+08
-Australia|	1|	2.331602e+07|	2.331602e+07|	NaN
-Europe|	6|	4.579297e+08|	7.632161e+07|	3.464767e+07
-North America	|3	|4.769802e+08|	1.589934e+08	|1.443809e+08
-South America|	1|	2.059153e+08|	2.059153e+08|	NaN
+Asia          |	4   |	2.821591e+09|	7.053977e+08	|7.138779e+08
+Australia     |	1   |	2.331602e+07|	2.331602e+07  |	NaN
+Europe        |	6   |	4.579297e+08|	7.632161e+07  |	3.464767e+07
+North America	|3	  |4.769802e+08 |	1.589934e+08	|1.443809e+08
+South America |	1   |	2.059153e+08|	2.059153e+08  |	NaN
+
 <br>
 
 Asia is the most populous continent with the most average and total population per country. Because there is only 1 country in Australia and South America continent within the 15 top ranking countries, std shows NaN for these 2 continents.
