@@ -6,24 +6,20 @@ categories: media
 ---
 <img style="float:left" src="/assets/images/Image2_small.png">
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. 
-You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Executive Summary
+1.	Introduction
+2.	Project Objectives
+3.	Challenges with Raw Data Input
+4.	Programming
 
+### 1.	Introduction
+Over the past decade, bicycle-sharing systems have been growing in number and popularity in cities across the world. Bicycle-sharing systems allow users to rent bicycles on a very short-term basis for a price. This allows people to borrow a bike from point A and return it at point B, though they can also return it to the same location if they'd like to just go for a ride. Regardless, each bike can serve several users per day.
+In this project, we will make use of Python to explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington. 
+We will write a program to answer interesting questions about it by computing descriptive statistics. Our program will take input from the users about which information they want to see to create an interactive experience by presenting these statistics. 
+Datasets for the 3 cities:
+chicago.cvs
+new_york_city.cvs
+washington.cvs
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+These data are from the U.S. BikeShare from Udacity’s Course: Programming for Data Science with Python – NanoDegree Program. I do not own any of these datasets.
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
