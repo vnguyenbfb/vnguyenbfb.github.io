@@ -32,21 +32,23 @@ These data are from the U.S. BikeShare from Udacity’s Course: Programming for 
 The project’s goal is to provide an interactive program for the user to customize the results per how the users want to see the data and provide the accurate information the user is looking for.
 
 The datasets we have cover there cities: Chicago, New York and Washington. We will let the user choose which data/data level they are interested in seeing. Variables included in the program are: 
+  * Time filter: The user can choose to see by month, day of the week, or both month and day of the week, or without a filter at all.
+Once the user has chosen their filter, the program will return a set of statistics
+  * Most popular hour: what travel hour is the most popular time with a total count
+  * Pouplar stations including most popular start and end station with total counts
+  * Popular trip: the most popular trip that passengers take given that time filter with a total count
+  * Trip duration: how long it takes in terms of total travel time and average travel time
+  * Passenger type: counts of passenger types as normal customers and subscribers
+  * Passenger gender: counts of passenger types by gender (male vs female)
+  * Birth year: counts of ealiest, latest and most popular birth year
 
-..*Time filter: The user can choose to see by month, day of the week, or both month and day of the week, or without a filter at all.<br>
-Once the user has chosen their filter, the program will return a set of statistics:<br>
-     *Most popular hour: What travel hour is the most popular time with a total count.<br>
-     *Pouplar stations including most popular start and end station with total counts.<br>
-     *Popular trip: the most popular trip that passengers take given that time filter with a total count.<br>
-     *Trip duration: how long it takes in terms of total travel time and average travel time.<br>
-     *Passenger type: counts of passenger types as normal customers and subscribers<br>
-     *Passenger gender: counts of passenger types by gender (male vs female)<br>
-     *Birth year: counts of ealiest, latest and most popular birth year.<br>
-The program also provides the run time of each statistic calculation.<br>
+The program also provides the run time of each statistic calculation.
+
 Then it will ask the user if they would like to see the first 5 lines of raw data and prompt for another set if they still want to see it, unitl the users answer “No” to the prompt.
-Lastly, the program then will ask whether the user wants to start over their statistics search.<br>
 
-*Please note that there is no gender and birth year data for Washington in this dataset, the user will be notified in the statistic report when searching for Washington.*
+Lastly, the program then will ask whether the user wants to start over their statistics search.
+
+_* Please note that there is no gender and birth year data for Washington in this dataset, the user will be notified in the statistic report when searching for Washington._
 
 ### 3.	Challenges with Taking Prompts from the Users’ Raw Input
 
@@ -485,3 +487,7 @@ Would you like to see 5 lines of raw data? Type 'Y' or 'N' N
 Would you like to restart? Type 'Y' or 'N' N
 END OF REPORT.
 ```
+
+<img src="/assets/images/P2_1.png">
+
+<img src="/assets/images/P2_2.png">
