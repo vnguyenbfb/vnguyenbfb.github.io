@@ -4,6 +4,7 @@ mathjax: true
 layout: post
 categories: media
 ---
+
 <img style="float:left" src="/assets/images/Image2b_small.png">
 
 <br> <br> 
@@ -11,6 +12,8 @@ categories: media
 In this project, we will use Python to explore data related to the bike share systems for the three major cities in the United States which are Chicago, New York City, and Washington. Our program will take queries and input from the users with which information they want to see to create an interactive experience by returing descriptive statistics to answer the users' questions. 
 
 <br> <br> 
+
+
 ### Executive Summary
 1.	Introduction
 2.	Project Objectives
