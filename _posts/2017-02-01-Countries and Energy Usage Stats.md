@@ -69,7 +69,7 @@ def cleansed_df():
     return df     
 
 df = cleansed_df()
-df.iloc[:15]
+top15_Scimagojr_ranking = 'df.iloc[:15]
 
 ```
 
@@ -183,12 +183,13 @@ def correlation_check():
     df = adding_avgGDP()
     df = df.iloc[:15]  
     corr, pval = stats.pearsonr(df['2013'], df['Energy Supply per Capita'])
-    return corr, pval
+    return round(corr,5), round(pval,5)
 
 correlation_check()
 ```
-Output: (0.30674695967590515, 0.26612100439533454) <br>
-Correlation coefficient of 0.30674695967590515 is telling us that the two variables are not in a strong direct relationship and p-value of 0.26612100439533454 means the correlation is not statistically significant either.   
+Output: (0.30675, 0.26612) <br>
+
+Correlation coefficient of 0.30675 is telling us that the two variables are not in a strong direct relationship and p-value of 0.26612 means the correlation is not statistically significant either.   
 
 #### 3. Renewable Supply
 Which country among the top 15 GDP ranking has the maximum and minimum % Renewable? 
@@ -219,8 +220,7 @@ We will find the mean of percent Renewable of the top 15 GDP ranking and compare
 def Compare_Renewable ():
     df = adding_avgGDP()
     df = df.iloc[:15]
-    df = df.round({'% Renewable':2})
-    mean_value = df['% Renewable'].mean()
+    mean_value = round(df['% Renewable'].mean(),2)
     df['Compare % Renewable'] = df['% Renewable'].apply(lambda x: 'Below' if x < mean_value else 'Above')
     result = df[['% Renewable', 'Compare % Renewable']]
     return mean_value, result
@@ -228,7 +228,7 @@ def Compare_Renewable ():
 Compare_Renewable ()
 ```
 Output: 
-(23.30466666666667)     
+(23.30)     
 
 Country  |                % Renewable |Compare % Renewable
 ---|---|---                                         
@@ -254,25 +254,30 @@ Only 4 out of 15 countries are above the mean value of % Renewable value for the
 #### 4. Analysis by Continent
 ##### * Population
 
+<ul>
+My indented text goes here, and it can be long and wrap if you like.
+And you can have multiple lines if you want.
+</ul>
+
 We are going to use the following dictionary to group the top 15 countries by continent, creating a DataFrame that displays the sample size (the number of countries in each continent bin), and the sum, mean, and std deviation for the estimated population of each country. 
 
-ContinentDict  = {'United States':'North America', <br>
-                  'China':'Asia', <br>
-                  'Japan':'Asia', <br>
-                  'Germany':'Europe', <br>
-                  'France':'Europe', <br>
-                  'United Kingdom':'Europe', <br>
-                  'Brazil':'South America', <br>
-                  'Italy':'Europe', <br>
-                  'India':'Asia', <br>
-                  'Canada':'North America', <br>
-                  'Russian Federation':'Europe', <br>
-                  'Spain':'Europe', <br>
-                  'Australia':'Australia', <br>
-                  'South Korea':'Asia', <br>
+```
+ContinentDict  = {'United States':'North America', 
+                  'China':'Asia', 
+                  'Japan':'Asia', 
+                  'Germany':'Europe', 
+                  'France':'Europe', 
+                  'United Kingdom':'Europe', 
+                  'Brazil':'South America',
+                  'Italy':'Europe', 
+                  'India':'Asia',
+                  'Canada':'North America', 
+                  'Russian Federation':'Europe', 
+                  'Spain':'Europe', 
+                  'Australia':'Australia', 
+                  'South Korea':'Asia', 
                   'Mexico':'North America'}
 
-```
 def dict_dataframe():
     df = adding_avgGDP()
     df = df.iloc[:15]
@@ -300,7 +305,6 @@ stats_calculations ()
 ```
 Output: 
 
-
 Continent			|	size|	sum|	mean|	std
 ---|---|---|--|---
 Asia|	4|	2.821591e+09|	7.053977e+08	|7.138779e+08
@@ -309,6 +313,7 @@ Europe|	6|	4.579297e+08|	7.632161e+07|	3.464767e+07
 North America	|3	|4.769802e+08|	1.589934e+08	|1.443809e+08
 South America|	1|	2.059153e+08|	2.059153e+08|	NaN
 <br>
+
 Asia is the most populous continent with the most average and total population per country. Because there is only 1 country in Australia and South America continent within the 15 top ranking countries, std shows NaN for these 2 continents.
 
 
