@@ -4,8 +4,13 @@ mathjax: true
 layout: post
 categories: media
 ---
-<img style="float:left" src="/assets/images/Image2_small.png">
+<img style="float:left" src="/assets/images/Image2b_small.png">
 
+<br> <br> 
+
+In this project, we will use Python to explore data related to the bike share systems for the three major cities in the United States which are Chicago, New York City, and Washington. Our program will take queries and input from the users with which information they want to see to create an interactive experience by returing descriptive statistics to answer the users' questions. 
+
+<br> <br> 
 ### Executive Summary
 1.	Introduction
 2.	Project Objectives
@@ -14,9 +19,6 @@ categories: media
 
 ### 1.	Introduction
 Over the past decade, bicycle-sharing systems have been growing in number and popularity in cities across the world. Bicycle-sharing systems allow users to rent bicycles on a very short-term basis for a price. This allows people to borrow a bike from point A and return it at point B, though they can also return it to the same location if they'd like to just go for a ride. Regardless, each bike can serve several users per day.
-
-In this project, we will make use of Python to explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington. 
-We will write a program to answer interesting questions about it by computing descriptive statistics. Our program will take input from the users about which information they want to see to create an interactive experience by presenting these statistics. 
 
 Datasets for the 3 cities:
 
