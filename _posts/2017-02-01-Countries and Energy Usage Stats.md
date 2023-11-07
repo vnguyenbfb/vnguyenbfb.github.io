@@ -228,7 +228,8 @@ def Compare_Renewable ():
 Compare_Renewable ()
 ```
 Output: 
-(23.30466666666667)                    
+(23.30466666666667)     
+
 Country  |                % Renewable |Compare % Renewable
 ---|---|---                                         
  United States      |       11.57      |         Below <br>
@@ -246,6 +247,7 @@ Country  |                % Renewable |Compare % Renewable
  Australia          |       11.81      |         Below <br>
  South Korea        |        2.28      |         Below <br>
  Mexico             |       12.91      |         Below <br>
+
 
 Only 4 out of 15 countries are above the mean value of % Renewable value for the top 15 countries. Most "below" countries are in the teen-ish range which is significantly low compared to the "above" countries.
 
@@ -298,6 +300,7 @@ description_stats()
 ```
 Output: 
 
+
 Continent			|	size|	sum|	mean|	std
 ---|---|---|--|---
 Asia|	4|	2.821591e+09|	7.053977e+08	|7.138779e+08
@@ -308,8 +311,9 @@ South America|	1|	2.059153e+08|	2.059153e+08|	NaN
 <br>
 Asia is the most populous continent with the most average and total population per country. Because there is only 1 country in Australia and South America continent within the 15 top ranking countries, std shows NaN for these 2 continents.
 
+
 ##### * Renewable Energy
-We are Cut % Renewable into 5 bins. Group Top15 by the Continent, as well as these new % Renewable bins. How many countries are in each of these groups? 
+we are going to Cut % Renewable into 5 bins and group Top 15 GDP ranking by Continent, as well as these new % Renewable bins and find out how many countries are in each of these groups? 
 
 ### Summary of Findings
 
