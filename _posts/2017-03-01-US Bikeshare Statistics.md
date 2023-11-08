@@ -87,7 +87,8 @@ def get_filters():
       break
 
   """ GET THE FILTER """
-  filter = input("Would you like to see by month (type 'month'), by day (type 'day') or both (type 'both')? Press any key if you do not want any filter. ")
+  filter = input("Would you like to see by month (type 'month'), by day (type 'day') or both (type 'both')?
+                  Press any key if you do not want any filter. ")
 
   return city, filter
 
@@ -315,7 +316,8 @@ Sample Output:
 
 ```
 Please enter a city name (Chicago, New York or Washington): Chicago
-Would you like to see by month (type 'month'), by day (type 'day') or both (type 'both')? Press any key if you do not want any filter. both
+Would you like to see by month (type 'month'), by day (type 'day') or both (type 'both')?
+Press any key if you do not want any filter. both
 Please enter full name of a month (January, February, March, April, May or June): March
 Please enter a number between 0 and 6 i.e 0 for Monday, 1 for Tuesday, ect: 9
 Please re-enter a valid number: 
@@ -418,7 +420,8 @@ Would you like to see more raw data? Type 'Y' or 'N' N
 ------------------------------------------------------------------------------
 Would you like to restart? Type 'Y' or 'N' Y
 Please enter a city name (Chicago, New York or Washington): wASHINGTON
-Would you like to see by month (type 'month'), by day (type 'day') or both (type 'both')? Press any key if you do not want any filter. MONTH
+Would you like to see by month (type 'month'), by day (type 'day') or both (type 'both')?
+Press any key if you do not want any filter. MONTH
 Please enter full name of a month (January, February, March, April, May or June): jANUARY
 Please re-enter a valid month: 
 Please enter full name of a month (January, February, March, April, May or June): January
