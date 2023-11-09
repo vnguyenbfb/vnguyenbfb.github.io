@@ -1,5 +1,5 @@
 ---
-title:  "Countries and Energy Usage Stats"
+title:  "Countries and Energy Usage Statistics"
 mathjax: true
 layout: post
 categories: media 
@@ -14,15 +14,16 @@ In this project we will use use Python to cleanse and prepare the dataset before
 
 <br> <br> 
 ### Overview
-   * Introduction <br>
-   * Data Cleansing and Preparation <br>
-   * Reporting and Analysis <br>
-        - GDP
-        - Energy Supply
-        - Renewable Supply
-        - By Continent
-            - By Population
-            - By Renewable Energy Level
+1. Introduction <br>
+2. Data Cleansing and Preparation <br>
+3. Reporting and Analysis <br>
+   * GDP
+   * Energy Supply
+   * Renewable Supply
+   * Continents
+       - By Population
+       - By Renewable Energy Level
+4. Findings
 
    
 ### 1. Introduction
@@ -64,7 +65,8 @@ def cleansed_df():
                                         
     # ScimEn dataframe                                             
     ScimEn = pd.read_excel('assets/scimagojr-3.xlsx', header=0, index_col=False, keep_default_na=True)  
-    
+    ScimEn.drop(ScimEn.iloc[:, 2:], inplace=True, axis=1)
+
     # Join dataframes                                        
     df = ScimEn.merge(energy, on = 'Country').merge(gdp, on = 'Country')
     column_titles = ['Country', 'Rank', 'Documents', 'Citable documents', 'Citations', 'Self-citations', 'Citations per document',
@@ -75,7 +77,7 @@ def cleansed_df():
     return df     
 
 df = cleansed_df()
-top15_Scimagojr_ranking = 'df.iloc[:15]
+df.iloc[:15]
 
 ```
 
@@ -189,13 +191,13 @@ def correlation_check():
     df = adding_avgGDP()
     df = df.iloc[:15]  
     corr, pval = stats.pearsonr(df['2013'], df['Energy Supply per Capita'])
-    return round(corr,5), round(pval,5)
+    return corr, pval
 
 correlation_check()
 ```
-Output: (0.30675, 0.26612) <br>
+Output: (0.30674695967590515, 0.26612100439533454) <br>
 
-Correlation coefficient of 0.30675 is telling us that the two variables are not in a strong direct relationship and p-value of 0.26612 means the correlation is not statistically significant either.   
+Correlation coefficient of 0.30674695967590515 is telling us that the two variables are not in a strong direct relationship and p-value of 0.26612100439533454 means the correlation is not statistically significant either.   
 
 #### 3.3. Renewable Supply
 Which country among the top 15 GDP ranking has the maximum and minimum % Renewable? 
@@ -226,7 +228,7 @@ We will find the mean of percent Renewable of the top 15 GDP ranking and compare
 def Compare_Renewable ():
     df = adding_avgGDP()
     df = df.iloc[:15]
-    mean_value = round(df['% Renewable'].mean(),2)
+    mean_value = df['% Renewable'].mean()
     df['Compare % Renewable'] = df['% Renewable'].apply(lambda x: 'Below' if x < mean_value else 'Above')
     result = df[['% Renewable', 'Compare % Renewable']]
     return mean_value, result
@@ -234,25 +236,25 @@ def Compare_Renewable ():
 Compare_Renewable ()
 ```
 Output: 
-(23.30)     
+(23.30477286666667)     
 
 Country  |                % Renewable |Compare % Renewable
 ---|---|---                                         
- United States      |       11.57      |         Below <br>
- China              |       19.75      |         Below <br>
- Japan              |       10.23      |         Below <br>
- Germany            |       17.90      |         Below <br>
- France             |       17.02      |         Below <br>
- United Kingdom     |       10.60      |         Below <br>
- Brazil             |       69.65      |         *Above* <br>
- Italy              |       33.67      |         *Above* <br>
- India              |       14.97      |         Below <br>
- Canada             |       61.95      |         *Above* <br>
- Russian Federation |       17.29      |         Below <br>
- Spain              |       37.97      |         *Above* <br>
- Australia          |       11.81      |         Below <br>
- South Korea        |        2.28      |         Below <br>
- Mexico             |       12.91      |         Below <br>
+ United States      |       11.570980      |         Below <br>
+ China              |       19.754910      |         Below <br>
+ Japan              |       10.232820      |         Below <br>
+ Germany            |       17.901530      |         Below <br>
+ France             |       17.020280      |         Below <br>
+ United Kingdom     |       10.600470      |         Below <br>
+ Brazil             |       69.648030      |         *Above* <br>
+ Italy              |       33.667230      |         *Above* <br>
+ India              |       14.969080      |         Below <br>
+ Canada             |       61.945430      |         *Above* <br>
+ Russian Federation |       17.288680      |         Below <br>
+ Spain              |       37.968590      |         *Above* <br>
+ Australia          |       11.810810      |         Below <br>
+ South Korea        |        2.279353      |         Below <br>
+ Mexico             |       12.913400      |         Below <br>
 
 
 Only 4 out of 15 countries are above the mean value of % Renewable value for the top 15 countries. Most "below" countries are in the teen-ish range which is significantly low compared to the "above" countries.
@@ -293,9 +295,7 @@ def dict_dataframe():
     continent_df.columns = ['Country', 'Continent']
     continent_df = continent_df.set_index('Country')
     merged_df = pd.merge(continent_df, df, left_index=True, right_on= ['Country'], how = 'left')
-    merged_df = merged_df.drop(['Rank', 'Documents', 'Citable documents', 'Citations', 'Self-citations', 'Citations per document',
-                                'H index', 'Energy Supply', 'Energy Supply per Capita', '% Renewable', '2006', '2007', '2008', '2009',
-                                '2010', '2011', '2012', '2013', '2014', '2015', 'avgGDP'], axis=1)
+    merged_df.drop(columns=merged_df.columns[1:-1], inplace=True)
     return merged_df
 
 def stats_calculations ():
@@ -350,7 +350,6 @@ merged_df = dict_dataframe()
 def Renewable_bins():
     
     merged_df = dict_dataframe()
-    
     new_df['bins'] = pd.cut(df['% Renewable'], bins=5)
     my_series = new_df.groupby(['Continent', 'bins'])['Continent'].count()
     return my_series
@@ -389,7 +388,7 @@ South America  (-0.1, 20.0]     0
 Name: Continent, dtype: int64
 ```
 
-
+### 4. Findings
 
 
 
