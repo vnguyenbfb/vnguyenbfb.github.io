@@ -184,6 +184,7 @@ plt.title('Record High and Record Low Temperatures by Day of the Year 10 year Pe
 
 ### Findings
 Based on the graph, we are going to answer the question: *"Is extreme weather getting more frequent in 2015?"*
+
 According to the graph, there is no trend showing that year 2015 is getting more frequent extreme weather. The most extreme cold weather is observed in February 2015 and extreme cold weather in  December 2015. Hot and cold extreme weather is also seen across the year but is not significantly as frequent compared to February and December 2015. 
 
 For future work, we can compare the extreme weather frequency in 2015 versus previous years like 2014, 2013, ect. to define any possible trends.
