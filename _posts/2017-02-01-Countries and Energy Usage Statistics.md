@@ -27,9 +27,11 @@ In this project we will use use Python to cleanse and prepare the dataset before
 
    
 ### 1. Introduction
-i.The energy datafile “Energy Indicators” is a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013, we will put the information into a DataFrame with the variable name of **Energy**. This datafile is in Excel format and available [here](http://unstats.un.org/unsd/environment/excel_file_tables/2013/Energy%20Indicators.xls). <br>
-ii.The GDP data is a csv containing countries' GDP from 1960 to 2015 from World Bank. We name this DataFrame **GDP**. The GDP datafile can be found [here](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD). <br>
-iii.The Sciamgo Journal and Country Rank data for Energy Engineering and Power Technology, which ranks countries based on their journal contributions in the aforementioned area. We call this DataFrame **ScimEn**. The datafile can be found [here](https://www.scimagojr.com/countryrank.php?category=2102). 
+The energy datafile “Energy Indicators” is a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013, we will put the information into a DataFrame with the variable name of **Energy**. This datafile is in Excel format and available [here](http://unstats.un.org/unsd/environment/excel_file_tables/2013/Energy%20Indicators.xls). 
+
+The GDP data is a csv containing countries' GDP from 1960 to 2015 from World Bank. We name this DataFrame **GDP**. The GDP datafile can be found [here](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD). 
+
+The Sciamgo Journal and Country Rank data for Energy Engineering and Power Technology, which ranks countries based on their journal contributions in the aforementioned area. We call this DataFrame **ScimEn**. The datafile can be found [here](https://www.scimagojr.com/countryrank.php?category=2102). 
 
 ### 2. Data Cleansing and Preparation
 The first task we need to do is to change some of the column names and country names for easy recognition and alignment. Some countries have different names on the dataframes. For example, South Korea is named "Republic of Korea" in the Energy Dataframe and "Korea, Rep." in the GDP Dataframe, or Hong Kong is called "China, Hong Kong Special Administrative Region" in the Energy Dataframe and "Hong Kong SAR, China" in the GDP Dataframe, ect. And for all countries which have missing data (e.g. data with "..."), missing data will be reflected as np.NaN values.<br>
