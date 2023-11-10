@@ -15,6 +15,8 @@ We will use the daily climate records of Ann Arbor Michigan from a subset of The
 
 
 
+
+
 ### Overview
 
 Introduction
