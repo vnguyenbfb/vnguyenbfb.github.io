@@ -11,11 +11,15 @@ We will use the daily climate records of Ann Arbor Michigan from a subset of The
 (GHCN-Daily) to plot line graphs of the record high and record low temperatures by the day of the year over the period 2005-2014. 
 
 
+
+
+
 ### Overview
 Introduction
 Source Code
 Plotting
-Analysis
+Findings
+
 
 
 ### 1. Introduction
@@ -70,7 +74,7 @@ Printshots of the map as below.
 
 <img src="/assets/images/P5_2.png">
 
-##### Step 1:
+#### Step 1:
 
 In step 1, we are going to load the dataset and transform the data into Celsius then extract all of the rows which have minimum or maximum temperatures.
 
@@ -100,7 +104,7 @@ df['Data_Value(C)'] = round((df['Data_Value'] - 32) * 5/9, 1)
 df_TMAX = df[df['Element']=='TMAX']
 df_TMIN = df[df['Element']=='TMIN']
 ```
-##### Step 2:
+#### Step 2:
 
 In order to visualize the data we would plot the min and max data for each day of the year between the years 2005 and 2014 across all weather stations. But we also need to find out when the min or max temperature in 2015 falls below the min or rises above the max for the previous decade.
 
@@ -131,7 +135,7 @@ TMIN_10Y = TMIN_10Y.drop(['02-29'], axis = 'index')
 TMIN_10Y = TMIN_10Y.reset_index()
 TMIN_10Y.rename(columns = {'Data_Value(C)':'TMIN_10Y_Temp'}, inplace = True)
 ```
-##### Step 3:
+#### Step 3:
 
 Now that we have grouped the daily max and min temperatures for each day of the years 2005 through 2015, we will separate out the data for 2015. Then we are going to use the Pandas groupby function to find the max and min of the temperature data for each day of the year for the 2005-2014 data.
 
@@ -143,7 +147,7 @@ merged_df['IsGreater'] = np.where((merged_df['TMAX_2015_Temp'] > merged_df['TMAX
 merged_df['IsLower'] = np.where((merged_df['TMIN_2015_Temp'] < merged_df['TMIN_10Y_Temp']), merged_df['TMIN_2015_Temp'], np.nan)
 ```
 
-##### Step 4:
+#### Step 4:
 Now it's time to plot! You are going to use matplotlib to plot line graphs of the min and max temperatures for the years 2005 through 2014 and to scatter plot only the daily 2015 temperatures that exceeded those values.
 
 ```
@@ -173,6 +177,8 @@ plt.yticks(np.arange(round(min(TMIN_scatter_df['IsLower']), -1), 250, 20))
 plt.xticks([0,31,59,90,120,151,181,212,243,273,304,334], ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
 plt.title('Record High and Record Low Temperatures by Day of the Year 10 year Period 2005-2014 vs. 2015', fontsize = 24)
 ```
-Output:
+### Plotting
 
-<img src="/assets/images/P5_1.png">
+<img src="/assets/images/P5_3.png">
+
+### Findings
