@@ -54,9 +54,9 @@ def cleansed_df():
     energy['Energy Supply'] = energy['Energy Supply'].astype('int')
     energy = energy.replace('\s\([\w ]*\)', '', regex=True)
     energy = energy.replace('[0-9]+$', '', regex=True)
-    energy = energy.replace(['Republic of Korea', 'United States of America', 'United Kingdom of Great Britain and Northern Ireland',
-                            'China, Hong Kong Special Administrative Region', '...'], 
-                            ['South Korea', 'United States', 'United Kingdom', 'Hong Kong', np.nan])
+    energy = energy.replace(['Republic of Korea', 'China, Hong Kong Special Administrative Region', 'United States of America',
+                            'United Kingdom of Great Britain and Northern Ireland', '...'], 
+                            ['South Korea', 'Hong Kong', 'United States', 'United Kingdom', np.nan])
     energy['Energy Supply'] = energy['Energy Supply'] * 1000000
 
     # gdp dataframe
@@ -72,8 +72,8 @@ def cleansed_df():
     
     #Join dataframes                                        
     df = ScimEn.merge(energy, on = 'Country').merge(gdp, on = 'Country')
-    column_titles = ['Country', 'Rank', 'Energy Supply', 'Energy Supply per Capita', '% Renewable', '2006', '2007', '2008', '2009', '2010',
-                    '2011', '2012', '2013', '2014', '2015']                                             
+    column_titles = ['Country', 'Rank', 'Energy Supply', 'Energy Supply per Capita', '% Renewable', '2006', '2007', '2008', '2009',
+                    '2010', '2011', '2012', '2013', '2014', '2015']                                             
     df = df[column_titles]
     df = df.set_index('Country')
     return df                                      
@@ -359,7 +359,7 @@ def Renewable_bins():
 
 Renewable_bins()
 ```
-Output
+Output:
 
 ```
 Continent      bins         
