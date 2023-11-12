@@ -46,7 +46,8 @@ import re
 
 def cleansed_df():
     #energy dataframe
-    energy = pd.read_excel('assets/Energy Indicators.xls', header=0, index_col=False, keep_default_na=True, skiprows=17)
+    energy = pd.read_excel('assets/Energy Indicators.xls', header=0, index_col=False, keep_default_na=True,
+             skiprows=17)
     energy = energy.iloc[:227]
     energy = energy.drop(energy.columns[[0, 1]], axis = 1)
     energy.columns = ['Country', 'Energy Supply', 'Energy Supply per Capita', '% Renewable']
@@ -54,9 +55,9 @@ def cleansed_df():
     energy['Energy Supply'] = energy['Energy Supply'].astype('int')
     energy = energy.replace('\s\([\w ]*\)', '', regex=True)
     energy = energy.replace('[0-9]+$', '', regex=True)
-    energy = energy.replace(['Republic of Korea', 'China, Hong Kong Special Administrative Region', 'United States of America',
-                            'United Kingdom of Great Britain and Northern Ireland', '...'], 
-                            ['South Korea', 'Hong Kong', 'United States', 'United Kingdom', np.nan])
+    energy = energy.replace(['United States of America', 'China, Hong Kong Special Administrative Region',
+                            'Republic of Korea', 'United Kingdom of Great Britain and Northern Ireland', '...'], 
+                            ['United States', 'Hong Kong', 'South Korea', 'United Kingdom', np.nan])
     energy['Energy Supply'] = energy['Energy Supply'] * 1000000
 
     # gdp dataframe
@@ -72,8 +73,8 @@ def cleansed_df():
     
     #Join dataframes                                        
     df = ScimEn.merge(energy, on = 'Country').merge(gdp, on = 'Country')
-    column_titles = ['Country', 'Rank', 'Energy Supply', 'Energy Supply per Capita', '% Renewable', '2006', '2007', '2008', '2009',
-                    '2010', '2011', '2012', '2013', '2014', '2015']                                             
+    column_titles = ['Country', 'Rank', 'Energy Supply', 'Energy Supply per Capita', '% Renewable',
+                    '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015']                                             
     df = df[column_titles]
     df = df.set_index('Country')
     return df                                      
