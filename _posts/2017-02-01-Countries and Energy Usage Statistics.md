@@ -34,10 +34,13 @@ The GDP data is a csv containing countries' GDP from 1960 to 2015 from World Ban
 The Sciamgo Journal and Country Rank data for Energy Engineering and Power Technology, which ranks countries based on their journal contributions in the aforementioned area. We call this DataFrame **ScimEn**. The datafile can be found [here](https://docs.google.com/spreadsheets/d/1mvfsk0nhPlhu70XHirBIHn-3tCg54eBl/edit?usp=drive_link&ouid=106973170624396683384&rtpof=true&sd=true).
 
 ### 2. Data Cleansing and Preparation
-The first task we need to do is to change some of the column names and country names for easy recognition and alignment. Some countries have different names on the dataframes. For example, South Korea is named "Republic of Korea" in the Energy Dataframe and "Korea, Rep." in the GDP Dataframe, or Hong Kong is called "China, Hong Kong Special Administrative Region" in the Energy Dataframe and "Hong Kong SAR, China" in the GDP Dataframe, ect. And for all countries which have missing data (e.g. data with "..."), missing data will be reflected as np.NaN values.<br>
-To make it easier, we exclude the footer and header information from the datafiles, and trimming unnecessary columns.<br>
-We are going to join the three datasets: GDP, Energy, and ScimEn into a new dataset (using the intersection of country names), specifically focus on the last 10 years (2006-2015) of GDP data and the top 15 countries by Scimagojr 'Rank' (Rank 1 through 15).<br>
-The index of this DataFrame is the names of the countries. <br>
+The first task we need to do is to change some of the column names and country names for easy recognition and alignment. Some countries have different names on the dataframes. For example, South Korea is named "Republic of Korea" in the Energy Dataframe and "Korea, Rep." in the GDP Dataframe, or Hong Kong is called "China, Hong Kong Special Administrative Region" in the Energy Dataframe and "Hong Kong SAR, China" in the GDP Dataframe, ect. And for all countries which have missing data (e.g. data with "..."), missing data will be reflected as np.NaN values.
+
+To make it easier, we exclude the footer and header information from the datafiles, and trimming unnecessary columns.
+
+We are going to join the three datasets: GDP, Energy, and ScimEn into a new dataset (using the intersection of country names), specifically focus on the last 10 years (2006-2015) of GDP data and the top 15 countries by Scimagojr 'Rank' (Rank 1 through 15).
+
+The index of this DataFrame is the names of the countries. 
 
 ```
 import pandas as pd
@@ -90,10 +93,12 @@ df.iloc[:15]
 ### 3. Reporting and Analysis
 #### 3.1. GDP
 We are curious to know what are the top 15 countries in terms of average GDP over the last 10 years.
+
 ```
 def adding_avgGDP():
   df = cleansed_df()
-  df['avgGDP'] = df[['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015']].mean(axis=1)
+  df['avgGDP'] = df[['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013',
+                    '2014', '2015']].mean(axis=1)
   df = df.sort_values(by='avgGDP', ascending=False)
   return df
 df = adding_avgGDP()
@@ -136,7 +141,8 @@ def GDP_percent_change():
 GDP_percent_change()
 
 ```
-The output:
+Output:
+
 ```
 Country
 China                 120.37%
@@ -157,11 +163,12 @@ Italy                  -6.94%
 Name: %GDPchange, dtype: object
 
 ```
-Compared to 2006, China's GDP has impressively gained 120.37% in 2015. Paired with the magnitude of its GDP, China's economy is growing strongest over the years. Aside from China, the other countries in top 5 of highest average GDP are not seeing their GDP gaining that much. It is worth noticing that the top 3 fastest gainers are Asian countries, with India in the second place and South Korea in the third place. <br>
+Compared to 2006, China's GDP has impressively gained 120.37% in 2015. Paired with the magnitude of its GDP, China's economy is growing the strongest over the years. India comes second at 87%. It is worth noticing that the top 3 fastest gainers are Asian countries, with India in the second place and South Korea in the third place. Aside from China, the other countries in top 5 of highest average GDP are not seeing their GDP gaining that much. The largest economy which is the U.S only gains modestly 11.87%. 
+
 Spain's GDP is almost the same as 10 years ago at 0.35% growth rate and Italy's GDP actually shrinks at -6.94% growth rate. Japan is the 3rd biggest GDP but sees a modest growth rate of only 3.15% compared to 10 years ago.
 
 #### 3.2. Energy Supply
-In this part, we will drill into the Energy supply statistics. Keep in mind that this data is for the year 2013. 
+In this part, we will drill into the Energy supply statistics. Keep in mind that this data is for the year 2013. <br>
 Let's take a look at the average energy supply per capita in 2013 for all the countries.
 
 ```
@@ -184,8 +191,9 @@ def avg_supply_per_capita_top15():
 avg_supply_per_capita_top15()
 ```
 
-Running the above function, we've got the average energy supply per capita for the top 15 countries is *153.93 (Gigajoules)*, which is 152% that of all countries. <br>
-This gap leads to our next question: Is there any correlation between average energy supply per capita and GDP? Because the Energy Data is only for the year 2013, we are going to use GDP for the year 2013 as well for the correlation test. We will review this for only the top 15 GDP ranking countries, given that some other countries do not have GDP data for 2013. <br>
+Running the above function, we've got the average energy supply per capita for the top 15 countries is *153.93 (Gigajoules)*, which is 152% that of all countries. 
+
+This gap leads to our next question: Is there any correlation between energy supply per capita and GDP? Because the Energy Data is only for the year 2013, we are also going to use GDP for the year 2013 for the correlation test. We will review this for only the top 15 GDP ranking countries, given that some other countries do not have GDP data for 2013. 
 
 ```
 import scipy.stats as stats
@@ -198,12 +206,13 @@ def correlation_check():
 
 correlation_check()
 ```
-Output: (0.30674695967590515, 0.26612100439533454) <br>
+Output: (0.30674695967590515, 0.26612100439533454) 
 
-Correlation coefficient of 0.30674695967590515 is telling us that the two variables are not in a strong direct relationship and p-value of 0.26612100439533454 means the correlation is not statistically significant either.   
+Correlation coefficient of 0.30674695967590515 is telling us that the two variables are not in a strong direct relationship and p-value of 0.26612100439533454 means the correlation is not statistically significant either. This can very likely be explained by the difference in population sizes of the countries.
 
 #### 3.3. Renewable Supply
 Which country among the top 15 GDP ranking has the maximum and minimum % Renewable? 
+
 ```
 def check_Renewable():
     df = adding_avgGDP()
@@ -224,8 +233,8 @@ Output:
  ('China', 19.75), <br>
  ('United States', 11.57))
  
-Brazil impressively has the maximum % Renewable Energy (69.65%) while South Korea has the minimum % Renewable Energy (2.28%) out the top 15 GDP ranking countries.
-Brazil's percent Renewable is quite far ahead of those of the two biggest economies the U.S and China.
+Brazil magnificently has the maximum % Renewable Energy (69.65%) while South Korea has the minimum % Renewable Energy (2.28%) out the top 15 GDP ranking countries.
+Brazil's % Renewable is quite far ahead of those of the two biggest economies which are the U.S (11.57%) and China (19.75%).
 
 We will find the mean of percent Renewable of the top 15 GDP ranking and compare their percent Renewable to that value.
 ```
@@ -265,11 +274,6 @@ Only 4 out of 15 countries are above the mean value of % Renewable value for the
 
 #### 3.4. Analysis by Continent
 ##### 3.4.1. By Population
-
-<ul>
-My indented text goes here, and it can be long and wrap if you like.
-And you can have multiple lines if you want.
-</ul>
 
 We are going to use the following dictionary to group the top 15 countries by continent, creating a DataFrame that displays the sample size (the number of countries in each continent bin), and the sum, mean, and std deviation for the estimated population of each country. 
 
@@ -326,7 +330,7 @@ North America	|3	  |4.769802e+08 |	1.589934e+08	|1.443809e+08
 South America |	1   |	2.059153e+08|	2.059153e+08  |	NaN
 
 <br>
-Asia is the most populous continent with the most average and total population per country. Because there is only 1 country in Australia and South America continent within the 15 top ranking countries, std shows NaN for these 2 continents.
+Asia is the most populous continent with the largest average, total population and aslo standard deviation. Because there is only 1 country in Australia and South America continent within the 15 top ranking countries, std shows NaN for these 2 continents.
 
 
 ##### 3.4.2. By Renewable Energy Level
@@ -360,7 +364,7 @@ def Renewable_bins():
 
 Renewable_bins()
 ```
-Output:
+Output: The bins offer better observation of the difference among continents in terms of % Renewable Energy.
 
 ```
 Continent      bins         
@@ -393,6 +397,16 @@ Name: Continent, dtype: int64
 ```
 
 ### 4. Findings
+
+According to the average GDP over the past 10 years from 2006 to 2015, U.S is the largest economy, followed by China and Japan. The three European countries which are Germany, France and U.K come in third, fourth and fifth place.
+
+In terms of GDP change when comparing that of 2015 and 2006, China's GDP has gained the strongest at 120.37%. India comes second at 87%. U.S, the largest economy gained modestly 11.87%. Aside from China, the other countries in the top 5 largest GDP ranking are not gaining that much (between 3.15% and 11.87%). It is worth noticing that the top 3 fastest gainers are Asian countries which are China, India and South Korea. Spain's GDP is almost stagnant over the past 10 years while Italy's GDP actually shrinks at a -6.94% growth rate.
+
+Average energy supply per capital for the top 15 countries is 153.93 Gigajoules which is 152% that of all countries in 2013. When running correlation test on the energy supply per capita of 2013 and 2013 GDP on those 15 top ranking, we don't see a strong direct relationship. This can likely be due to the difference in their population sizes.
+
+Being the 7th largest average GDP in the period 2006-2015, Brazil magnificently has the maximum % Renewable Energy at 69.65% which is quite far ahead of those of the two biggest economies which are the U.S (11.57%) and China (19.75%). South Korea (ranked 14th) has the minimum % Renewable Energy at 2.28%. And when we compare % Renewable Energy of those top 15 GDP ranking ies to their mean value (23.30%), only 4 countries including Brazil, Italy, Canada and Spain are above average.
+
+Looking into the population of those top 15 GDP ranking grouped by continent, Asia is the most populous continent with the largest average, total population and aslo standard deviation.
 
 
 
