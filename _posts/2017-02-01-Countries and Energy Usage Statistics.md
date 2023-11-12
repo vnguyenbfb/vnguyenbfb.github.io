@@ -45,45 +45,45 @@ import numpy as np
 import re
 
 def cleansed_df():
-    # Energy dataframe
+    #energy dataframe
     energy = pd.read_excel('assets/Energy Indicators.xls', header=0, index_col=False, keep_default_na=True, skiprows=17)
     energy = energy.iloc[:227]
     energy = energy.drop(energy.columns[[0, 1]], axis = 1)
-    print(energy)
     energy.columns = ['Country', 'Energy Supply', 'Energy Supply per Capita', '% Renewable']
-    energy['Energy Supply'] = energy['Energy Supply'] * 1000000
+    energy = energy.loc[energy['Energy Supply'] != '...' ]
+    energy['Energy Supply'] = energy['Energy Supply'].astype('int')
     energy = energy.replace('\s\([\w ]*\)', '', regex=True)
     energy = energy.replace('[0-9]+$', '', regex=True)
     energy = energy.replace(['Republic of Korea', 'United States of America', 'United Kingdom of Great Britain and Northern Ireland',
-                            'China, Hong Kong Special, Administrative Region', '...'],
+                            'China, Hong Kong Special Administrative Region', '...'], 
                             ['South Korea', 'United States', 'United Kingdom', 'Hong Kong', np.nan])
-    
-    # GDP dataframe
+    energy['Energy Supply'] = energy['Energy Supply'] * 1000000
+
+    # gdp dataframe
     gdp = pd.read_csv("assets/world_bank.csv", skiprows=4)                          
     gdp.rename(columns={'Country Name':'Country'}, inplace=True)
     gdp['Country'] = gdp['Country'].replace(['Korea, Rep.', 'Iran, Islamic Rep.', 'Hong Kong SAR, China'],
                                             ['South Korea', 'Iran', 'Hong Kong'])
     gdp.drop(gdp.iloc[:, 1:-10], inplace=True, axis=1)
-                                        
+                                                     
     # ScimEn dataframe                                             
     ScimEn = pd.read_excel('assets/scimagojr-3.xlsx', header=0, index_col=False, keep_default_na=True)  
     ScimEn.drop(ScimEn.iloc[:, 2:], inplace=True, axis=1)
-
-    # Join dataframes                                        
+    
+    #Join dataframes                                        
     df = ScimEn.merge(energy, on = 'Country').merge(gdp, on = 'Country')
-    column_titles = ['Country', 'Rank', 'Documents', 'Citable documents', 'Citations', 'Self-citations', 'Citations per document',
-                    'H index', 'Energy Supply', 'Energy Supply per Capita', '% Renewable', '2006', '2007', '2008', '2009', '2010',
+    column_titles = ['Country', 'Rank', 'Energy Supply', 'Energy Supply per Capita', '% Renewable', '2006', '2007', '2008', '2009', '2010',
                     '2011', '2012', '2013', '2014', '2015']                                             
     df = df[column_titles]
     df = df.set_index('Country')
-    return df     
-
+    return df                                      
+                
 df = cleansed_df()
 df.iloc[:15]
 
 ```
 
-<img src="/assets/images/P3_Q1.png">
+<img src="/assets/images/P3_1.png">
 
 
 ### 3. Reporting and Analysis
@@ -217,9 +217,10 @@ def check_Renewable():
 check_Renewable()
 ```
 Output: 
-(('Brazil', 69.65),
- ('South Korea', 2.28),
- ('China', 19.75),
+
+(('Brazil', 69.65), <br>
+ ('South Korea', 2.28), <br>
+ ('China', 19.75), <br>
  ('United States', 11.57))
  
 Brazil impressively has the maximum % Renewable Energy (69.65%) while South Korea has the minimum % Renewable Energy (2.28%) out the top 15 GDP ranking countries.
