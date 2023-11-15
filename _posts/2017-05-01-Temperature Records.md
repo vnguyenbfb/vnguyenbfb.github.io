@@ -151,8 +151,10 @@ Now that we have grouped the daily max and min temperatures for each day of the 
 import numpy as np
 
 merged_df = TMAX_10Y.merge(TMAX_2015, on='MM-DD').merge(TMIN_10Y, on='MM-DD').merge(TMIN_2015, on='MM-DD')
-merged_df['IsGreater'] = np.where((merged_df['TMAX_2015_Temp'] > merged_df['TMAX_10Y_Temp']), merged_df['TMAX_2015_Temp'], np.nan)
-merged_df['IsLower'] = np.where((merged_df['TMIN_2015_Temp'] < merged_df['TMIN_10Y_Temp']), merged_df['TMIN_2015_Temp'], np.nan)
+merged_df['IsGreater'] = np.where((merged_df['TMAX_2015_Temp'] > merged_df['TMAX_10Y_Temp']),
+                                  merged_df['TMAX_2015_Temp'], np.nan)
+merged_df['IsLower'] = np.where((merged_df['TMIN_2015_Temp'] < merged_df['TMIN_10Y_Temp']),
+                                merged_df['TMIN_2015_Temp'], np.nan)
 ```
 
 #### Step 4:
@@ -165,8 +167,10 @@ from calendar import month_abbr
 fig = plt.figure(figsize=(20,16))
 plt.rcParams['font.size'] = '16'
 ax = fig.add_subplot(1,1,1)
-ax.plot(merged_df['MM-DD'], merged_df['TMAX_10Y_Temp'], label = 'Temperature Max of 10 Years (2005_2014)', color='lightblue', lw=3)
-ax.plot(merged_df['MM-DD'], merged_df['TMIN_10Y_Temp'], label = 'Temperature Min of 10 Years (2005_2014)', color='orange', lw=3)
+ax.plot(merged_df['MM-DD'], merged_df['TMAX_10Y_Temp'], label = 'Temperature Max of 10 Years (2005_2014)',
+        color='lightblue', lw=3)
+ax.plot(merged_df['MM-DD'], merged_df['TMIN_10Y_Temp'], label = 'Temperature Min of 10 Years (2005_2014)',
+        color='orange', lw=3)
 ax.set_xlabel('Date', fontsize=20)
 ax.set_ylabel('Temperature (Celcius)', fontsize=20)
 ax.fill_between(merged_df['MM-DD'], merged_df['TMIN_10Y_Temp'], merged_df['TMAX_10Y_Temp'], color='yellow')
@@ -174,17 +178,16 @@ ax.fill_between(merged_df['MM-DD'], merged_df['TMIN_10Y_Temp'], merged_df['TMAX_
 TMAX_scatter_df = merged_df[merged_df['IsGreater'].notna()]
 TMIN_scatter_df = merged_df[merged_df['IsLower'].notna()]
 
-ax.scatter(TMAX_scatter_df['MM-DD'], TMAX_scatter_df['IsGreater'], label = 'Temperature Max in 2015', color='darkgreen')
-ax.scatter(TMIN_scatter_df['MM-DD'], TMIN_scatter_df['IsLower'], label = 'Temperature Min in 2015', color='red')
+ax.scatter(TMAX_scatter_df['MM-DD'], TMAX_scatter_df['IsGreater'], label = 'Temperature Max in 2015',
+           color='darkgreen')
+ax.scatter(TMIN_scatter_df['MM-DD'], TMIN_scatter_df['IsLower'], label = 'Temperature Min in 2015',
+           color='red')
 
 ax.legend()
-#Improving the outlook
-# for spine in plt.gca().spines.values():
-#     spine.set_visible(False)
 plt.yticks(np.arange(round(min(TMIN_scatter_df['IsLower']), -1), 250, 20))
 plt.xticks([0,31,59,90,120,151,181,212,243,273,304,334],
            ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
-plt.title('Record High and Record Low Temperatures by Day of the Year 10 year Period 2005-2014 vs. 2015', fontsize = 24)
+plt.title('Record High and Record Low Temperatures by Day of the Year [2005-2014] vs. 2015', fontsize = 24)
 ```
 ### Plotting
 
