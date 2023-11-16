@@ -89,6 +89,7 @@ plt.scatter(years, df_continents_transposed['Oceania'], label = 'Oceania', color
 plt.xticks([0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,35])
 plt.xlabel('Year', fontsize=16)
 plt.ylabel('Number of Immigrants', fontsize=16)
+plt.tick_params(axis='y', which='both', labelleft='off', labelright='on')
 plt.legend(fontsize = 12)
 plt.title('Immigration from All Continents to Canada (1980 - 2013)', y=1.1, fontsize = 20)
 plt.show()
@@ -147,7 +148,7 @@ plt.xlabel('Country of Origin', fontsize=16)
 plt.ylabel('Number of Immigrants', fontsize=16)
 addlabels(shortlist_df.index,shortlist_df['Alltime'])
 plt.title('Immigration from Countries with More than 100,000 Immigrants (Total 1980 - 2013)', y=1.1, fontsize=20)
-
+plt.yticks([])
 plt.show()
 ```
 
@@ -180,7 +181,7 @@ plt.title('Immigration by Country (1980 - 2013)', y=1.1, fontsize=20)
 plt.xlabel('Year', fontsize=14)
 plt.ylabel('Number of Immigrants', fontsize=14)
 plt.xticks(rotation=90, ha='right')
-
+plt.tick_params(axis='y', which='both', labelleft='off', labelright='on')
 plt.show()
 ```
 <img src="/assets/images/P7_5.png">
@@ -219,6 +220,58 @@ plt.show()
 ```
 <img src="/assets/images/P7_6.png">
 
-Because we are keen on investigating countries that have the most active highest flow of immigrants in the most recent years, we choose to exclude the UK which observes a sharp decline in immigration flow since 1994. <br>
-Comparing the statistics of the three countries that have the highest number of immigrants to Canada between 1980 and 2013, we notice that China and India almost have the same average number of around 20,000 and China has the widest range of yearly number of immigrants. Philippines ranks fourth and its statistics is on the low end compared to that of India and China. <br>
-For the boxplot of Philippines, there are two outliers observed about the end of the whisker (aka the ma
+Because we are keen on investigating countries that have the most active highest flow of immigrants in the most recent years, we choose to exclude the UK which observes a sharp decline in immigration flow since 1994. 
+
+Comparing the statistics of the three countries that have the highest number of immigrants to Canada between 1980 and 2013, we notice that China and India almost have the same average number of around 20,000 and China has the widest range of yearly number of immigrants. Philippines ranks fourth and its statistics is on the low end compared to that of India and China. 
+For the boxplot of Philippines, there are two outliers observed above the upper end of the whisker. Generally, the outliers only affect the minimum and maximum values. How are the two datapoints assigned to be outliers? It all depends on the IQR (Interquartile Range):
+
+    * IQR = Third Quartile - First Quartile = 19,249 - 8,663 = 10,586
+    * Upper Boundary = Third Quartile + 1.5 * IQR = 19,249 + 1.5 * 10,586 = 35,128
+    
+Therefore, the whisker for the maximum values in the boxplot for Philippines is placed at 35,128 and the datapoints 38,617 for year 2010 and 36,765 for year 2011 are considered outliers, although the actual maximum value of the chart is at 38,617.
+
+Now we have seen the statistics for those top countries, we are also going to see the long term trends in their immigration flows over the years next.
+
+```
+# bubble size: % immigrants that year/total Asia that year
+df_merged = pd.merge(df_continents_transposed, shortlist_df_transposed , left_index=True, right_index=True)
+df_merged['India_%'] = df_merged['India']*4000/df_merged['Asia']
+df_merged['China_%'] = df_merged['China']*4000/df_merged['Asia']
+df_merged['Philippines_%'] = df_merged['Philippines']*4000/df_merged['Asia']
+
+df_merged.index.name = 'Year'
+df_merged.reset_index(inplace=True)
+
+df_merged['India_%'] = df_merged['India_%'].astype(int)
+df_merged['China_%'] = df_merged['China_%'].astype(int)
+df_merged['Philippines_%'] = df_merged['Philippines_%'].astype(int)
+df_merged['Year'] = df_merged['Year'].astype(int)
+df_merged['India'] = df_merged['India'].astype(int)
+df_merged['China'] = df_merged['China'].astype(int)
+df_merged['Philippines'] = df_merged['Philippines'].astype(int)
+
+# bubble chart (India, China, Phillipines)
+
+import numpy as np
+
+plt.figure(figsize=(14,8))
+plt.scatter('Year', 'India', s='India_%', alpha=0.5, color='green', data = df_merged)
+plt.scatter('Year', 'China', s='China_%', alpha=0.5, color='blue', data = df_merged)
+plt.scatter('Year', 'Philippines', s='Philippines_%', alpha=0.5, color='orange', data = df_merged)
+
+plt.xticks(np.arange(1975,2020,5))
+plt.title('Immigration from India, China and Philippines from 1980 to 2013', y = 1.1, fontsize = 20)
+plt.legend(fontsize = 16)
+plt.xlabel('Year', fontsize = 16)
+plt.ylabel('Number of Immigrants', fontsize = 16)
+plt.tick_params(axis='y', which='both', labelleft='off', labelright='on')
+plt.show()
+```
+
+<img src="/assets/images/P7_7.png">
+
+This bubble plots are created using the immigration flow volume. The bubble sizes depict the percentage of a country's immigrant volume to the Asia's immigrant volume of the same year. Please note that I have multiply the size by 4000% for better visibility. 
+Overall, China and India's immigration flows are on a strong uptrend since 1990. Philippines slows down since later of 90s' and starts to pick up strongly again since 2007.   
+
+
+
