@@ -13,20 +13,20 @@ The Immigration to Canada dataset consists of immigrants record from 150+ countr
 ### Overview
 
 Introduction <br>
-Analysis <br>
+Analysis and Findings <br>
    * By Continent
    * By Region
    * By Country
    * India, China and Philippines
 Summary
 
-### Introduction
+### 1. Introduction
 The Immigration to Canada dataset consists of immigrants record from 150+ countries to Canada between 1980 to 2013. It records international migration flows to Canada from selected countries - The 2015 revision from United Nation's website. The dataset contains annual data on both inflows and outflows according to the place of birth, citizenship or place of previous / next residence both for foreigners and nationals. The focus is on Canadian Immigration data.
 
 The dataset can be found [here](https://github.com/rashida048/Datasets/blob/master/Canada.xlsx).
 
-### Analysis
-#### *By Continent*
+### 2. Analysis
+#### *2.1. By Continent*
 
 ```
 import pandas as pd
@@ -98,7 +98,7 @@ plt.show()
 
 While there is a wave of immigration from Europe and Latin America and the Caribbean to Canada between 1986 till 1996 for the former and till 1993 for the latter, there is not much change to the immigration from most continents, except for Asia which observes a rapid increase in immigration to Canada. The uptrend has started since around 1986 till now. 
 
-#### *By Region*
+#### *2.2. By Region*
 
 ```
 # Plot the numbers of immigrants by regions over the years
@@ -129,7 +129,7 @@ plt.show()
 
 Following up with the the above "By continent" graph, the "By region" graph zooms into which regions of each continent the flows are happening. It is worth noticing that the significant flow of outbound immigration flow from Asia is mainly occuring in South Asia and Eastern Asia. The rest of the regions in the chart show constant flows over time. 
 
-#### *By Country*
+#### *2.3. By Country*
 ```
 # Immigration from Countries with More than 100,000 Immigrants (Total 1980-2013)
 import matplotlib.pyplot as plt
@@ -189,7 +189,7 @@ plt.show()
 Here we have a chance to look closely into the top 4 biggest countries of origin that are India, China, the UK and Philippines. Since 1994, the flow from the UK witnesses a sharp plummet from its peak at 39,231. As it gets to low at 7,045 in 1999, it starts to move sideway from there. <br>
 The top three countries that show a sharp increase since early '90s are India, China, and Philippines.
 
-#### *By Country*
+#### *2.4. India, China and Philippines*
 
 ```
 #df_ICP = shortlist_df_transposed.iloc[2:-1, [0,1,3]]
@@ -234,6 +234,7 @@ Now we have seen the statistics for those top countries, we are also going to se
 
 ```
 # bubble size: % immigrants that year/total Asia that year
+
 df_merged = pd.merge(df_continents_transposed, shortlist_df_transposed , left_index=True, right_index=True)
 df_merged['India_%'] = df_merged['India']*4000/df_merged['Asia']
 df_merged['China_%'] = df_merged['China']*4000/df_merged['Asia']
@@ -273,5 +274,6 @@ plt.show()
 This bubble plots are created using the immigration flow volume. The bubble sizes depict the percentage of a country's immigrant volume to the Asia's immigrant volume of the same year. Please note that I have multiply the size by 4000% for better visibility. 
 Overall, China and India's immigration flows are on a strong uptrend since 1990. Philippines slows down since later of 90s' and starts to pick up strongly again since 2007.   
 
+### 3. Analysis
 
 
