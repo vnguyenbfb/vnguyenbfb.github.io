@@ -283,10 +283,12 @@ From 1980 to 2013, Asia and Europe have the most immigrants to Canada, respectiv
 
 There is not much change to the immigration flows from most continents, except for Asia which observes a rapid increase since late 80’s. 
 
+<br>
 *By Region*
 
 It is worth noticing that the significant flows of outbound immigration from Asia are mainly occuring in South Asia and Eastern Asia. The rest of the regions in the chart show constant flows over time.
 
+<br>
 *By Country*
 
 We only focus on countries with an accumulation of at least 100,000 immigrants in the period of 1980 - 2013 and got a list of 13 countries among which India has the highest number (691,904), second is China (659,962), third is the UK (551,500), and fourth is Philippines(511,391). The next one in the ranking is Pakistan and is only 47% of Philippines level.
@@ -294,6 +296,7 @@ We only focus on countries with an accumulation of at least 100,000 immigrants i
 Since 1994, the flow from the UK witnesses a sharp plummet from its peak at 39,231. As it gets to low at 7,045 in 1999, it starts to move sideway from there. 
 The top three countries that show a sharp increase since early '90s are India, China, and Philippines.
 
+<br>
 *India, China and Philippines*
 
 Comparing the statistics of the three countries that have the highest number of immigrants to Canada between 1980 and 2013, we notice that China and India almost have the same average number of around 20,000 although China has the widest range (between the maximum and minimum values) of yearly number of immigrants. 
