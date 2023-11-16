@@ -26,7 +26,7 @@ The Immigration to Canada dataset consists of immigrants record from 150+ countr
 The dataset can be found [here](https://github.com/rashida048/Datasets/blob/master/Canada.xlsx).
 
 ### Analysis
-#### By Continent
+#### *By Continent*
 
 ```
 import pandas as pd
@@ -95,3 +95,130 @@ plt.show()
 ```
 <img src="/assets/images/P7_2.png">
 
+While there is a wave of immigration from Europe and Latin America and the Caribbean to Canada between 1986 till 1996 for the former and till 1993 for the latter, there is not much change to the immigration from most continents, except for Asia which observes a rapid increase in immigration to Canada. The uptrend has started since around 1986 till now. 
+
+#### *By Region*
+
+```
+# Plot the numbers of immigrants by regions over the years
+
+df_Region = df.groupby('Region').aggregate({'1980':'sum', '1981':'sum', '1982':'sum', '1983':'sum', '1984':'sum', '1985':'sum', '1986':'sum', '1987':'sum', '1988':'sum', '1989':'sum', '1990':'sum', '1991':'sum', '1992':'sum', '1993':'sum', '1994':'sum', '1995':'sum', '1996':'sum', '1997':'sum','1998':'sum','1999':'sum','2000':'sum','2001':'sum', '2002':'sum','2003':'sum', '2004':'sum','2005':'sum', '2006':'sum','2007':'sum', '2008':'sum','2009':'sum', '2010':'sum','2011':'sum', '2012':'sum','2013':'sum'})
+df_Region = df_Region.sort_values(by='2013', ascending=False)
+
+plt.figure(figsize=(20,10))
+plt.plot(df_Region.columns, df_Region.iloc[1], color = 'brown', label="Southern Asia")
+plt.plot(df_Region.columns, df_Region.iloc[2], color = 'yellow', label="Eastern Asia")
+plt.plot(df_Region.columns, df_Region.iloc[3], color = 'green', label="South-Eastern Asia")
+plt.plot(df_Region.columns, df_Region.iloc[4], color = 'pink', label="Northern Africa")
+plt.plot(df_Region.columns, df_Region.iloc[5], color = 'darkblue', label="Western Asia")
+plt.plot(df_Region.columns, df_Region.iloc[6], color = 'orange', label="Caribbean")
+plt.plot(df_Region.columns, df_Region.iloc[7], color = 'purple', label="Eastern Europe")
+plt.plot(df_Region.columns, df_Region.iloc[8], color = 'blue', label="Eastern Africa")
+plt.plot(df_Region.columns, df_Region.iloc[9], color = 'red', label="South America")
+plt.plot(df_Region.columns, df_Region.iloc[10], color = 'grey', label="Western Africa")
+
+plt.legend(fontsize=12, loc='upper left')
+plt.title('The Numbers of Immigrants by Region (1980-2013)', fontsize=20)
+plt.xlabel('Year', fontsize=14)
+plt.ylabel('Number of Immigrants', fontsize=14)
+plt.xticks(rotation=90, ha='right')
+plt.show()
+```
+<img src="/assets/images/P7_3.png">
+
+Following up with the the above "By continent" graph, the "By region" graph zooms into which regions of each continent the flows are happening. It is worth noticing that the significant flow of outbound immigration flow from Asia is mainly occuring in South Asia and Eastern Asia. The rest of the regions in the chart show constant flows over time. 
+
+#### *By Country*
+```
+# Immigration from Countries with More than 100,000 Immigrants (Total 1980-2013)
+import matplotlib.pyplot as plt
+plt.figure(figsize=(12,6))
+shortlist_df = df[(df['Alltime']>100000)]
+
+# Plotting bar graphs
+def addlabels(x,y):
+    for i in range(len(x)):
+        plt.text(i, y[i], y[i], ha = 'center', fontsize=10)
+
+plt.bar(shortlist_df.index, shortlist_df['Alltime'], alpha=0.6)
+plt.xticks(rotation=45, ha='right')
+plt.rcParams['font.size'] = '12'
+plt.xlabel('Country of Origin', fontsize=16)
+plt.ylabel('Number of Immigrants', fontsize=16)
+addlabels(shortlist_df.index,shortlist_df['Alltime'])
+plt.title('Immigration from Countries with More than 100,000 Immigrants (Total 1980 - 2013)', y=1.1, fontsize=20)
+
+plt.show()
+```
+
+<img src="/assets/images/P7_4.png">
+
+We choose the cut-off threshold of accumulated 100,000 immigrants for each country in the period of 1980 - 2013 and got a list of 13 countries among which India has the highest number (691,904), second is China (659,962), third is the UK (551,500), and fourth is Philippines(511,391). The next one in the ranking is Pakistan and is only 47% of Philippines level.
+
+```
+# Plotting line graphs
+
+shortlist_df_transposed = shortlist_df.transpose()
+plt.figure(figsize=(20,10))
+
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 0], color = 'orange', label="India")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 1], color = 'red', label="China")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 2], color = 'magenta', label="UK")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 3], color = 'darkblue', label="Philippines")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 4], color = 'black', label="Pakistan")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 5], color = 'gold', label="US")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 6], color = 'yellowgreen', label="Iran")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 7], color = 'purple', label="Sri Lanka")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 8], color = 'brown', label="South Korea")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 9], color = 'grey', label="Poland")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 10], color = 'pink', label="Lebanon")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 11], color = 'cyan', label="France")
+plt.plot(years, shortlist_df_transposed.iloc[2:-1, 12], color = 'darkgreen', label="Jamaica")
+
+plt.legend(fontsize=11, loc='upper left')
+plt.title('Immigration by Country (1980 - 2013)', y=1.1, fontsize=20)
+plt.xlabel('Year', fontsize=14)
+plt.ylabel('Number of Immigrants', fontsize=14)
+plt.xticks(rotation=90, ha='right')
+
+plt.show()
+```
+<img src="/assets/images/P7_5.png">
+
+Here we have a chance to look closely into the top 4 biggest countries of origin that are India, China, the UK and Philippines. Since 1994, the flow from the UK witnesses a sharp plummet from its peak at 39,231. As it gets to low at 7,045 in 1999, it starts to move sideway from there. <br>
+The top three countries that show a sharp increase since early '90s are India, China, and Philippines.
+
+#### *By Country*
+
+```
+#df_ICP = shortlist_df_transposed.iloc[2:-1, [0,1,3]]
+df_ICP = df.loc[['China', 'India', 'Philippines'], years].transpose()
+
+df_ICP_describe = df_ICP.describe()
+```
+Output:
+|Country	|China |	India	|Philippines |
+| ------- | ---- | ------ | ---------- |
+|count	  |34.000000	| 34.000000	| 34.000000 |
+|mean	|19410.647059	|20350.117647	|15040.911765|
+|std	|13568.230790	|10007.342579	|9506.754936|
+|min	|1527.000000	|4211.000000	|3150.000000|
+|25%	|5512.750000	|10637.750000	|8663.000000|
+|50%	|19945.000000	|20235.000000	|12738.000000|
+|75%	|31568.500000	|28699.500000	|19249.000000|
+|max	|42584.000000	|36210.000000	|38617.000000|
+
+```
+#Box chart India, China, Phillipines
+df_ICP.plot(kind='box', figsize=(10, 7))
+plt.title('Box plots of Immigrants from India, China and Philippines (1980 - 2013)', y = 1.1, fontsize = 20)
+plt.xlabel('Country', fontsize = 14)
+plt.ylabel('Number of Immigrants', fontsize = 14)
+
+plt.show()
+```
+<img src="/assets/images/P7_6.png">
+
+Because we are keen on investigating countries that have the most active highest flow of immigrants in the most recent years, we choose to exclude the UK which observes a sharp decline in immigration flow since 1994. <br>
+Comparing the statistics of the three countries that have the highest number of immigrants to Canada between 1980 and 2013, we notice that China and India almost have the same average number of around 20,000 and China has the widest range of yearly number of immigrants. Philippines ranks fourth and its statistics is on the low end compared to that of India and China. <br>
+For the boxplot of Philippines, there are two outliers observed about the end of the whisker (aka the ma
