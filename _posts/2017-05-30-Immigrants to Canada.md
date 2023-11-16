@@ -13,11 +13,13 @@ The Immigration to Canada dataset consists of immigrants record from 150+ countr
 ### Overview
 
 Introduction <br>
+
 Analysis and Findings <br>
    * By Continent
    * By Region
    * By Country
-   * India, China and Philippines
+   * India, China and Philippines <br>     
+
 Summary
 
 ### 1. Introduction
@@ -25,7 +27,7 @@ The Immigration to Canada dataset consists of immigrants record from 150+ countr
 
 The dataset can be found [here](https://github.com/rashida048/Datasets/blob/master/Canada.xlsx).
 
-### 2. Analysis
+### 2. Analysis and Findings
 #### *2.1. By Continent*
 
 ```
