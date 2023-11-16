@@ -200,6 +200,7 @@ df_ICP = df.loc[['China', 'India', 'Philippines'], years].transpose()
 df_ICP_describe = df_ICP.describe()
 ```
 Output:
+
 |Country	|China |	India	|Philippines |
 | ------- | ---- | ------ | ---------- |
 |count	  |34.000000	| 34.000000	| 34.000000 |
@@ -210,6 +211,7 @@ Output:
 |50%	|19945.000000	|20235.000000	|12738.000000|
 |75%	|31568.500000	|28699.500000	|19249.000000|
 |max	|42584.000000	|36210.000000	|38617.000000|
+
 
 ```
 #Box chart India, China, Phillipines
