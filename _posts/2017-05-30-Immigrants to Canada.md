@@ -72,7 +72,7 @@ plt.show()
 
 <img src="/assets/images/P7_1.png">
 
-From 1980 to 2013, Canada has the most immigrants from Asia (51,8%), next is Europe (22%). Latin America and Caribbean (11.9%) and Africa is 9.7%. Northern America and Oceania are in the minority.
+From 1980 to 2013, Canada has the most immigrants from Asia (51,8%), next is Europe (22%). Latin America and Caribbean (11.9%) and Africa is 9.7%. Immigrants from Northern America and Oceania are in the minority compared to other continents.
 
 We then are going to look at immigration from each continent over time (1980-2013) 
 
@@ -98,7 +98,7 @@ plt.show()
 ```
 <img src="/assets/images/P7_2.png">
 
-While there is a wave of immigration from Europe and Latin America and the Caribbean to Canada between 1986 till 1996 for the former and till 1993 for the latter, there is not much change to the immigration from most continents, except for Asia which observes a rapid increase in immigration to Canada. The uptrend has started since around 1986 till now. 
+While there is a wave of immigration from Europe and Latin America and the Caribbean to Canada between 1986 till 1996 for the former and till 1993 for the latter, there is not much change to the immigration from most continents, except for Asia which observes a rapid increase in immigration since around 1986. 
 
 #### *2.2. By Region*
 
@@ -129,7 +129,7 @@ plt.show()
 ```
 <img src="/assets/images/P7_3.png">
 
-Following up with the the above "By continent" graph, the "By region" graph zooms into which regions of each continent the flows are happening. It is worth noticing that the significant flow of outbound immigration flow from Asia is mainly occuring in South Asia and Eastern Asia. The rest of the regions in the chart show constant flows over time. 
+Following up with the the above "By continent" graph, the "By region" graph zooms into which regions of each continent the flows are happening. It is worth noticing that the significant flows of outbound immigration from Asia are mainly occuring in South Asia and Eastern Asia. The rest of the regions in the chart show constant flows over time. 
 
 #### *2.3. By Country*
 ```
@@ -156,7 +156,7 @@ plt.show()
 
 <img src="/assets/images/P7_4.png">
 
-We choose the cut-off threshold of accumulated 100,000 immigrants for each country in the period of 1980 - 2013 and got a list of 13 countries among which India has the highest number (691,904), second is China (659,962), third is the UK (551,500), and fourth is Philippines(511,391). The next one in the ranking is Pakistan and is only 47% of Philippines level.
+We choose the cut-off threshold of an accumulation of at least 100,000 immigrants for each country in the period of 1980 - 2013 and got a list of 13 countries among which India has the highest number (691,904), second is China (659,962), third is the UK (551,500), and fourth is Philippines(511,391). The next one in the ranking is Pakistan and is only 47% of Philippines level.
 
 ```
 # Plotting line graphs
@@ -224,7 +224,7 @@ plt.show()
 
 Because we are keen on investigating countries that have the most active highest flow of immigrants in the most recent years, we choose to exclude the UK which observes a sharp decline in immigration flow since 1994. 
 
-Comparing the statistics of the three countries that have the highest number of immigrants to Canada between 1980 and 2013, we notice that China and India almost have the same average number of around 20,000 and China has the widest range of yearly number of immigrants. Philippines ranks fourth and its statistics is on the low end compared to that of India and China. 
+Comparing the statistics of the three countries that have the highest number of immigrants to Canada between 1980 and 2013, we notice that China and India almost have the same average number of around 20,000 although China has the widest range (between the maximum and minimum values) of yearly number of immigrants. Philippines ranks fourth and its statistics is on the low end compared to that of India and China. 
 For the boxplot of Philippines, there are two outliers observed above the upper end of the whisker. Generally, the outliers only affect the minimum and maximum values. How are the two datapoints assigned to be outliers? It all depends on the IQR (Interquartile Range):
 
     * IQR = Third Quartile - First Quartile = 19,249 - 8,663 = 10,586
@@ -276,6 +276,30 @@ plt.show()
 This bubble plots are created using the immigration flow volume. The bubble sizes depict the percentage of a country's immigrant volume to the Asia's immigrant volume of the same year. Please note that I have multiply the size by 4000% for better visibility. 
 Overall, China and India's immigration flows are on a strong uptrend since 1990. Philippines slows down since later of 90s' and starts to pick up strongly again since 2007.   
 
-### 3. Analysis
+### 3. Summary
+*By Continent* 
+
+From 1980 to 2013, Asia and Europe have the most immigrants to Canada, respectively at 51,8% and 22%. Immigrants from Northern America and Oceania are in the minority compared to other continents.
+
+There is not much change to the immigration flows from most continents, except for Asia which observes a rapid increase since late 80’s. 
+
+*By Region*
+
+It is worth noticing that the significant flows of outbound immigration from Asia are mainly occuring in South Asia and Eastern Asia. The rest of the regions in the chart show constant flows over time.
+
+*By Country*
+
+We only focus on countries with an accumulation of at least 100,000 immigrants in the period of 1980 - 2013 and got a list of 13 countries among which India has the highest number (691,904), second is China (659,962), third is the UK (551,500), and fourth is Philippines(511,391). The next one in the ranking is Pakistan and is only 47% of Philippines level.
+
+Since 1994, the flow from the UK witnesses a sharp plummet from its peak at 39,231. As it gets to low at 7,045 in 1999, it starts to move sideway from there. 
+The top three countries that show a sharp increase since early '90s are India, China, and Philippines.
+
+*India, China and Philippines*
+
+Comparing the statistics of the three countries that have the highest number of immigrants to Canada between 1980 and 2013, we notice that China and India almost have the same average number of around 20,000 although China has the widest range (between the maximum and minimum values) of yearly number of immigrants. 
+
+Overall, China and India's immigration flows are on a strong uptrend since 1990. Philippines slows down from later of 90s' and starts to pick up strongly again since 2007.
+    
+
 
 
