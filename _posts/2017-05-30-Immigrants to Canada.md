@@ -5,12 +5,9 @@ layout: post
 categories: media
 --- 
 
-
 <img style="float:left" src="/assets/images/Image7_small.jpg">
 
-
 The Immigration to Canada dataset consists of immigrants record from 150+ countries to Canada between 1980 to 2013. We will use the dataset to analyze the distribution of countries of origin of all immigrants to Canada as well as any trends and hidden patterns of Immigrants from all over the world to Canada.
-
 
 
 
