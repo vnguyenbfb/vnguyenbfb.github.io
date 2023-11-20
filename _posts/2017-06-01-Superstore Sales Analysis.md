@@ -67,7 +67,8 @@ Let's look at the business performance by Customer Segment per region. Each circ
 
 <img src="/assets/images/P8_3.png">
 
-<img style="float:left" src="/assets/images/P8_3b.png">
+<img src="/assets/images/P8_3b.png">
+
 
 The "Performance by City" map below shows us more details about sales and profit ratio at city level where the size of the circle demonstrate the sales of a city while the color of the circle depicts the profit ratio of that city (red/orange means big negative profit ratio while dark blue means good positive profit ratio). We can see that big orange circles are found in the Central and the West of the country. These are the cities with big sales and big negative profit ratio (Figure 4). So what are those cities?
 
@@ -78,6 +79,7 @@ The "Performance by City" map below shows us more details about sales and profit
 Figure 5 is a list of the underperforming cities in terms of Profit Ratio. The cities in Illinois and Texas are the most underperforming cities. The cities in Ohio and Pensylvania, although not as serverely, they should be paid attention to as well.
 
 *Figure 5* 
+
 <img src="/assets/images/P8_5.png">
 
 So what are the specific sub-categories that the business is losing money in the Central and the East? While profitable sub-categories are mostly performing the the same in both regions. Binders and Appliances are especially taking big loss in the Central (Figure 6).
