@@ -90,6 +90,8 @@ So what are the specific sub-categories that the business is losing money in the
 
 Figure 7 consists of customers in the Central and East only. Each bubble stands for a customer, the color of the bubble tells us about the the profit ratio the company has with that customer and the size indicates the discount percent. For most big bubbles (i.e heavily discounted customers), the color is orange to brown-ish, meaning the company are losing money (negative profit ratio) with these customers. 
 
+*Note that the tooltip (the rectangle text box) is demonstrating information of a bubble (i.e a customer) on the chart*
+
 *Figure 7* 
 
 <img src="/assets/images/P8_7.png">
@@ -100,6 +102,7 @@ Figure 8 does a good job in demonstrating how many customers we have in each dis
 
 Also, the profit ratio start to turn negative at around 25% discount (notice the white-ish bubbles depicting 0% profit ratio). The company should use 25% discount level as it threshold and start to design a strategy around that level.
 
+*Note that the tooltip (the rectangle text box) is demonstrating information of a bubble (i.e a customer) on the chart*
 
 *Figure 8* 
 
