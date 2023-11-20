@@ -73,7 +73,7 @@ The "Performance by City" map below shows us more details about sales and profit
 
 *Figure 4* 
 
-<img src="/assets/images/P8_4.png">
+<img src="/assets/images/P8_4b.png">
 
 Figure 5 is a list of the underperforming cities in terms of Profit Ratio. The cities in Illinois and Texas are the most underperforming cities. The cities in Ohio and Pensylvania, although not as serverely, they should be paid attention to as well.
 
