@@ -11,9 +11,13 @@ Superstore dataset is includes sales information of a small retail business name
 
 
 
+
+
+
+
 ### Table of Content
    * Introduction
-   * Analysis Outline
+   * Analysis Direction
    * Analysis
    * Summary of Findings
 
@@ -25,7 +29,7 @@ This dataset is from the series of “Data Visualization with Tableau” I took 
 
 The dataset contains comprehensive data of sales, profit, discount, profit ratio, customer names, order IDs and geographical information of SuperStore. We are going to analyse the dataset and provide a full picture of its business performance and problems with opportunities for business growth.
 
-#### *1.2. Target Audience (Immaginative Personas)* 
+#### *1.2. Target Audience (Imaginative Personas)* 
 Vice President of Sales: 
    * Needs an analysis in order to turn it into a sales strategy she can sell to the executive team
    * Has limited face time with executives, needs a concise yet comprehensive analysis for data-driven decision making
@@ -34,7 +38,7 @@ Vice President of Sales:
      
 The Vice President of Sales is aware of the company discount policy is being abused but she does not know its exact magnitude. She is interested in learning how discounted sales is affecting the company sales and profitability so she can suggest a resonable adjustment to the discount scheme in the meeting with the exective team.
 
-### 2. Analysis Outline
+### 2. Analysis Direction
 There is a signigicant loss for those discounted orders. While discounted orders generate $1,088,020 in sales (vs. $1,209,334 in sales by non-discounted orders), they generate a sub-zero profit of -$34,599.
 
 We will look into what causes that loss by region, customer segment, and sub-categories, ect. and more specifically how to tackle this situation for business improvement. We are going to use Tableau, a powerful visualization tool that can convert a seemingly endless datasets into more visual and intuitive graphs, to analyze the dataset and demonstrate the whole business story for an actionable business plan.
@@ -42,11 +46,11 @@ We will look into what causes that loss by region, customer segment, and sub-cat
 ### 3. Analysis
 Before we jump into the analysis, I would like to firstly make sure we are on the same page of those matrixes used in the analysis.
 
-**Sales($)**: **Sum** of sales
-**Profit($)**: **Sum** of profit
-**Discount(%)**: **Average** of discount percent
-**Profit Ratio(%)**: **Average** of Profit Ratio
-**Discounted Orders**: All orders that get a discount of more than zero percent
+**Sales($)**: **Sum** of sales <br>
+**Profit($)**: **Sum** of profit <br>
+**Discount(%)**: **Average** of discount percent <br>
+**Profit Ratio(%)**: **Average** of Profit Ratio <br>
+**Discounted Orders**: All orders that get a discount of more than zero percent <br>
 **Non-Discounted Orders**: All orders that get a discount of zero percent
 
 The current situation: Discounted orders generate $1,088,020 in sales, equal 47% of the bussines revenue but generate a profit loss of -8.23%. And the average discount ratio for all the discounted orders is 30.04% (Figure 1).
