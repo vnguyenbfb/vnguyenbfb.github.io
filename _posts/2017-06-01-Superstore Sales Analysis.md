@@ -21,7 +21,7 @@ Superstore dataset is includes sales information of a small retail business name
 #### *1.1. The Dataset*
 SuperStore dataset is a demonstrative dataset of a small retail business located in the United States which sells Furniture, Office Supplies and Technology products to their customers consisting of the mass Consumers, Corporates and Home Offices.
 
-This dataset is from the series of “Data Visualization with Tableau” I took on Coursera. It can be found [here]().
+This dataset is from the series of “Data Visualization with Tableau” I took on Coursera. It can be found [here](/Full-Sales-Superstore-Dataset.xlsx).
 
 The dataset contains comprehensive data of sales, profit, discount, profit ratio, customer names, order IDs and geographical information of SuperStore. We are going to analyse the dataset and provide a full picture of its business performance and problems with opportunities for business growth.
 
