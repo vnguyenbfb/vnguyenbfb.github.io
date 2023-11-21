@@ -27,10 +27,10 @@ The dataset contains comprehensive data of sales, profit, discount, profit ratio
 
 #### *1.2. Target Audience (Imaginative Personas)* 
 Vice President of Sales: 
-   * Needs an analysis in order to turn it into a sales strategy she can sell to the executive team
-   * Has limited face time with executives, needs a concise yet comprehensive analysis for data-driven decision making
+   * Needs an immediate actionable plan to start improving the loss situation
+   * Is super busy with daily operation, so the analysis should be comprehensive with a meaningful story and easy to follow.
+   * Has limited face time with executives, needs a concise analysis for data-driven decision making to sell to the executive team
    * Is a good sales person but not great with charting and numbers.
-   * Is busy dealing with reports and KPIs, so the analysis should help tell a meaningful story.
      
 The Vice President of Sales is aware of the company discount policy is being abused but she does not know its exact magnitude. She is interested in learning how discounted sales is affecting the company sales and profitability so she can suggest a resonable adjustment to the discount scheme in the meeting with the exective team.
 
@@ -38,6 +38,8 @@ The Vice President of Sales is aware of the company discount policy is being abu
 There is a signigicant loss for those discounted orders. While discounted orders generate $1,088,020 in sales (vs. $1,209,334 in sales by non-discounted orders), they generate a sub-zero profit of -$34,599.
 
 We will look into what causes that loss by region, customer segment, and sub-categories, ect. and more specifically how to tackle this situation for business improvement. We are going to use Tableau, a powerful visualization tool that can convert a seemingly endless datasets into more visual and intuitive graphs, to analyze the dataset and demonstrate the whole business story for an actionable business plan.
+
+*Disclaimer: Because this analysis is focused on an immediate actionable plan, this should be considered to be a part of the whole business plan. We are only going to discuss the areas where attention is needed first and foremost in this analysis.*
 
 ### 3. Analysis
 Before we jump into the analysis, I would like to firstly make sure we are on the same page of those matrixes used in the analysis.
@@ -112,14 +114,22 @@ Also, the profit ratio starts to turn negative at around 25% discount (notice th
 
 ### 4. Summary of Findings
 
-It is clearly evident that discount scheme of SuperStore is abused to the point it is hurting the business profit. <br>
-While the discounted orders mounted up to 47% of the total business revenue, it results in -$34,599 loss in profit, equal -8.23% profit ratio. <br>
-Performance is best in the West while loss in profit is mained observed in the Central. The East and South can hardly break even. <br>
-Loss is seen across all customer segments for heavily discounted orders, most are in the Central. <br>
-Illinois and Texas are the two states to start with adjusting the discount scheme. Chicago, Aurora city in Illinois and Houston, San Antonio and Dallas city in Texas are seriously underperforming with great sales and highly negative profit ratio. <br>
-Philadelphia city should also be paid attention to because it generates the highest sales ($109,085) but has a negative profit ratio of -7.99%. This city alone contributes 4.74% of the total business sales, if we can convert its profit ratio to a high positive percent then it will significantly contributes to the overall profit of the business. <br>
-In terms of performance by sub-category, profit ratio of appliances, binders and furnishings needs to be immediately improved in order to gain postive profit for the Central region. In the East, it is mostly Tables and Machines that needs to be fixed in terms of the profit ratio they generate. <br>
-Following the bubble chart, we could identify those individual customers with large discounts and large negative profit ratio. The modification should start from those. <br>
+It is clearly evident that discount scheme of SuperStore is abused to the point it is hurting the business profit. 
+
+While the discounted orders mounted up to 47% of the total business revenue, it results in -$34,599 loss in profit, equal -8.23% profit ratio. 
+
+Performance is best in the West while loss in profit is mained observed in the Central. The East and South can hardly break even. 
+
+Loss is seen across all customer segments for heavily discounted orders, most are in the Central. 
+
+Illinois and Texas are the two states to start with adjusting the discount scheme. Chicago, Aurora city in Illinois and Houston, San Antonio and Dallas city in Texas are seriously underperforming with great sales and highly negative profit ratio. 
+
+Philadelphia city should also be paid attention to because it generates the highest sales ($109,085) but has a negative profit ratio of -7.99%. This city alone contributes 4.74% of the total business sales, if we can convert its profit ratio to a high positive percent then it will significantly contributes to the overall profit of the business. 
+
+In terms of performance by sub-category, profit ratio of appliances, binders and furnishings needs to be immediately improved in order to gain postive profit for the Central region. In the East, it is mostly Tables and Machines that needs to be fixed in terms of the profit ratio they generate. 
+
+Following the bubble chart, we could identify those individual customers with large discounts and large negative profit ratio. The modification should start from those. 
+
 We have found that the company starts to have a mixture of positive and negative profit ratios at around 25% discount. SuperStore should use this 25% discount level as a threshold and start to design a sales strategy around that level.
 
 
