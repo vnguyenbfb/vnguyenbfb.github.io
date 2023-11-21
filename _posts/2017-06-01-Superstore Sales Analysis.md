@@ -9,11 +9,7 @@ categories: media
 
 Superstore dataset is includes sales information of a small retail business named SuperStore. We will analyze the dataset and use Tableau to develop a story line for visualization and analysis.
 
-
-
-
-
-
+<br> <br> <br> <br>
 
 ### Table of Content
    * Introduction
@@ -88,6 +84,8 @@ Figure 5 is a list of the underperforming cities in terms of Profit Ratio. The c
 
 So what are the specific sub-categories that the business is losing money in the Central and the East? While profitable sub-categories are mostly performing the the same in both regions. Binders and Appliances are especially taking big loss in the Central (Figure 6).
 
+Philadelphia city should also be paid attention to with its highest sales number of $109,085 among all the cities but has a negative profit ratio of -7.99%. This city alone contributes 4.74% of the total business sales. <br>
+
 *Figure 6* 
 
 <img src="/assets/images/P8_6.png">
@@ -104,10 +102,26 @@ While Figure 7 is useful in confirming the hypothesis that the larger discount t
 
 Figure 8 does a good job in demonstrating how many customers we have in each discount tier. Also, it helps discover another interesting fact that those customers that receive lower discount rate actually make bigger sales then the heavily discounted ones. This leads to necessity of large discount, because it does not incentivize larger sales. 
 
-Also, the profit ratio start to turn negative at around 25% discount (notice the white-ish bubbles depicting 0% profit ratio). The company should use 25% discount level as it threshold and start to design a strategy around that level.
+Also, the profit ratio starts to turn negative at around 25% discount (notice the white-ish bubbles depicting 0% profit ratio). This 25% discount level should be used as a threshold for building the company's sales strategy.
 
 *Note that the tooltip (the rectangle text box) is demonstrating information of a bubble (i.e a customer) on the chart*
 
 *Figure 8* 
 
 <img src="/assets/images/P8_8.png">
+
+### 4. Summary of Findings
+
+It is clearly evident that discount scheme of SuperStore is abused to the point it is hurting the business profit. <br>
+While the discounted orders mounted up to 47% of the total business revenue, it results in -$34,599 loss in profit, equal -8.23% profit ratio. <br>
+Performance is best in the West while loss in profit is mained observed in the Central. The East and South can hardly break even. <br>
+Loss is seen across all customer segments for heavily discounted orders, most are in the Central. <br>
+Illinois and Texas are the two states to start with adjusting the discount scheme. Chicago, Aurora city in Illinois and Houston, San Antonio and Dallas city in Texas are seriously underperforming with great sales and highly negative profit ratio. <br>
+Philadelphia city should also be paid attention to because it generates the highest sales ($109,085) but has a negative profit ratio of -7.99%. This city alone contributes 4.74% of the total business sales, if we can convert its profit ratio to a high positive percent then it will significantly contributes to the overall profit of the business. <br>
+In terms of performance by sub-category, profit ratio of appliances, binders and furnishings needs to be immediately improved in order to gain postive profit for the Central region. In the East, it is mostly Tables and Machines that needs to be fixed in terms of the profit ratio they generate. <br>
+Following the bubble chart, we could identify those individual customers with large discounts and large negative profit ratio. The modification should start from those. <br>
+We have found that the company starts to have a mixture of positive and negative profit ratios at around 25% discount. SuperStore should use this 25% discount level as a threshold and start to design a sales strategy around that level.
+
+
+
+
