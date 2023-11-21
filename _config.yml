@@ -20,7 +20,6 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "Projects.html", title: Projects}
   - {file: "Resume.md", title: Resume}
   - {file: "My Career Path.md", title: My Career Path}
-  - {file: "README.md", title: About Me}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Email, icon: envelope, url: "mailto:vnguyen.rit@gmail.com"}
