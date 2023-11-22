@@ -42,25 +42,30 @@ We will start with exploratory analysis first before we can identify a story to 
 Because the analysis was to answer both the General Director and the Sales Manager, it was approached on both overview level and specific levels. Different measures was considered.
 Multi-frame data story with multiple story points was used for user-friendly story telling.
 
- ### 4. Target Audience (Imaginative)
+### 4. Target Audience (Imaginative)
 
 <img src="/assets/images/P9_1.png">
 
 <img src="/assets/images/P9_2.png">
 
- ### 5. Project Objectives
+### 5. Project Objectives
  
- Which retailers are generating the most revenue for Adidas?
- Which regions are the best and worst regions?
- Which products are best selling?
- How differrent sales methods are driving revenue?
- Which sales methods are driving profitability?
+ 1. Which retailers are generating the most revenue for Adidas?
+ 2. Which regions are the best and worst regions?
+ 3. Which products are best selling?
+ 4. How differrent sales methods are driving revenue and profitability?
 
 ### 6. Analysis
+
+#### 6.1. Which retailers are generating the most revenue for Adidas?
+
 Figure 1
+
 <img src="/assets/images/P9_3.png">
 
 According to Figure 1, West Gear, Foot Locker and Sports Direct are the three leading retailers in terms of revenue. Noticeably, Sports Direct gains the most profit margin while West Gear and Footlocker's profit margin is almost on par with the rest retailers. Walmart can be worked on as it generates the least sales with lowest profit ratio.
+
+#### 6.2. Which regions are the best and worst regions?
 
 Figure 2
 
@@ -74,6 +79,8 @@ Figure 3
 
 It is quite similar when looking at performance by state. States that gain less sales are mostly those with higher profit ratio (Figure 3)
 
+#### 6.3. Which products are best selling?
+
 Figure 4
 
 <img src="/assets/images/P9_6.png">
@@ -86,13 +93,15 @@ Figure 5
 
 <img src="/assets/images/P9_7.png">
 
-Figure 5 offers a deeper drills into how each product is performing in each region. 
+Figure 5 offers a deeper drill into how each product is performing in each region. 
 
 Women's Apparel is the most highly priced product and generates quite good margin, except for in the West. 
 
 On the other hand, Men's Apparel ranks second in terms of pricing but generate quite poor margin compared to other products, except for in the West. 
 
 Men's St Footwear is actually doing very well, especially in the West. It has big sales volumn, medium range price, and quite good margin.
+
+#### 6.4. How differrent sales methods are driving revenue and profitability?
 
 Figure 6
 
@@ -104,7 +113,7 @@ However, In-Store generates the least profit ratio due to its fixed cost on rent
 
 Online is still the most profitable method and should be focused on growing.
 
-*Full version of the Analysis visualization on Teableau can be found [here]()*
+*Full version of the Analysis visualization on Teableau can be found [here]().*
 
 ### 7. Findings
 
