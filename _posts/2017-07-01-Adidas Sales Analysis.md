@@ -11,7 +11,7 @@ We will use the fabricated Adidas Sales dataset to analyze the performance of th
 
 
 ### Table of Content
-
+ 
 Introduction
 Why this dataset
 Analysis Outline
