@@ -6,7 +6,7 @@ categories: media
 ---
 
 ## Work Experience
-
+___ 
 *12/2011 – Present* <br>
 **My Translation Business** <br>
 Position: Owner
