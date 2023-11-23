@@ -17,15 +17,16 @@ The Immigration to Canada dataset consists of immigrants record from 150+ countr
 
 ### Overview
 
-Introduction <br>
+- Introduction <br>
 
-Analysis and Findings <br>
+- Analysis and Findings <br>
    * By Continent
    * By Region
    * By Country
    * India, China and Philippines <br>     
 
-Summary
+- Summary
+
 
 ### 1. Introduction
 The Immigration to Canada dataset consists of immigrants record from 150+ countries to Canada between 1980 to 2013. It records international migration flows to Canada from selected countries - The 2015 revision from United Nation's website. The dataset contains annual data on both inflows and outflows according to the place of birth, citizenship or place of previous / next residence both for foreigners and nationals. The focus is on Canadian Immigration data.
