@@ -7,6 +7,9 @@ categories: media
 
 <img style="float:left" src="/assets/images/Image8_small.png">
 
+<br> <br>
+
+
 Superstore dataset is includes sales information of a small retail business named SuperStore. We will analyze the dataset and use Tableau to develop a story line for visualization and analysis.
 
 
