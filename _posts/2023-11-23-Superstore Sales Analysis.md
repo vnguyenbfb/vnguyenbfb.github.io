@@ -34,8 +34,6 @@ This dataset is from the series of “Data Visualization with Tableau” I took 
 
 The dataset contains comprehensive data of sales, profit, discount, profit ratio, customer names, order IDs and geographical information of SuperStore. We are going to analyse the dataset and provide a full picture of its business performance and problems with opportunities for business growth.
 
-<br> 
-
 #### *1.2. Target Audience (Imaginative Personas)* 
 Vice President of Sales: 
    * Needs an immediate actionable plan to start improving the loss situation
@@ -44,6 +42,8 @@ Vice President of Sales:
    * Is a good sales person but not great with charting and numbers.
      
 The Vice President of Sales is aware of the company discount policy is being abused but she does not know its exact magnitude. She is interested in learning how discounted sales is affecting the company sales and profitability so she can suggest a resonable adjustment to the discount scheme in the meeting with the exective team.
+     
+<br> 
 
 ### 2. Analysis Direction
 There is a signigicant loss for those discounted orders. While discounted orders generate $1,088,020 in sales (vs. $1,209,334 in sales by non-discounted orders), they generate a sub-zero profit of -$34,599.
@@ -51,6 +51,8 @@ There is a signigicant loss for those discounted orders. While discounted orders
 We will look into what causes that loss by region, customer segment, and sub-categories, ect. and more specifically how to tackle this situation for business improvement. We are going to use Tableau, a powerful visualization tool that can convert a seemingly endless datasets into more visual and intuitive graphs, to analyze the dataset and demonstrate the whole business story for an actionable business plan.
 
 *Disclaimer: Because this analysis is focused on an immediate actionable plan, this should be considered to be a part of the whole business plan. We are only going to discuss the areas where attention is needed first and foremost in this analysis.*
+     
+<br> 
 
 ### 3. Analysis
 Before we jump into the analysis, I would like to firstly make sure we are on the same page of those matrixes used in the analysis.
@@ -68,11 +70,15 @@ The current situation: Discounted orders generate $1,088,020 in sales, equal 47%
 
 <img src="/assets/images/P8_1.png">
 
+<br>
+
 When we look at Sales, Profit, Discount and Profit Ratio by Region, the picture becomes clearer that big loss is happening mainly to the Discounted Orders in the Central (profit ratio of -35.10%). Discounted Orders in the East and South are not making any profit. Only Discounted Orders in the West is making a modest profit ratio of 8.57% (Figure 2).
 
 *Figure 2*
 
 <img src="/assets/images/P8_2.png">
+
+<br>
 
 Let's look at the business performance by Customer Segment per region. Each circle demonstrates each customer. The color scheme depicts the profit ratio range from -100% to 100%. The darker the color is, the more loss the company is taking for a customer. It is worth noticing that customers with higher discount generate more negative profit ratio, mostly across all customer segments. However, most loss is seen in the Central (Figure 3).
 
@@ -82,6 +88,7 @@ Let's look at the business performance by Customer Segment per region. Each circ
 
 <img src="/assets/images/P8_3b.png">
 
+<br>
 
 The "Performance by City" map below shows us more details about sales and profit ratio at city level where the size of the circle demonstrate the sales of a city while the color of the circle depicts the profit ratio of that city (red/orange means big negative profit ratio while dark blue means good positive profit ratio). We can see that big orange circles are found in the Central and the West of the country. These are the cities with big sales and big negative profit ratio (Figure 4). So what are those cities?
 
@@ -89,11 +96,15 @@ The "Performance by City" map below shows us more details about sales and profit
 
 <img src="/assets/images/P8_4b.png">
 
+<br>
+
 Figure 5 is a list of the underperforming cities in terms of Profit Ratio. The cities in Illinois and Texas are the most underperforming cities. The cities in Ohio and Pensylvania, although not as serverely, they should be paid attention to as well.
 
 *Figure 5* 
 
 <img src="/assets/images/P8_5.png">
+
+<br>
 
 So what are the specific sub-categories that the business is losing money in the Central and the East? While profitable sub-categories are mostly performing the the same in both regions. Binders and Appliances are especially taking big loss in the Central (Figure 6).
 
@@ -103,6 +114,8 @@ Philadelphia city should also be paid attention to with its highest sales number
 
 <img src="/assets/images/P8_6.png">
 
+<br>
+
 Figure 7 consists of customers in the Central and East only. Each bubble stands for a customer, the color of the bubble tells us about the the profit ratio the company has with that customer and the size indicates the discount percent. For most big bubbles (i.e heavily discounted customers), the color is orange to brown-ish, meaning the company are losing money (negative profit ratio) with these customers. 
 
 *Note that the tooltip (the rectangle text box) is demonstrating information of a bubble (i.e a customer) on the chart*
@@ -110,6 +123,8 @@ Figure 7 consists of customers in the Central and East only. Each bubble stands 
 *Figure 7* 
 
 <img src="/assets/images/P8_7.png">
+
+<br>
 
 While Figure 7 is useful in confirming the hypothesis that the larger discount the company offers, the more loss the company gets. However, it does not show us how many customers in each discount tier.
 
@@ -122,6 +137,8 @@ Also, the profit ratio starts to turn negative at around 25% discount (notice th
 *Figure 8* 
 
 <img src="/assets/images/P8_8.png">
+
+<br>
 
 ### 4. Summary of Findings
 
