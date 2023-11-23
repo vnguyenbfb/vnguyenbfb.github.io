@@ -11,6 +11,14 @@ In this project, we will use Python to explore data related to the bike share sy
 
 
 
+
+
+
+
+<br><br><br><br><br><br><br><br>
+
+
+
 ### Executive Summary
 1.	Introduction
 2.	Project Objectives
