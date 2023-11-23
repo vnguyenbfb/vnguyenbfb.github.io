@@ -9,23 +9,25 @@ categories: media
 
 We will use the fabricated Adidas Sales dataset to analyze the performance of the company. From writing a proposal to analyzing the data and building a data story with Tableau.  
 
+<br> <br> <br> <br>
+
 
 ### Table of Content
  
-Introduction
-Why this dataset
-Analysis Outline
-Target Audience
-Project Objectives
-Analysis
-Findings
-Recommendations
+Introduction <br>
+Why this dataset <br>
+Analysis Outline <br>
+Target Audience <br>
+Project Objectives <br>
+Analysis <br>
+Findings <br>
+Recommendations 
 
 ### 1. Introduction
 
 The Adidas Sales Database is an interesting dataset that shows us Adidas business landscape in 2020-2021 where we can drill down to retailer, region, state, product, sales methods and profitability level. The dataset is big and clean enough for deep analysis and visualization to help provide a thorough story of the brand as well as guide the management’s decisions in their future actions.
 
-The dataset can be found [here](https://data.world/stellabigail/adidas-us-sales-datasets).
+The dataset is available [here](https://data.world/stellabigail/adidas-us-sales-datasets).
 
 ### 2. Why is this dataset chosen?
 
@@ -51,8 +53,8 @@ Multi-frame data story with multiple story points was used for user-friendly sto
 ### 5. Project Objectives
  
  1. Which retailers are generating the most revenue for Adidas?
- 2. Which regions are the best and worst regions?
- 3. Which products are best selling?
+ 2. Which are the best and worst regions in terms of sales and profitability?
+ 3. What products are best selling?
  4. How differrent sales methods are driving revenue and profitability?
 
 ### 6. Analysis
@@ -65,21 +67,21 @@ Figure 1
 
 According to Figure 1, West Gear, Foot Locker and Sports Direct are the three leading retailers in terms of revenue. Noticeably, Sports Direct gains the most profit margin while West Gear and Footlocker's profit margin is almost on par with the rest retailers. Walmart can be worked on as it generates the least sales with lowest profit ratio.
 
-#### 6.2. Which regions are the best and worst regions?
+#### 6.2. Which are the best and worst regions in terms of sales and profitability?
 
 Figure 2
 
 <img src="/assets/images/P9_4.png">
 
-West is the top region in terms of revenue and quite far ahead from the second which is Northeast and the third which is Southeast. Profit ratio shows a reversed picture. Pricing strategies may be different among regions. It is worth looking further into any discount scheme currently in place or in the future. (Figure 2)
+West is the top region in terms of revenue and quite far ahead from the second and third which are Northeast and Southeast. However, profit ratio shows a reversed picture. It seems like Adidas AG applies different pricing strategies among regions. It is worth looking further into any discount scheme and retailers' commission rates currently in place or in the future. (Figure 2)
 
 Figure 3
 
 <img src="/assets/images/P9_5.png">
 
-It is quite similar when looking at performance by state. States that gain less sales are mostly those with higher profit ratio (Figure 3)
+It is quite similar when looking at performance by state. States that gain less sales are mostly those with higher profit ratio. States with highest revenue including California, Texas, Florida and New York generate around 40% profit ratio while states with smaller revenue gains 45%-50% profit ratio (Figure 3).
 
-#### 6.3. Which products are best selling?
+#### 6.3. What products are best selling?
 
 Figure 4
 
@@ -113,7 +115,7 @@ However, In-Store generates the least profit ratio due to its fixed cost on rent
 
 Online is still the most profitable method and should be focused on growing.
 
-*Full version of the Analysis visualization on Teableau can be found [here]().*
+*Full version of the Analysis visualization on Teableau can be found [here](https://public.tableau.com/views/Dashboard-MilestoneProject/AdidasAGStory?:language=en-US&:display_count=n&:origin=viz_share_link).*
 
 ### 7. Findings
 
