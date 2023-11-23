@@ -83,6 +83,8 @@ Multi-frame data story with multiple story points was used for user-friendly sto
 
 ### 6. Analysis
 
+*Full version of the analysis and visualization on Teableau can be found [here](https://public.tableau.com/views/Dashboard-MilestoneProject/AdidasAGStory?:language=en-US&:display_count=n&:origin=viz_share_link).*
+
 #### 6.1. Which retailers are generating the most revenue for Adidas?
 
 Figure 1
@@ -143,7 +145,7 @@ However, In-Store generates the least profit ratio due to its fixed cost on rent
 
 Online is still the most profitable method and should be focused on growing.
 
-*Full version of the Analysis visualization on Teableau can be found [here](https://public.tableau.com/views/Dashboard-MilestoneProject/AdidasAGStory?:language=en-US&:display_count=n&:origin=viz_share_link).*
+<br>
 
 ### 7. Findings
 
@@ -162,14 +164,17 @@ Online is still the most profitable method and should be focused on growing.
 The biggest problem for Adidas AG is that regions/states that generate most total sales secure less profitability. 
 
 * In the West, Addidas’s Women’s Appeal is selling well, at the highest price compared to the rest of Addidas products, but it is generating the least margin.
-* 
+  
 * In the other regions, Men's Apparel generates quite poor margin, despite its high pricing
   
 * The following can be considered.
   
-    · Conduct a survey for consumers’ feedback to understand about their behavior and satisfaction of using these particular products 
-    · Advertise more to raise brand awareness and/or retain users. 
-    · Is operating cost too higher? 
+    · Conduct a survey for consumers’ feedback to understand about their behavior and satisfaction of using these particular products
+  
+    · Advertise more to raise brand awareness and/or retain users
+  
+    · Is operating cost too higher?
+  
     · Is retailer commission too high on this product? 
 
 Growth opportunity for Adidas AG is in their online business. There is a fierce race among brands in terms of digitalizing their brands. A website that is eye-catchy and user friendly would tremendously help grow the business. This change should also be coupled with excellent customer service, an easy only payment system and great return policy. 
