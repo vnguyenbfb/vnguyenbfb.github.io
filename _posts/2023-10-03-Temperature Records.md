@@ -11,6 +11,14 @@ We will use the daily climate records of Ann Arbor Michigan from a subset of The
 (GHCN-Daily) to plot line graphs of the record high and record low temperatures by the day of the year over the period 2005-2014. 
 
 
+
+
+
+
+<br><br><br><br><br><br><br><br>
+
+
+
 ### Overview
 
 Introduction
