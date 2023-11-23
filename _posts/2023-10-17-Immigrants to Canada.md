@@ -17,21 +17,28 @@ The Immigration to Canada dataset consists of immigrants record from 150+ countr
 
 ### Overview
 
-- Introduction <br>
+- Introduction 
 
-- Analysis and Findings <br>
+- Analysis and Findings
+  
    * By Continent
+     
    * By Region
+     
    * By Country
-   * India, China and Philippines <br>     
+     
+   * India, China and Philippines 
 
 - Summary
 
+<br>
 
 ### 1. Introduction
 The Immigration to Canada dataset consists of immigrants record from 150+ countries to Canada between 1980 to 2013. It records international migration flows to Canada from selected countries - The 2015 revision from United Nation's website. The dataset contains annual data on both inflows and outflows according to the place of birth, citizenship or place of previous / next residence both for foreigners and nationals. The focus is on Canadian Immigration data.
 
 The dataset can be found [here](https://github.com/rashida048/Datasets/blob/master/Canada.xlsx).
+
+<br>
 
 ### 2. Analysis and Findings
 #### *2.1. By Continent*
@@ -45,8 +52,10 @@ df = pd.read_csv('datasets/Canada by Citizenship.csv')
 # Data cleansing and preparation
 df.drop(columns=['Type', 'Coverage', 'AREA', 'REG', 'DEV', 'DevName'], inplace=True)
 df.rename(columns={'OdName':'Country', 'AreaName':'Continent','RegName':'Region'}, inplace=True)
-df['Country'] = df['Country'].replace(['United Kingdom of Great Britain and Northern Ireland', 'United States of America',
-                                      'Iran (Islamic Republic of)', 'Republic of Korea'], ['UK', 'US', 'Iran', 'South Korea'])
+df['Country'] = df['Country'].replace(['United Kingdom of Great Britain and Northern Ireland',
+                                       'United States of America', 'Iran (Islamic Republic of)',
+                                       'Republic of Korea'],
+                                      ['UK', 'US', 'Iran', 'South Korea'])
 df.set_index('Country', inplace=True)
 df.drop(['Total', 'Unknown'], inplace=True)
 df['Alltime'] = df.sum(axis=1)
@@ -194,7 +203,8 @@ plt.show()
 ```
 <img src="/assets/images/P7_5.png">
 
-Here we have a chance to look closely into the top 4 biggest countries of origin that are India, China, the UK and Philippines. Since 1994, the flow from the UK witnesses a sharp plummet from its peak at 39,231. As it gets to low at 7,045 in 1999, it starts to move sideway from there. <br>
+Here we have a chance to look closely into the top 4 biggest countries of origin that are India, China, the UK and Philippines. Since 1994, the flow from the UK witnesses a sharp plummet from its peak at 39,231. As it gets to low at 7,045 in 1999, it starts to move sideway from there. 
+
 The top three countries that show a sharp increase since early '90s are India, China, and Philippines.
 
 #### *2.4. India, China and Philippines*
@@ -233,7 +243,7 @@ plt.show()
 Because we are keen on investigating countries that have the most active highest flow of immigrants in the most recent years, we choose to exclude the UK which observes a sharp decline in immigration flow since 1994. 
 
 Comparing the statistics of the three countries that have the highest number of immigrants to Canada between 1980 and 2013, we notice that China and India almost have the same average number of around 20,000 although China has the widest range (between the maximum and minimum values) of yearly number of immigrants. Philippines ranks fourth and its statistics is on the low end compared to that of India and China. 
-For the boxplot of Philippines, there are two outliers observed above the upper end of the whisker. Generally, the outliers only affect the minimum and maximum values. How are the two datapoints assigned to be outliers? It all depends on the IQR (Interquartile Range):
+For the boxplot of Philippines, there are two outliers observed above the upper end of the whisker. Generally, the outliers only affect the minimum and maximum values. How are the two datapoints assigned to be outliers? It all depends on the IQR (Interquartile Range).
 
     * IQR = Third Quartile - First Quartile = 19,249 - 8,663 = 10,586
     * Upper Boundary = Third Quartile + 1.5 * IQR = 19,249 + 1.5 * 10,586 = 35,128
