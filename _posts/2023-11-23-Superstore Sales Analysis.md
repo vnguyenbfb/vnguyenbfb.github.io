@@ -16,6 +16,8 @@ Superstore dataset is includes sales information of a small retail business name
 
 
 
+
+
 ### Table of Content
    * Introduction
    * Analysis Direction
