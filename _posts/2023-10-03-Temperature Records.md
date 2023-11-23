@@ -21,13 +21,13 @@ We will use the daily climate records of Ann Arbor Michigan from a subset of The
 
 ### Overview
 
-Introduction
+- Introduction
 
-Source Code
+- Data Preparation
 
-Plotting
+- Plotting
 
-Findings
+- Findings
 
 
 
