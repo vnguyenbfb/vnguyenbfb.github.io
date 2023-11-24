@@ -28,6 +28,8 @@ In this project, we will use Python to explore data related to the bike share sy
 
 * The program
 
+* Sample Output
+
 <br>
 
 ### 1.	Introduction
@@ -342,7 +344,7 @@ main()
 ```
 <br>
 
-Sample Output:
+### 5.	Sample Output
 
 ```
 Please enter a city name (Chicago, New York or Washington): Chicago
