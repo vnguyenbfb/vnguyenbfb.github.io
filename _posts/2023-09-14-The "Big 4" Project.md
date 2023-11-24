@@ -212,14 +212,15 @@ def mlb_correlation():
     mlb_df = mlb_df.drop(['GB', 'League'], axis=1)
     mlb_df['team'] = mlb_df['team'].replace(['Arizona Diamondbacks', 'Chicago Cubs', 'Chicago White Sox',
                                             'Colorado Rockies', 'Los Angeles Angels', 'Los Angeles Dodgers',
-                                            'Miami Marlins', 'Minnesota Twins', 'New York Mets', 'New York Yankees',
-                                            'Oakland Athletics', 'San Francisco Giants', 'Tampa Bay Rays',
-                                            'Texas Rangers', 'Washington Nationals'],  
+                                            'Miami Marlins', 'Minnesota Twins', 'New York Mets',
+                                            'New York Yankees', 'Oakland Athletics', 'San Francisco Giants',
+                                            'Tampa Bay Rays', 'Texas Rangers', 'Washington Nationals'],  
                                             ['Phoenix Diamondbacks', 'Chicago Cubs White Sox',
-                                            'Chicago Cubs White Sox', 'Denver Rockies','Los Angeles Dodgers Angels',
-                                            'Los Angeles Dodgers Angels', 'Miami–Fort Lauderdale Marlins',
-                                            'Minneapolis–Saint Paul Twins', 'New York City Yankees Mets',
-                                            'New York City Yankees Mets', 'San Francisco Bay Area Giants Athletics',
+                                            'Chicago Cubs White Sox', 'Denver Rockies',
+                                            'Los Angeles Dodgers Angels', 'Los Angeles Dodgers Angels',
+                                            'Miami–Fort Lauderdale Marlins', 'Minneapolis–Saint Paul Twins',
+                                            'New York City Yankees Mets', 'New York City Yankees Mets',
+                                            'San Francisco Bay Area Giants Athletics',
                                             'San Francisco Bay Area Giants Athletics', 'Tampa Bay Area Rays',
                                             'Dallas–Fort Worth Rangers', 'Washington, D.C. Nationals'])   
     mlb_df = mlb_df.rename(columns={'team':'MLB_team'})
@@ -280,11 +281,12 @@ def nfl_correlation():
                                             'Minnesota Vikings', 'New England Patriots', 'New York Giants',
                                             'New York Jets', 'Oakland Raiders', 'San Francisco 49ers',
                                             'Tampa Bay Buccaneers', 'Tennessee Titans', 'Washington Redskins'],
-                                            ['Phoenix Cardinals', 'Charlotte Panthers', 'Dallas–Fort Worth Cowboys',
-                                            'Los Angeles Rams Chargers', 'Los Angeles Rams Chargers',
-                                            'Miami–Fort Lauderdale Dolphins', 'Minneapolis–Saint Paul Vikings',
-                                            'Boston Patriots', 'New York City Giants Jets',
-                                            'New York City Giants Jets', 'San Francisco Bay Area 49ers Raiders',
+                                            ['Phoenix Cardinals', 'Charlotte Panthers',
+                                            'Dallas–Fort Worth Cowboys', 'Los Angeles Rams Chargers',
+                                            'Los Angeles Rams Chargers', 'Miami–Fort Lauderdale Dolphins',
+                                            'Minneapolis–Saint Paul Vikings', 'Boston Patriots',
+                                            'New York City Giants Jets', 'New York City Giants Jets',
+                                            'San Francisco Bay Area 49ers Raiders',
                                             'San Francisco Bay Area 49ers Raiders', 'Tampa Bay Area Buccaneers',
                                             'Nashville Titans', 'Washington, D.C. Redskins'])    
     nfl_df['W-L%'] = nfl_df['W-L%'].replace('([a-zA-Z]+)', '', regex=True)
@@ -301,12 +303,14 @@ def nfl_correlation():
     df = df[['Metropolitan area', 'Population (2016 est.)[8]', 'NFL_team', 'W-L%']]
     df['W-L%'] = df['W-L%'].astype(float)
     df['Population (2016 est.)[8]'] = df['Population (2016 est.)[8]'].astype(float)
-    LA_Avg = ['LA_Avg', df['Population (2016 est.)[8]'][16], df['NFL_team'][16], (df['W-L%'][16]+df['W-L%'][17])/2]   
+    LA_Avg = ['LA_Avg', df['Population (2016 est.)[8]'][16], df['NFL_team'][16],
+             (df['W-L%'][16]+df['W-L%'][17])/2]   
     df.loc[32] = LA_Avg
     NYC_Avg = ['NYC_Avg', df['Population (2016 est.)[8]'][22], df['NFL_team'][22],
               (df['W-L%'][22]+df['W-L%'][23])/2]   
     df.loc[33] = NYC_Avg
-    SF_Avg = ['SF_Avg', df['Population (2016 est.)[8]'][27], df['NFL_team'][27], (df['W-L%'][27]+df['W-L%'][28])/2]   
+    SF_Avg = ['SF_Avg', df['Population (2016 est.)[8]'][27], df['NFL_team'][27],
+             (df['W-L%'][27]+df['W-L%'][28])/2]   
     df.loc[34] = SF_Avg
     df = df.drop(index=[16,17,22,23,27,28])
 
@@ -438,11 +442,12 @@ def sports_team_performance():
                                             'Minnesota Vikings', 'New England Patriots', 'New York Giants',
                                             'New York Jets', 'Oakland Raiders', 'San Francisco 49ers',
                                             'Tampa Bay Buccaneers', 'Tennessee Titans', 'Washington Redskins'],
-                                            ['Phoenix Cardinals', 'Charlotte Panthers', 'Dallas–Fort Worth Cowboys',
-                                            'Los Angeles Rams Chargers', 'Los Angeles Rams Chargers',
-                                            'Miami–Fort Lauderdale Dolphins', 'Minneapolis–Saint Paul Vikings',
-                                            'Boston Patriots', 'New York City Giants Jets',
-                                            'New York City Giants Jets', 'San Francisco Bay Area 49ers Raiders',
+                                            ['Phoenix Cardinals', 'Charlotte Panthers',
+                                            'Dallas–Fort Worth Cowboys', 'Los Angeles Rams Chargers',
+                                            'Los Angeles Rams Chargers', 'Miami–Fort Lauderdale Dolphins',
+                                            'Minneapolis–Saint Paul Vikings', 'Boston Patriots',
+                                            'New York City Giants Jets', 'New York City Giants Jets',
+                                            'San Francisco Bay Area 49ers Raiders',
                                             'San Francisco Bay Area 49ers Raiders', 'Tampa Bay Area Buccaneers',
                                             'Nashville Titans', 'Washington, D.C. Redskins'])    
     nfl_df['W-L%'] = nfl_df['W-L%'].replace('([a-zA-Z]+)', '', regex=True)
