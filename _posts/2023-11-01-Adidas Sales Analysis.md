@@ -85,6 +85,8 @@ Multi-frame data story with multiple story points was used for user-friendly sto
 
 *Full version of the analysis and visualization on Teableau can be found [here](https://public.tableau.com/views/Dashboard-MilestoneProject/AdidasAGStory?:language=en-US&:display_count=n&:origin=viz_share_link).*
 
+<br>
+
 #### 6.1. Which retailers are generating the most revenue for Adidas?
 
 Figure 1
@@ -92,6 +94,8 @@ Figure 1
 <img src="/assets/images/P9_3.png">
 
 According to Figure 1, West Gear, Foot Locker and Sports Direct are the three leading retailers in terms of revenue. Noticeably, Sports Direct gains the most profit margin while West Gear and Footlocker's profit margin is almost on par with the rest retailers. Walmart can be worked on as it generates the least sales with lowest profit ratio.
+
+<br>
 
 #### 6.2. Which are the best and worst regions in terms of sales and profitability?
 
@@ -108,6 +112,8 @@ Figure 3
 <img src="/assets/images/P9_5.png">
 
 It is quite similar when looking at performance by state. States that gain less sales are mostly those with higher profit ratio. States with highest revenue including California, Texas, Florida and New York generate around 40% profit ratio while states with smaller revenue gains 45%-50% profit ratio (Figure 3).
+
+<br>
 
 #### 6.3. What products are best selling?
 
@@ -132,6 +138,8 @@ Women's Apparel is the most highly priced product and generates quite good margi
 On the other hand, Men's Apparel ranks second in terms of pricing but generate quite poor margin compared to other products, except for in the West. 
 
 Men's St Footwear is actually doing very well, especially in the West. It has big sales volumn, medium range price, and quite good margin.
+
+<br>
 
 #### 6.4. How differrent sales methods are driving revenue and profitability?
 
@@ -158,6 +166,8 @@ Online is still the most profitable method and should be focused on growing.
 * Women's Apparel is the most highly priced product and generates quite good margin, except for in the West. On the other hand, Men's Apparel ranks second in terms of pricing but generates quite poor margin compared to other products, except for in the West. Men's St Footwear is actually doing very well, especially in the West. It has big sales volumn, medium range price, and quite good margin.
   
 * In-Store is the most sales generating method but Online gains the most profit ratio.
+  
+<br>
   
 ### 8. Recommendations
 
