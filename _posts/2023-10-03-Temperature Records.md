@@ -211,11 +211,12 @@ plt.xticks([0,31,59,90,120,151,181,212,243,273,304,334],
 plt.title('Record High and Record Low Temperatures by Day of the Year [2005-2014] vs. 2015', fontsize = 24)
 plt.show()
 ```
-Output
+Output:
 
 <img src="/assets/images/P5_3.png">
 
 <br>
+
 ### 4. Findings
 Based on the graph, we are going to answer the question: *"Is extreme weather getting more frequent in 2015?"*
 
