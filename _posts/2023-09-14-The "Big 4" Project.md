@@ -236,7 +236,8 @@ def mlb_correlation():
     NYC_Avg = [df['MLB_team'][1], (df['W-L%'][1]+df['W-L%'][2])/2, 'NYC_Avg',
               df['Population (2016 est.)[8]'][1]]   
     df.loc[30] = NYC_Avg
-    Chicago_Avg = [df['MLB_team'][9], (df['W-L%'][9]+df['W-L%'][10])/2, 'Chicago_Avg', df['Population (2016 est.)[8]'][9]]   
+    Chicago_Avg = [df['MLB_team'][9], (df['W-L%'][9]+df['W-L%'][10])/2, 'Chicago_Avg',
+                  df['Population (2016 est.)[8]'][9]]   
     df.loc[31] = Chicago_Avg
     SF_Avg = [df['MLB_team'][13], (df['W-L%'][13]+df['W-L%'][14])/2, 'SF_Avg', df['Population (2016 est.)[8]'][13]]   
     df.loc[32] = SF_Avg
@@ -350,11 +351,11 @@ def sports_team_performance():
                                             'Washington, D.C. Capitals', 'Raleigh Hurricanes',
                                             'New York City Rangers Islanders Devils',
                                             'New York City Rangers Islanders Devils',
-                                            'New York City Rangers Islanders Devils', 'Minneapolis–Saint Paul Wild',
-                                            'Denver Avalanche', 'Dallas–Fort Worth Stars', 
-                                            'Las Vegas Golden Knights', 'Los Angeles Kings Ducks',
-                                            'San Francisco Bay Area Sharks', 'Los Angeles Kings Ducks',
-                                            'Phoenix Coyotes'])
+                                            'New York City Rangers Islanders Devils',
+                                            'Minneapolis–Saint Paul Wild', 'Denver Avalanche',
+                                            'Dallas–Fort Worth Stars', 'Las Vegas Golden Knights',
+                                            'Los Angeles Kings Ducks', 'San Francisco Bay Area Sharks',
+                                            'Los Angeles Kings Ducks', 'Phoenix Coyotes'])
     nhl_df = nhl_df.drop(index=[0, 9, 18, 26])
     nhl_df = nhl_df.sort_values(by='team')
     nhl_df = nhl_df.rename(columns={'team':'NHL_team'})
@@ -400,14 +401,15 @@ def sports_team_performance():
     mlb_df = mlb_df.drop(['GB', 'League', 'year'], axis=1)
     mlb_df['team'] = mlb_df['team'].replace(['Arizona Diamondbacks', 'Chicago Cubs', 'Chicago White Sox',
                                             'Colorado Rockies', 'Los Angeles Angels', 'Los Angeles Dodgers',
-                                            'Miami Marlins', 'Minnesota Twins', 'New York Mets', 'New York Yankees',
-                                            'Oakland Athletics', 'San Francisco Giants', 'Tampa Bay Rays',
-                                            'Texas Rangers', 'Washington Nationals'],  
+                                            'Miami Marlins', 'Minnesota Twins', 'New York Mets',
+                                            'New York Yankees', 'Oakland Athletics', 'San Francisco Giants',
+                                            'Tampa Bay Rays', 'Texas Rangers', 'Washington Nationals'],  
                                             ['Phoenix Diamondbacks', 'Chicago Cubs White Sox',
-                                            'Chicago Cubs White Sox','Denver Rockies', 'Los Angeles Dodgers Angels',
-                                            'Los Angeles Dodgers Angels', 'Miami–Fort Lauderdale Marlins',
-                                            'Minneapolis–Saint Paul Twins', 'New York City Yankees Mets',
-                                            'New York City Yankees Mets', 'San Francisco Bay Area Giants Athletics',
+                                            'Chicago Cubs White Sox','Denver Rockies',
+                                            'Los Angeles Dodgers Angels', 'Los Angeles Dodgers Angels',
+                                            'Miami–Fort Lauderdale Marlins', 'Minneapolis–Saint Paul Twins',
+                                            'New York City Yankees Mets', 'New York City Yankees Mets',
+                                            'San Francisco Bay Area Giants Athletics',
                                             'San Francisco Bay Area Giants Athletics', 'Tampa Bay Area Rays',
                                             'Dallas–Fort Worth Rangers', 'Washington, D.C. Nationals'])   
     mlb_df = mlb_df.rename(columns={'team':'MLB_team', 'W-L%':'MLB_WL%'})
