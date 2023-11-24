@@ -15,17 +15,23 @@ In this project, we will use Python to explore data related to the bike share sy
 
 
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 
 
 
-### Executive Summary
-1.	Introduction
-2.	Project Objectives
-3.	Challenges with Raw Data Input
-4.	Programming
+### Table of Content
+* Introduction
+  
+* Project Objectives
+
+* Challenges with Raw Data Input
+
+* The program
+
+<br>
 
 ### 1.	Introduction
+
 Over the past decade, bicycle-sharing systems have been growing in number and popularity in cities across the world. Bicycle-sharing systems allow users to rent bicycles on a very short-term basis for a price. This allows people to borrow a bike from point A and return it at point B, though they can also return it to the same location if they'd like to just go for a ride. Regardless, each bike can serve several users per day.
 
 Datasets for the 3 cities:
@@ -38,18 +44,29 @@ Datasets for the 3 cities:
 
 These data are from the U.S. BikeShare from Udacity’s Course: Programming for Data Science with Python – NanoDegree Program. I do not own any of these datasets.
 
+<br>
+
 ### 2.	Project Objectives
 The project’s goal is to provide an interactive program for the user to customize the results per how the users want to see the data and provide the accurate information the user is looking for.
 
 The datasets we have cover there cities: Chicago, New York and Washington. We will let the user choose which data/data level they are interested in seeing. Variables included in the program are: 
+
   * Time filter: The user can choose to see by month, day of the week, or both month and day of the week, or without a filter at all.
+    
 Once the user has chosen their filter, the program will return a set of statistics
+
   * Most popular hour: what travel hour is the most popular time with a total count
+    
   * Pouplar stations including most popular start and end station with total counts
+    
   * Popular trip: the most popular trip that passengers take given that time filter with a total count
+    
   * Trip duration: how long it takes in terms of total travel time and average travel time
+    
   * Passenger type: counts of passenger types as normal customers and subscribers
+    
   * Passenger gender: counts of passenger types by gender (male vs female)
+    
   * Birth year: counts of ealiest, latest and most popular birth year
 
 The program also provides the run time of each statistic calculation.
@@ -59,6 +76,8 @@ Then it will ask the user if they would like to see the first 5 lines of raw dat
 Lastly, the program then will ask whether the user wants to start over their statistics search.
 
 _* Please note that there is no gender and birth year data for Washington in this dataset, the user will be notified in the statistic report when searching for Washington._
+
+<br>
 
 ### 3.	Challenges with Taking Prompts from the Users’ Raw Input
 
@@ -72,7 +91,9 @@ In this program, we are asking the user to input the time filter the user is int
 
 Finally, because we let the users input the variable they want to see, we need to anticipate all the scenerios and include them in our coding. A lot of testing is required to make sure our program works any how. It was a fun learning process.
 
-### 4.	Programming
+<br>
+
+### 4.	The Program
 
 ```
 import time
@@ -319,6 +340,7 @@ def main():
 
 main()
 ```
+<br>
 
 Sample Output:
 
