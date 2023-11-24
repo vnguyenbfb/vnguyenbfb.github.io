@@ -38,7 +38,7 @@ In this project we will use use Python to cleanse and prepare the dataset before
          
        - By Renewable Energy Level
          
-5. Findings
+* Findings
 
 <br>
    
