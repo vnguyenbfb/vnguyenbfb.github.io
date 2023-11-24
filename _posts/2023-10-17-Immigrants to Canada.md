@@ -115,6 +115,8 @@ plt.show()
 
 While there is a wave of immigration from Europe and Latin America and the Caribbean to Canada between 1986 till 1996 for the former and till 1993 for the latter, there is not much change to the immigration from most continents, except for Asia which observes a rapid increase in immigration since around 1986. 
 
+<br>
+
 #### *2.2. By Region*
 
 ```
@@ -151,6 +153,8 @@ plt.show()
 <img src="/assets/images/P7_3.png">
 
 Following up with the the above "By continent" graph, the "By region" graph zooms into which regions of each continent the flows are happening. It is worth noticing that the significant flows of outbound immigration from Asia are mainly occuring in South Asia and Eastern Asia. The rest of the regions in the chart show constant flows over time. 
+
+<br>
 
 #### *2.3. By Country*
 ```
@@ -212,6 +216,8 @@ plt.show()
 Here we have a chance to look closely into the top 4 biggest countries of origin that are India, China, the UK and Philippines. Since 1994, the flow from the UK witnesses a sharp plummet from its peak at 39,231. As it gets to low at 7,045 in 1999, it starts to move sideway from there. 
 
 The top three countries that show a sharp increase since early '90s are India, China, and Philippines.
+
+<br>
 
 #### *2.4. India, China and Philippines*
 
@@ -299,6 +305,8 @@ plt.show()
 
 This bubble plots are created using the immigration flow volume. The bubble sizes depict the percentage of a country's immigrant volume to the Asia's immigrant volume of the same year. Please note that I have multiply the size by 4000% for better visibility. 
 Overall, China and India's immigration flows are on a strong uptrend since 1990. Philippines slows down since later of 90s' and starts to pick up strongly again since 2007.   
+
+<br>
 
 ### 3. Summary
 *By Continent* 
