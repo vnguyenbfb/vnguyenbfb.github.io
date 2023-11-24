@@ -14,22 +14,33 @@ In this project we will use use Python to cleanse and prepare the dataset before
 
 
 
-<br><br><br><br><br><br><br> <br> 
+<br><br><br><br><br><br><br><br><br><br> 
 
 
 
 ### Overview
-1. Introduction <br>
-2. Data Cleansing and Preparation <br>
-3. Reporting and Analysis <br>
-   * GDP
-   * Energy Supply
-   * Renewable Supply
-   * Continents
-       - By Population
-       - By Renewable Energy Level
-4. Findings
 
+* Introduction
+
+* Data Cleansing and Preparing
+
+* Reporting and Analysis
+  
+   * GDP
+     
+   * Energy Supply
+     
+   * Renewable Supply
+     
+   * Continents
+     
+       - By Population
+         
+       - By Renewable Energy Level
+         
+5. Findings
+
+<br>
    
 ### 1. Introduction
 The energy datafile “Energy Indicators” is a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013, we will put the information into a DataFrame with the variable name of **Energy**. This datafile is in Excel format and available [here](https://docs.google.com/spreadsheets/d/1QkXYq9ptjwzIP36E9TNYbou940cIExcT/edit?usp=drive_link&ouid=106973170624396683384&rtpof=true&sd=true). 
@@ -38,7 +49,9 @@ The GDP data is a csv containing countries' GDP from 1960 to 2015 from World Ban
 
 The Sciamgo Journal and Country Rank data for Energy Engineering and Power Technology, which ranks countries based on their journal contributions in the aforementioned area. We call this DataFrame **ScimEn**. The datafile can be found [here](https://docs.google.com/spreadsheets/d/1mvfsk0nhPlhu70XHirBIHn-3tCg54eBl/edit?usp=drive_link&ouid=106973170624396683384&rtpof=true&sd=true).
 
-### 2. Data Cleansing and Preparation
+<br>
+
+### 2. Data Cleansing and Preparing
 The first task we need to do is to change some of the column names and country names for easy recognition and alignment. Some countries have different names on the dataframes. For example, South Korea is named "Republic of Korea" in the Energy Dataframe and "Korea, Rep." in the GDP Dataframe, or Hong Kong is called "China, Hong Kong Special Administrative Region" in the Energy Dataframe and "Hong Kong SAR, China" in the GDP Dataframe, ect. And for all countries which have missing data (e.g. data with "..."), missing data will be reflected as np.NaN values.
 
 To make it easier, we exclude the footer and header information from the datafiles, and trimming unnecessary columns.
@@ -94,6 +107,7 @@ df.iloc[:15]
 
 <img src="/assets/images/P3_1.png">
 
+<br>
 
 ### 3. Reporting and Analysis
 #### 3.1. GDP
@@ -172,8 +186,11 @@ Compared to 2006, China's GDP has impressively gained 120.37% in 2015. Paired wi
 
 Spain's GDP is almost the same as 10 years ago at 0.35% growth rate and Italy's GDP actually shrinks at -6.94% growth rate. Japan is the 3rd biggest GDP but sees a modest growth rate of only 3.15% compared to 10 years ago.
 
+<br>
+
 #### 3.2. Energy Supply
-In this part, we will drill into the Energy supply statistics. Keep in mind that this data is for the year 2013. <br>
+In this part, we will drill into the Energy supply statistics. Keep in mind that this data is for the year 2013.
+
 Let's take a look at the average energy supply per capita in 2013 for all the countries.
 
 ```
@@ -215,6 +232,8 @@ Output: (0.30674695967590515, 0.26612100439533454)
 
 Correlation coefficient of 0.30674695967590515 is telling us that the two variables are not in a strong direct relationship and p-value of 0.26612100439533454 means the correlation is not statistically significant either. This can very likely be explained by the difference in population sizes of the countries.
 
+<br>
+
 #### 3.3. Renewable Supply
 Which country among the top 15 GDP ranking has the maximum and minimum % Renewable? 
 
@@ -238,8 +257,7 @@ Output:
  ('China', 19.75), <br>
  ('United States', 11.57))
  
-Brazil magnificently has the maximum % Renewable Energy (69.65%) while South Korea has the minimum % Renewable Energy (2.28%) out the top 15 GDP ranking countries.
-Brazil's % Renewable is quite far ahead of those of the two biggest economies which are the U.S (11.57%) and China (19.75%).
+Brazil magnificently has the maximum % Renewable Energy (69.65%) while South Korea has the minimum % Renewable Energy (2.28%) out the top 15 GDP ranking countries. Brazil's % Renewable is quite far ahead of those of the two biggest economies which are the U.S (11.57%) and China (19.75%).
 
 We will find the mean of percent Renewable of the top 15 GDP ranking and compare their percent Renewable to that value.
 ```
@@ -276,6 +294,8 @@ Country  |                % Renewable |Compare % Renewable
 
 
 Only 4 out of 15 countries are above the mean value of % Renewable value for the top 15 countries. Most "below" countries are in the teen-ish range which is significantly low compared to the "above" countries.
+
+<br>
 
 #### 3.4. Analysis by Continent
 ##### 3.4.1. By Population
@@ -337,6 +357,7 @@ South America |	1   |	2.059153e+08|	2.059153e+08  |	NaN
 <br>
 Asia is the most populous continent with the largest average, total population and aslo standard deviation. Because there is only 1 country in Australia and South America continent within the 15 top ranking countries, std shows NaN for these 2 continents.
 
+<br>
 
 ##### 3.4.2. By Renewable Energy Level
 we are going to Cut % Renewable into 5 bins and group Top 15 GDP ranking by Continent, as well as these new % Renewable bins and find out how many countries are in each of these groups. 
@@ -400,6 +421,8 @@ South America  (-0.1, 20.0]     0
                (80.0, 100.0]    0
 Name: Continent, dtype: int64
 ```
+
+<br>
 
 ### 4. Findings
 
