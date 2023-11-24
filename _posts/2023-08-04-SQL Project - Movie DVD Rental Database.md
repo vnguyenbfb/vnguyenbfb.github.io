@@ -209,9 +209,14 @@ It is quite interesting that the most rented category (Animation) has the shorte
 ### 5. Summary of main findings and Recommendations
 
    * There is not much difference in terms of number of rental orders between the two stores. The most counts are observed in July 2005 and the least in February 2006. The dataset only provides monthly data from May to August 2005 and February 2006. If there is more continuous monthly data, we could look at trends in terms of rental orders on a monthly basis.
+     
    * Most film categories show even distribution among the quartiles. However, Classics and Music observe the largest gaps among quartiles - quartiles 1, 4 versus quartiles 2, 3 for Classics and quartile 1 versus quartile 3 for Music.
+     
    * The top 10 paying customers made the most payment amounts in April 2007 and least in May 2007. Data of May 2007 is significanly little compared to other months. If we remove May 2007 data from the picture, there is an up trend in the payment amounts by 8 out of 10 top paying customers between February and April 2007. More investigation should be launched to find out whether May 2007 data is complete to determine the real trend behind these payment amounts. The company can conduct customer satisfaction survey to understand the unmet needs by Ana B. and Mike W. to explore more sales opportunities.
+     
    * Eleanor H. ($64.9) had the most increase in payment and that happened in March 2007. Closely following are Curtis I. ($63.9) and Rhonda K. ($54.9). All of those records are observed in March 2007. Besides those best increases, we also need to look into those customers who are paying less such as Mike W. (-$80.83), Marcia E. (-$72.8) and Ana B. (-$69.9). These are noticed in May 2007.
+     
    * Animation is the most frequently rented category (1166 times). Family came as a close second (1096 times) and Children came third (945 times). Music is the least rented category (830 times).
+     
    * It is worth mentioning that the most rented category (Animation) has the shortest average rental duration (4.89 days) while the least rented category (Music) has the longest average rental duration (5.24 days). More research should be done to understand the nature of each film category to understand what drives the rental duration. For example, average length of each film category, customers’ behavoir and profiles, ect.
 
