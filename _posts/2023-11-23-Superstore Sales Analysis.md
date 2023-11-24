@@ -34,6 +34,8 @@ This dataset is from the series of “Data Visualization with Tableau” I took 
 
 The dataset contains comprehensive data of sales, profit, discount, profit ratio, customer names, order IDs and geographical information of SuperStore. We are going to analyse the dataset and provide a full picture of its business performance and problems with opportunities for business growth.
 
+<br>
+
 #### *1.2. Target Audience (Imaginative Personas)* 
 Vice President of Sales: 
    * Needs an immediate actionable plan to start improving the loss situation
@@ -64,7 +66,7 @@ Before we jump into the analysis, I would like to firstly make sure we are on th
 **Discounted Orders**: All orders that get a discount of more than zero percent <br>
 **Non-Discounted Orders**: All orders that get a discount of zero percent
 
-The current situation: Discounted orders generate $1,088,020 in sales, equal 47% of the bussines revenue but generate a profit loss of -8.23%. And the average discount ratio for all the discounted orders is 30.04% (Figure 1).
+**The current situation: Discounted orders generate $1,088,020 in sales, equal 47% of the bussines revenue but generate a profit loss of -8.23%.** And the average discount ratio for all the discounted orders is 30.04% (Figure 1).
 
 *Figure 1*
 
@@ -72,7 +74,7 @@ The current situation: Discounted orders generate $1,088,020 in sales, equal 47%
 
 <br>
 
-When we look at Sales, Profit, Discount and Profit Ratio by Region, the picture becomes clearer that big loss is happening mainly to the Discounted Orders in the Central (profit ratio of -35.10%). Discounted Orders in the East and South are not making any profit. Only Discounted Orders in the West is making a modest profit ratio of 8.57% (Figure 2).
+When we look at Sales, Profit, Discount and Profit Ratio by Region, the picture becomes clearer that **big loss is happening mainly to the Discounted Orders in the Central (profit ratio of -35.10%).** Discounted Orders in the East and South are not making any profit. Only Discounted Orders in the West is making a modest profit ratio of 8.57% (Figure 2).
 
 *Figure 2*
 
@@ -80,7 +82,7 @@ When we look at Sales, Profit, Discount and Profit Ratio by Region, the picture 
 
 <br>
 
-Let's look at the business performance by Customer Segment per region. Each circle demonstrates each customer. The color scheme depicts the profit ratio range from -100% to 100%. The darker the color is, the more loss the company is taking for a customer. It is worth noticing that customers with higher discount generate more negative profit ratio, mostly across all customer segments. However, most loss is seen in the Central (Figure 3).
+Let's look at the business performance by Customer Segment per region. Each circle demonstrates each customer. The color scheme depicts the profit ratio range from -100% to 100%. The darker the color is, the more loss the company is taking for a customer. **It is worth noticing that customers with higher discount generate more negative profit ratio, mostly across all customer segments. However, most loss is seen in the Central** (Figure 3).
 
 *Figure 3*
 
@@ -90,7 +92,7 @@ Let's look at the business performance by Customer Segment per region. Each circ
 
 <br>
 
-The "Performance by City" map below shows us more details about sales and profit ratio at city level where the size of the circle demonstrate the sales of a city while the color of the circle depicts the profit ratio of that city (red/orange means big negative profit ratio while dark blue means good positive profit ratio). We can see that big orange circles are found in the Central and the West of the country. These are the cities with big sales and big negative profit ratio (Figure 4). So what are those cities?
+The "Performance by City" map below shows us more details about sales and profit ratio at city level where the size of the circle demonstrate the sales of a city while the color of the circle depicts the profit ratio of that city (red/orange means big negative profit ratio while dark blue means good positive profit ratio). We can see that big orange circles are found in the Central and the West of the country. **These are the cities with big sales and big negative profit ratio (Figure 4). So what are those cities?**
 
 *Figure 4* 
 
@@ -98,7 +100,9 @@ The "Performance by City" map below shows us more details about sales and profit
 
 <br>
 
-Figure 5 is a list of the underperforming cities in terms of Profit Ratio. The cities in Illinois and Texas are the most underperforming cities. The cities in Ohio and Pensylvania, although not as serverely, they should be paid attention to as well.
+Figure 5 is a list of the underperforming cities in terms of Profit Ratio. **The cities in Illinois and Texas are the most underperforming cities.** The cities in Ohio and Pensylvania, although not as serverely, they should be paid attention to as well.
+
+**Philadelphia city should also be paid attention to with its highest sales number of $109,085 among all the cities but has a negative profit ratio of -7.99%. This city alone contributes 4.74% of the total business sales. (Figure 5)**
 
 *Figure 5* 
 
@@ -106,9 +110,7 @@ Figure 5 is a list of the underperforming cities in terms of Profit Ratio. The c
 
 <br>
 
-So what are the specific sub-categories that the business is losing money in the Central and the East? While profitable sub-categories are mostly performing the the same in both regions. Binders and Appliances are especially taking big loss in the Central (Figure 6).
-
-Philadelphia city should also be paid attention to with its highest sales number of $109,085 among all the cities but has a negative profit ratio of -7.99%. This city alone contributes 4.74% of the total business sales. <br>
+So what are the specific sub-categories that the business is losing money in the Central and the East? While profitable sub-categories are mostly performing the the same in both regions. **Binders and Appliances are especially taking big loss in the Central (Figure 6).**
 
 *Figure 6* 
 
@@ -116,7 +118,7 @@ Philadelphia city should also be paid attention to with its highest sales number
 
 <br>
 
-Figure 7 consists of customers in the Central and East only. Each bubble stands for a customer, the color of the bubble tells us about the the profit ratio the company has with that customer and the size indicates the discount percent. For most big bubbles (i.e heavily discounted customers), the color is orange to brown-ish, meaning the company are losing money (negative profit ratio) with these customers. 
+Figure 7 consists of customers in the Central and East only. Each bubble stands for a customer, the color of the bubble tells us about the the profit ratio the company has with that customer and the size indicates the discount percent. **For most big bubbles (i.e heavily discounted customers), the color is orange to brown-ish, meaning the company are losing money (negative profit ratio) with these customers.**
 
 *Note that the tooltip (the rectangle text box) is demonstrating information of a bubble (i.e a customer) on the chart*
 
@@ -128,9 +130,9 @@ Figure 7 consists of customers in the Central and East only. Each bubble stands 
 
 While Figure 7 is useful in confirming the hypothesis that the larger discount the company offers, the more loss the company gets. However, it does not show us how many customers in each discount tier.
 
-Figure 8 does a good job in demonstrating how many customers we have in each discount tier. Also, it helps discover another interesting fact that those customers that receive lower discount rate actually make bigger sales then the heavily discounted ones. This leads to necessity of large discount, because it does not incentivize larger sales. 
+Figure 8 does a good job in demonstrating how many customers we have in each discount tier. Also, it helps discover another interesting fact that **those customers that receive lower discount rate actually make bigger sales then the heavily discounted ones. This questions the necessity of large discounts, because they do not incentivize larger sales.**
 
-Also, the profit ratio starts to turn negative at around 25% discount (notice the white-ish bubbles depicting 0% profit ratio). This 25% discount level should be used as a threshold for building the company's sales strategy.
+**Also, the profit ratio starts to turn negative at around 25% discount (notice the white-ish bubbles depicting 0% profit ratio). This 25% discount level should be used as a threshold for building the company's sales strategy.**
 
 *Note that the tooltip (the rectangle text box) is demonstrating information of a bubble (i.e a customer) on the chart*
 
