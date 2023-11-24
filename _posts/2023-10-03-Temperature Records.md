@@ -13,8 +13,6 @@ We will use the daily climate records of Ann Arbor Michigan from a subset of The
 
 
 
-
-
 <br><br><br><br><br><br><br><br>
 
 
@@ -23,9 +21,9 @@ We will use the daily climate records of Ann Arbor Michigan from a subset of The
 
 - Introduction
 
-- Data Preparation
+- Analysis outline
 
-- Plotting
+- Analysis and Plotting
 
 - Findings
 
@@ -38,22 +36,31 @@ The data for this assignment comes from a subset of The National Centers for Env
 Each row in this datafile corresponds to a single observation from a weather station, and has the following variables:
 
    * id : station identification code
-   * date : date in YYYY-MM-DD format (e.g. 2012-01-24 = January 24, 2012)
-   * element : indicator of element type
-        - TMAX : Maximum temperature (tenths of degrees C)
-        - TMIN : Minimum temperature (tenths of degrees C)
-   *	value : data value for element (tenths of degrees C)
      
-For this project, we will carry out these analysis:
-   * Plotting line graphs of the record high and record low temperatures by day of the year over the period 2005-2014. The area between the record high and record low temperatures for each day will be shaded.
-   * Then Overlaying a scatter of the 2015 data for any points (highs and lows) for which the ten year record (2005-2014) record high or record low was broken in 2015. We will remove leap days (i.e. February 29th) for the purpose of this visualization.
+   * date : date in YYYY-MM-DD format (e.g. 2012-01-24 = January 24, 2012)
+     
+   * element : indicator of element type
+     
+        - TMAX : Maximum temperature (tenths of degrees C)
+          
+        - TMIN : Minimum temperature (tenths of degrees C)
+          
+   *	value : data value for element (tenths of degrees C)
 
-I do not owe any of these datasets, datafiles can be found below:
+I do not own any of these datasets, datafiles can be found below:
 [BinSize_d400.csv](https://drive.google.com/file/d/1Fg-iSUBksGvHxnj-UTkGw2VLvawEU6nm/view?usp=drive_link)
 
 Daily climate records in Ann Arbor Michigan: [fb441e62df2d58994928907a91895ec62c2c42e6cd075c2700843b89.csv](https://drive.google.com/file/d/1KWJSlvKtMfZBQjaP84cZ0X0DrZQY9SCu/view?usp=drive_link)
 
-### 2. Source Code
+### 2. Analysis Outline
+
+For this project, we will carry out these analysis:
+
+   * Plotting line graphs of the record high and record low temperatures by day of the year over the period 2005-2014. The area between the record high and record low temperatures for each day will be shaded.
+     
+   * Then Overlaying a scatter of the 2015 data for any points (highs and lows) for which the ten year record (2005-2014) record high or record low was broken in 2015. We will remove leap days (i.e. February 29th) for the purpose of this visualization.
+
+### 3. Analysis and Plotting
 
 We are going to use the folium package to render the data into a map.
 
@@ -83,9 +90,9 @@ Printshots of the map as below.
 
 <img src="/assets/images/P5_2.png">
 
-#### Step 1:
+<br>
 
-In step 1, we are going to load the dataset and transform the data into Celsius then extract all of the rows which have minimum or maximum temperatures.
+#### 3.1. Step 1: Transforming the data_value into Celsius and creating a dataframe of minimum temperatures and a dataframe of maximum temperatures.
 
 ```
 df = pd.read_csv('assets/fb441e62df2d58994928907a91895ec62c2c42e6cd075c2700843b89.csv')
@@ -113,7 +120,10 @@ df['Data_Value(C)'] = round((df['Data_Value'] - 32) * 5/9, 1)
 df_TMAX = df[df['Element']=='TMAX']
 df_TMIN = df[df['Element']=='TMIN']
 ```
-#### Step 2:
+
+<br>
+
+#### 3.2. Step 2: Creating dataframes of maximum and minimum temperatures across all weather stations for each day of 10 years (2005-2014)
 
 In order to visualize the data we would plot the min and max data for each day of the year between the years 2005 and 2014 across all weather stations. But we also need to find out when the min or max temperature in 2015 falls below the min or rises above the max for the previous decade.
 
@@ -144,7 +154,10 @@ TMIN_10Y = TMIN_10Y.drop(['02-29'], axis = 'index')
 TMIN_10Y = TMIN_10Y.reset_index()
 TMIN_10Y.rename(columns = {'Data_Value(C)':'TMIN_10Y_Temp'}, inplace = True)
 ```
-#### Step 3:
+
+<br>
+
+#### 3.3. Step 3: Comparing the maximum temperature of for each day of the year 2015 against the maximum temperature of 2005-2014 for the same date. Same process with miumum temperatures.
 
 Now that we have grouped the daily max and min temperatures for each day of the years 2005 through 2015, we will separate out the data for 2015. Then we are going to use the Pandas groupby function to find the max and min of the temperature data for each day of the year for the 2005-2014 data.
 
@@ -158,8 +171,11 @@ merged_df['IsLower'] = np.where((merged_df['TMIN_2015_Temp'] < merged_df['TMIN_1
                                 merged_df['TMIN_2015_Temp'], np.nan)
 ```
 
-#### Step 4:
-Now it's time to plot! You are going to use matplotlib to plot line graphs of the min and max temperatures for the years 2005 through 2014 and to scatter plot only the daily 2015 temperatures that exceeded those values.
+<br>
+
+#### 3.4. Step 4: Plotting time! Line graphs of the min and max temperatures for 2005-2014 and scatter plot for the exceed values of 2015
+
+Now it's time to plot! We are going to use matplotlib to plot line graphs of the min and max temperatures for the years 2005 through 2014 and to scatter plot only the daily 2015 temperatures that exceeded those values.
 
 ```
 import matplotlib.pyplot as plt
@@ -189,12 +205,13 @@ plt.yticks(np.arange(round(min(TMIN_scatter_df['IsLower']), -1), 250, 20))
 plt.xticks([0,31,59,90,120,151,181,212,243,273,304,334],
            ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
 plt.title('Record High and Record Low Temperatures by Day of the Year [2005-2014] vs. 2015', fontsize = 24)
+plt.show()
 ```
-### Plotting
+Output
 
 <img src="/assets/images/P5_3.png">
 
-### Findings
+### 4. Findings
 Based on the graph, we are going to answer the question: *"Is extreme weather getting more frequent in 2015?"*
 
 According to the graph, there is no trend showing that year 2015 is getting more frequent extreme weather. The most extreme cold weather is observed in February 2015 and extreme cold weather in  December 2015. Hot and cold extreme weather is also seen across the year but is not significantly as frequent compared to February and December 2015. 
