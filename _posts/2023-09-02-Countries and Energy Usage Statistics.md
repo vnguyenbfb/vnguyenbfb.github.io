@@ -7,7 +7,11 @@ categories: media
 
 <img style="float:left" src="/assets/images/Image3c_small.jpg">
 
-In this project we will use use Python to cleanse and prepare the dataset before running analysis on it. We will look into four areas of interest: by GDP, Energy Supply, Renewable Supply and continent.  
+In this project, we will use use Python to cleanse and prepare the dataset before running analysis on it. We will look into four areas of interest: 
+* By GDP,
+* By Energy Supply
+* By Renewable Supply
+* By continent.  
 
 
 
