@@ -127,6 +127,8 @@ ORDER BY name, quartile;
 <img src="/assets/images/P1_2.png">
 
 Most film categories have even distribution among the quartiles, except for Classics and Music. Classics has large difference between quartiles 1, 4 and quartiles 2, 3 while Music has large difference between quartile 1 and 3.
+ 
+<br>
 
 #### 4.3.	Payments by the top 10 paying customers on a monthly basis during 2007
 ```
@@ -204,7 +206,8 @@ ORDER BY rental_count;
 <img style="float:left" src="/assets/images/P1_5.png">
 Animation is the most frequently rented category (1166 times). Family came as a close second (1096 times) and Children came third (945 times). Music is the least rented category (830 times).
 It is quite interesting that the most rented category (Animation) has the shortest average rental duration (4.89 days) while the least rented category (Music) has the longest average rental duration (5.24 days).
-<br> <br>
+ 
+<br>
 
 ### 5. Summary of main findings and Recommendations
 
