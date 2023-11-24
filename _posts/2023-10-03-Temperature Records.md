@@ -13,7 +13,7 @@ We will use the daily climate records of Ann Arbor Michigan from a subset of The
 
 
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 
 
 
@@ -27,7 +27,7 @@ We will use the daily climate records of Ann Arbor Michigan from a subset of The
 
 - Findings
 
-
+<br>
 
 ### 1. Introduction
 
@@ -52,6 +52,8 @@ I do not own any of these datasets, datafiles can be found below:
 
 Daily climate records in Ann Arbor Michigan: [fb441e62df2d58994928907a91895ec62c2c42e6cd075c2700843b89.csv](https://drive.google.com/file/d/1KWJSlvKtMfZBQjaP84cZ0X0DrZQY9SCu/view?usp=drive_link)
 
+<br>
+
 ### 2. Analysis Outline
 
 For this project, we will carry out these analysis:
@@ -59,6 +61,8 @@ For this project, we will carry out these analysis:
    * Plotting line graphs of the record high and record low temperatures by day of the year over the period 2005-2014. The area between the record high and record low temperatures for each day will be shaded.
      
    * Then Overlaying a scatter of the 2015 data for any points (highs and lows) for which the ten year record (2005-2014) record high or record low was broken in 2015. We will remove leap days (i.e. February 29th) for the purpose of this visualization.
+
+<br>
 
 ### 3. Analysis and Plotting
 
@@ -211,6 +215,7 @@ Output
 
 <img src="/assets/images/P5_3.png">
 
+<br>
 ### 4. Findings
 Based on the graph, we are going to answer the question: *"Is extreme weather getting more frequent in 2015?"*
 
