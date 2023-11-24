@@ -262,6 +262,8 @@ Output: (0.15003737475409495, 0.46442827201123427)
 
 Correlation coefficient of 0.15003737475409495 is telling us that the two variables are not in a strong direct relationship and p-value of 0.46442827201123427 means the correlation is not statistically significant either.
 
+<br>
+
 #### 3.4. NFL Dataset
 
 Lastly, we are going to run the same analysis on NFL's win/loss ratio's correlation with the population of the city it is in using 2018 data.
@@ -504,7 +506,7 @@ print('Ttest_relResult_NBA_MLB: ', NBA_MLB_team_ttest)
 print('Ttest_relResult_NFL_MLB: ', NFL_MLB_team_ttest)
 ```
 
-Output: 
+**Output:** 
 
 Ttest_relResult_NHL_NBA:  Ttest_relResult(statistic=2.5905361064540027, pvalue=0.02240459747249962)
 
