@@ -222,7 +222,6 @@ The top three countries that show a sharp increase since early '90s are India, C
 #### *2.4. India, China and Philippines*
 
 ```
-#df_ICP = shortlist_df_transposed.iloc[2:-1, [0,1,3]]
 df_ICP = df.loc[['China', 'India', 'Philippines'], years].transpose()
 
 df_ICP_describe = df_ICP.describe()
