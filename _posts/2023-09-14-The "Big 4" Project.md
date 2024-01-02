@@ -25,7 +25,9 @@ We will analyze the data from the perspective of the metropolitan region.
     
   * Challenges with Cleansing the Datasets
     
-  * Data Cleansing and Preparing
+  * Data Cleansing, Prepping and Pearsonr Correlation Test:
+    
+    *Does the performance of a team correlate with the population of the city it is in?* 
     
     - NHL Dataset
       
@@ -35,7 +37,9 @@ We will analyze the data from the perspective of the metropolitan region.
       
     - NFL Dataset
  
- * Correlation Tests and Findings
+ * Correlation Tests and Findings:
+   
+   *Given that an area has two sports teams in different sports, will those teams perform the same within their respective sports?*
       
 
 <br>
@@ -43,9 +47,9 @@ We will analyze the data from the perspective of the metropolitan region.
 ### 1.	Introduction
 In this assignment we will read into a file of metropolitan regions and associated sports teams from assets/wikipedia_data.html. Each of these regions may have one or more teams from the "Big 4": [NFL](/nfl.csv) (football), [MLB](/mlb.csv) (baseball), [NBA](/nba.csv) (basketball) or [NHL](/nhl.csv) (hockey). We will analyse the data from the perspective of the metropolitan region, and that the html file is the "source of authority" for the location of a given sports team. Teams which are commonly known by a different area (e.g. "Oakland Raiders") will be mapped into the metropolitan region given (e.g. San Francisco Bay Area). This will require some human data understanding outside of the data we've been given (e.g. we will have to hand-code some names, and might need to google to find out where teams are).
 
-For each sport we will answer the question:
+For each sport we will answer the question: *"Does the performance of a team correlate with the population of the city it is in?"* 
 
-*Does the performance of a team correlate with the population of the city it is in?* 
+We will use Pearsonr correlation analysis to answer this question.
 
 Win/Loss ratio refers to the number of wins over the number of wins plus the number of losses. We will use Pearsonr to calculate the correlation and then send in two ordered lists of values - the populations from the wikipedia_data.html file and the win/loss ratio for a given sport in the same order. For those cities which have multiple teams of a single sport, we will take the average of the win/loss ratios. 
 
@@ -64,8 +68,8 @@ The four datasets do not share any common rules. Therefore, cleansing and aligni
 
 <br>
 
-### 3.  Data Cleansing and Preparing
-
+### 3.  Data Cleansing, Prepping and Pearsonr Correlation Test
+***Does the performance of a team correlate with the population of the city it is in?***
 #### 3.1. NHL Dataset
 
 We are going to take a look at the win/loss ratio's correlation with the population of the city it is in for the NHL using 2018 data.
@@ -332,6 +336,8 @@ Correlation coefficient of 0.004282141436393031 shows that the two variables are
 <br>
 
 ### 4. Correlation Tests and Findings
+
+***Given that an area has two sports teams in different sports, will those teams perform the same within their respective sports?***
 
 Next, we are going to explore the hypothesis that given that an area has two sports teams in different sports, those teams will perform the same within their respective sports. We are going to use a series of paired t-tests (so use ttest_rel) between all pairs of sports. Are there any sports where we can reject the null hypothesis? Similarly, we will take the average values where a sport has multiple teams in one region. 
 
