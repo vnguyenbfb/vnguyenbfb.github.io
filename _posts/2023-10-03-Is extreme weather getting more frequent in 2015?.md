@@ -47,16 +47,13 @@ Each row in this datafile corresponds to a single observation from a weather sta
           
    *	value : data value for element (tenths of degrees C)
 
-I do not own any of these datasets, datafiles can be found below:
-[BinSize_d400.csv](https://drive.google.com/file/d/1Fg-iSUBksGvHxnj-UTkGw2VLvawEU6nm/view?usp=drive_link)
-
-Daily climate records in Ann Arbor Michigan: [fb441e62df2d58994928907a91895ec62c2c42e6cd075c2700843b89.csv](https://drive.google.com/file/d/1KWJSlvKtMfZBQjaP84cZ0X0DrZQY9SCu/view?usp=drive_link)
+I do not own any of these datasets, datafiles can be found [here](https://drive.google.com/file/d/1Fg-iSUBksGvHxnj-UTkGw2VLvawEU6nm/view?usp=drive_link) and Daily climate records in Ann Arbor Michigan is available [here](https://drive.google.com/file/d/1KWJSlvKtMfZBQjaP84cZ0X0DrZQY9SCu/view?usp=drive_link).
 
 <br>
 
 ### 2. Analysis Outline
 
-For this project, we will carry out these analysis:
+In order to answer the question *'Is extreme weather getting more frequent in 2015?'*, we will carry out these analysis:
 
    * Plotting line graphs of the record high and record low temperatures by day of the year over the period 2005-2014. The area between the record high and record low temperatures for each day will be shaded.
      
@@ -217,8 +214,9 @@ Output:
 
 <br>
 
-### 4. Findings
-Based on the graph, we are going to answer the question: *"Is extreme weather getting more frequent in 2015?"*
+### 4. Findings: 
+
+*Is extreme weather getting more frequent in 2015?*
 
 According to the graph, there is no trend showing that year 2015 is getting more frequent extreme weather. The most extreme cold weather is observed in February 2015 and extreme cold weather in  December 2015. Hot and cold extreme weather is also seen across the year but is not significantly as frequent compared to February and December 2015. 
 
