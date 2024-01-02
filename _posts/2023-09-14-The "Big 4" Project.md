@@ -19,7 +19,7 @@ We will analyze the data from the perspective of the metropolitan region.
 
 
 
-### Executive Summary
+### Overview
 
   * Introduction
     
@@ -43,9 +43,9 @@ We will analyze the data from the perspective of the metropolitan region.
 ### 1.	Introduction
 In this assignment we will read into a file of metropolitan regions and associated sports teams from assets/wikipedia_data.html. Each of these regions may have one or more teams from the "Big 4": [NFL](/nfl.csv) (football), [MLB](/mlb.csv) (baseball), [NBA](/nba.csv) (basketball) or [NHL](/nhl.csv) (hockey). We will analyse the data from the perspective of the metropolitan region, and that the html file is the "source of authority" for the location of a given sports team. Teams which are commonly known by a different area (e.g. "Oakland Raiders") will be mapped into the metropolitan region given (e.g. San Francisco Bay Area). This will require some human data understanding outside of the data we've been given (e.g. we will have to hand-code some names, and might need to google to find out where teams are).
 
-This analysis will focus on NBA (basketball) and NHL (hockey) for showcase purpose. For each sport we will answer the question:
+For each sport we will answer the question:
 
-*What is the win/loss ratio's correlation with the population of the city it is in?* 
+*Does the performance of a team correlate with the population of the city it is in?* 
 
 Win/Loss ratio refers to the number of wins over the number of wins plus the number of losses. We will use Pearsonr to calculate the correlation and then send in two ordered lists of values - the populations from the wikipedia_data.html file and the win/loss ratio for a given sport in the same order. For those cities which have multiple teams of a single sport, we will take the average of the win/loss ratios. 
 
