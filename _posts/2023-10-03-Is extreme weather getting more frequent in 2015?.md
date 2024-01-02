@@ -1,5 +1,5 @@
 ---
-title:  "Temperature Records"
+title:  "Is Extreme Weather Getting More Frequent in 2015?"
 mathjax: true
 layout: post
 categories: media
