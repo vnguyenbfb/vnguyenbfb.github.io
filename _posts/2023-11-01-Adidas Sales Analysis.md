@@ -94,7 +94,7 @@ Figure 1
 
 <img src="/assets/images/P9_3.png">
 
-According to Figure 1, West Gear, Foot Locker and Sports Direct are the three leading retailers in terms of revenue. Noticeably, Sports Direct gains the most profit margin while West Gear and Footlocker's profit margin is almost on par with the rest retailers. Walmart can be worked on as it generates the least sales with lowest profit ratio (operating margin).
+According to Figure 1, West Gear, Foot Locker and Sports Direct are the three leading retailers in terms of revenue. Noticeably, Sports Direct gains the most profit margin while West Gear and Footlocker's profit margin is almost on par with the rest of the retailers. Walmart can be worked on as it generates the least sales with lowest profit ratio (operating margin).
 
 <br>
 
