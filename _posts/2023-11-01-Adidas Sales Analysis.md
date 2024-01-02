@@ -93,7 +93,7 @@ Figure 1
 
 <img src="/assets/images/P9_3.png">
 
-According to Figure 1, West Gear, Foot Locker and Sports Direct are the three leading retailers in terms of revenue. Noticeably, Sports Direct gains the most profit margin while West Gear and Footlocker's profit margin is almost on par with the rest retailers. Walmart can be worked on as it generates the least sales with lowest profit ratio.
+According to Figure 1, West Gear, Foot Locker and Sports Direct are the three leading retailers in terms of revenue. Noticeably, Sports Direct gains the most profit margin while West Gear and Footlocker's profit margin is almost on par with the rest retailers. Walmart can be worked on as it generates the least sales with lowest profit ratio (operating margin).
 
 <br>
 
@@ -173,11 +173,11 @@ Online is still the most profitable method and should be focused on growing.
 
 The biggest problem for Adidas AG is that regions/states that generate most total sales secure less profitability. 
 
-* In the West, Addidas’s Women’s Appeal is selling well, at the highest price compared to the rest of Addidas products, but it is generating the least margin.
+* In the West, Adidas’ Women’s Appeal is selling well, at the highest price compared to the rest of Adidas products, but it is generating the least margin.
   
 * In the other regions, Men's Apparel generates quite poor margin, despite its high pricing
   
-* The following can be considered.
+* The following can be considered:
   
     · Conduct a survey for consumers’ feedback to understand about their behavior and satisfaction of using these particular products
   
@@ -185,6 +185,6 @@ The biggest problem for Adidas AG is that regions/states that generate most tota
   
     · Is operating cost too higher?
   
-    · Is retailer commission too high on this product? 
+    · Is retailer commission too high on these products? 
 
-Growth opportunity for Adidas AG is in their online business. There is a fierce race among brands in terms of digitalizing their brands. A website that is eye-catchy and user friendly would tremendously help grow the business. This change should also be coupled with excellent customer service, an easy only payment system and great return policy. 
+Growth opportunity for Adidas AG is in their online business. There is a fierce race among brands in terms of digitalizing their brands. A website that is eye-catchy and user friendly would tremendously help grow the business. This change should also be coupled with excellent customer service, an easy only payment system and great exchange and return policy. 
