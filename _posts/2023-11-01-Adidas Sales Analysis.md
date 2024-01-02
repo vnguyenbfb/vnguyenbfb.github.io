@@ -70,6 +70,7 @@ Multi-frame data story with multiple story points was used for user-friendly sto
 <img src="/assets/images/P9_1.png">
 <img src="/assets/images/P9_2.png">
 
+We will use these particular personas as a guide to shape our analysis by answering their specific concerns.
 <br>
 
 ### 5. Project Objectives
