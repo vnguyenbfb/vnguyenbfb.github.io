@@ -28,19 +28,33 @@ In this project, we will use use Python to cleanse and prepare the dataset befor
 
 * Data Cleansing and Preparing
 
-* Reporting and Analysis
+* Objectives
   
-   * GDP
+  *GDP:
+  
+   * 1.What are the top 15 countries in terms of average GDP from 2006 to 2015?
+       
+   * 2.How much has their GDP changed between 2006 and 2015?
+
+  *Energy:
      
-   * Energy Supply
+   * 3.What is the average enery per capita for all the countries?
      
-   * Renewable Supply
+   * 4.Compare the average per capita of all the countries against that of the top 15 countries.
      
-   * Continents
-     
-       - By Population
-         
-       - By Renewable Energy Level
+   * 5.Is there any correlation between energy supply per capita and GDP?
+  
+  *Renewable Supply:
+  
+   * 6.Among the top 15 countries in terms of GDP ranking, which countries have the maximum and minimum percent Renewable?
+
+   * 7.Compare the percent Renewable of each country in the top 15 countries against their average.
+
+  *Analysis by Continent:
+   
+   * 8.Group the top 15 countries into continents and compare those continents by population.
+
+   * 9.Devide the top 15 countries into 5 bins using % Renewable, which countries are in each group? 
          
 * Findings
 
@@ -364,7 +378,7 @@ Asia is the most populous continent with the largest average, total population a
 <br>
 
 ##### 3.4.2. By Renewable Energy Level
-we are going to Cut % Renewable into 5 bins and group Top 15 GDP ranking by Continent, as well as these new % Renewable bins and find out how many countries are in each of these groups. 
+We are going to Cut % Renewable into 5 bins and group Top 15 GDP ranking by Continent, as well as these new % Renewable bins and find out how many countries are in each of these groups. 
 
 ```
 ContinentDict  = {'United States':'North America', 
