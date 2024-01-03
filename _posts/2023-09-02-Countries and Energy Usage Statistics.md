@@ -129,7 +129,7 @@ df.iloc[:15, -1]
 
 ```
 
-Below is the list of the top 15 countries with highest average GDP over the last 10 years(2006-2015). United States ranks first, China comes second and third is Japan. It is interesting that the next 3 countries Germany, France and United Kingdom belong to Euroupe.
+Below is the list of the top 15 countries with highest average GDP over the last 10 years (2006-2015). United States ranks first, China comes second and third is Japan. It is interesting that the next 3 countries Germany, France and United Kingdom belong to Euroupe.
 
 ```
 Country
