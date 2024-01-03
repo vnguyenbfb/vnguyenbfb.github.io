@@ -129,7 +129,7 @@ df.iloc[:15]
 
 ### 3. Analysis
 #### 3.1. GDP
-##### 3.1.1. What are the top 15 countries in terms of average GDP over the 10 years from 2006 to 2015?
+#### 3.1.1. What are the top 15 countries in terms of average GDP over the 10 years from 2006 to 2015?
 
 ```
 def adding_avgGDP():
@@ -165,7 +165,7 @@ Mexico                1.090990e+12
 Name: avgGDP, dtype: float64
 
 ```
-##### 3.1.2. How much has GDP changed for the top 15 countries between 2006 and 2015?
+#### 3.1.2. How much has GDP changed for the top 15 countries between 2006 and 2015?
 
 ```
 def GDP_percent_change():
@@ -208,7 +208,7 @@ Spain's GDP is almost the same as 10 years ago at 0.35% growth rate and Italy's 
 
 #### 3.2. Energy Supply
 *In this part, we will drill into the Energy supply statistics. Keep in mind that this data is for the year 2013.*
-##### 3.2.1. What is the average enery per capita for all the countries in 2013?
+#### 3.2.1. What is the average enery per capita for all the countries in 2013?
 
 ```
 def avg_supply_per_capita():
@@ -220,7 +220,7 @@ avg_supply_per_capita()
 ```
 
 We've got the output of *101.13 (Gigajoules)*. 
-##### 3.2.2. Compare the average per capita of all the countries against that of the top 15 countries for the year 2013.  
+#### 3.2.2. Compare the average per capita of all the countries against that of the top 15 countries for the year 2013.  
 
 ```
 def avg_supply_per_capita_top15():
@@ -233,7 +233,7 @@ avg_supply_per_capita_top15()
 
 Running the above function, we've got the average energy supply per capita for the top 15 countries is *153.93 (Gigajoules)*, which is 152% that of all countries. 
 
-##### 3.2.3. Is there any correlation between energy supply per capita and GDP among the top 15 GDP ranking countries for the year 2013?
+#### 3.2.3. Is there any correlation between energy supply per capita and GDP among the top 15 GDP ranking countries for the year 2013?
 
 ```
 import scipy.stats as stats
@@ -253,7 +253,7 @@ Correlation coefficient of 0.30674695967590515 is telling us that the two variab
 <br>
 
 #### 3.3. Renewable Supply
-##### 3.3.1. Which countries among the top 15 ranking have the maximum and minimum percent Renewable? 
+#### 3.3.1. Which countries among the top 15 ranking have the maximum and minimum percent Renewable? 
 
 ```
 def check_Renewable():
@@ -277,7 +277,7 @@ Output:
  
 Brazil magnificently has the maximum % Renewable Energy (69.65%) while South Korea has the minimum % Renewable Energy (2.28%) out the top 15 GDP ranking countries. Brazil's % Renewable is quite far ahead of those of the two biggest economies which are the U.S (11.57%) and China (19.75%).
 
-##### 3.3.2. Compare the percent Renewable of each country in the top 15 countries against their average.
+#### 3.3.2. Compare the percent Renewable of each country in the top 15 countries against their average.
 
 ```
 def Compare_Renewable ():
@@ -317,7 +317,7 @@ Only 4 out of 15 countries are above the mean value of % Renewable value for the
 <br>
 
 #### 3.4. Analysis by Continent
-##### 3.4.1. Group the top 15 countries into continents and compare those continents by population.
+#### 3.4.1. Group the top 15 countries into continents and compare those continents by population.
 
 We are going to use the following dictionary to group the top 15 countries by continent, creating a DataFrame that displays the sample size (the number of countries in each continent bin), and the sum, mean, and std deviation for the estimated population of each country. 
 
@@ -378,7 +378,7 @@ Asia is the most populous continent with the largest average, total population a
 
 <br>
 
-##### 3.4.2. Divide the top 15 countries into 5 bins using percent Renewable, how many countries are in each group?
+#### 3.4.2. Divide the top 15 countries into 5 bins using percent Renewable, how many countries are in each group?
 We are going to Cut % Renewable into 5 bins and group Top 15 GDP ranking by Continent, as well as these new % Renewable bins and find out how many countries are in each of these groups. 
 
 ```
