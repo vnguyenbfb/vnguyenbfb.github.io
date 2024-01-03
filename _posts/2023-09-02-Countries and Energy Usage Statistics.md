@@ -239,7 +239,7 @@ Correlation coefficient of 0.30674695967590515 is telling us that the two variab
 <br>
 
 #### 3.3. Renewable Supply
-Which country among the top 15 GDP ranking has the maximal and minimal % Renewable? 
+Which country among the top 15 GDP ranking has the maximum and minimum % Renewable? 
 
 ```
 def check_Renewable():
