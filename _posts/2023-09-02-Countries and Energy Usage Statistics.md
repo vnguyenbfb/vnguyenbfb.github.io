@@ -342,7 +342,7 @@ def stats_calculations ():
     mean = merged_df.groupby(['Continent'])['EstimatedPop'].mean()
     std = merged_df.groupby(['Continent'])['EstimatedPop'].std()
     stats_df = pd.concat([size, total, mean, std], axis=1) 
-    stats_df.columns = ['size', 'sum', 'mean', 'std']
+    stats_df.columns = ['number of countries', 'total_population', 'avg_population', 'population_std']
     stats_df['sum'] = pd.to_numeric(stats_df['sum'])
     return stats_df
 
@@ -350,7 +350,7 @@ stats_calculations ()
 ```
 Output: 
 
-Continent			|	size|	sum|	mean|	std
+Continent			|	size|	total_population|	avg_population|	population_std
 ---|---|---|--|---
 Asia          |	4   |	2.821591e+09|	7.053977e+08	|7.138779e+08
 Australia     |	1   |	2.331602e+07|	2.331602e+07  |	NaN
