@@ -40,7 +40,7 @@ In this project, we will use use Python to cleanse and prepare the dataset befor
      
    * 3.What is the average enery per capita for all the countries?
      
-   * 4.Compare the average per capita of all the countries against that of the top 15 countries.
+   * 4.Compare the average energy per capita of all the countries against that of the top 15 countries.
      
    * 5.Is there any correlation between energy supply per capita and GDP?
   
@@ -54,7 +54,7 @@ In this project, we will use use Python to cleanse and prepare the dataset befor
    
    * 8.Group the top 15 countries into continents and compare those continents by population.
 
-   * 9.Devide the top 15 countries into 5 bins using % Renewable, which countries are in each group? 
+   * 9.Divide the top 15 countries into 5 bins using percent Renewable, which countries are in each group? 
          
 * Findings
 
