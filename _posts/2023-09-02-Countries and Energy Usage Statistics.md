@@ -376,8 +376,6 @@ South America |	1   |	2.059153e+08|	2.059153e+08  |	NaN
 <br>
 Asia is the most populous continent with the largest average, total population and aslo standard deviation. Because there is only 1 country in Australia and South America continent within the 15 top ranking countries, std shows NaN for these 2 continents.
 
-<br>
-
 #### 3.4.2. Divide the top 15 countries into 5 bins using percent Renewable, how many countries are in each group?
 We are going to Cut % Renewable into 5 bins and group Top 15 GDP ranking by Continent, as well as these new % Renewable bins and find out how many countries are in each of these groups. 
 
