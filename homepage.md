@@ -13,6 +13,6 @@ I came from a multidiscipline background, with a bachelor degree in English ling
 
 In my backbone, I love working with numbers and all the fun logics that come with it. With determination to grow my career as a data analyst, I have been training full time on programming for the past two years in SQL, Python and Tableau. I am now ready for a fulltime position as a data analyst. 
 
-While I am confident with the training and achievements I have gained, my enthusiasm for continuous growth and adaptibility would be my utimate driving force for any position I will be taking on.
+While I am confident with the training and achievements I have gained, my enthusiasm for continuous growth and adaptability would be my ultimate driving force for any position I will be taking on.
 
-In my spare time, I love cooking for my family and friends. Seeing everyone enjoying my food is actually a joy itself. I also have a passion for martial art with a black belt in Taekwondo and yellow belt in Karate.
+I love cooking for my family and friends in my spare time. I also have a passion for martial art with a black belt in Taekwondo and yellow belt in Karate.
