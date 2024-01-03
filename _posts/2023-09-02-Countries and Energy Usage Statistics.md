@@ -30,13 +30,13 @@ In this project, we will use use Python to cleanse and prepare the dataset befor
 
 * Analysis
   
-  *GDP:
+  1.GDP:
   
    * What are the top 15 countries in terms of average GDP from 2006 to 2015?
        
    * How much has their GDP changed between 2006 and 2015?
 
-  *Energy Supply:
+  2.Energy Supply:
      
    * What is the average enery per capita for all the countries?
      
@@ -44,13 +44,13 @@ In this project, we will use use Python to cleanse and prepare the dataset befor
      
    * Is there any correlation between energy supply per capita and GDP among the top 15 GDP ranking countries?
   
-  *Renewable Supply:
+  3.Renewable Supply:
   
    * Among the top 15 countries in terms of GDP ranking, which countries have the maximum and minimum percent Renewable?
 
    * Compare the percent Renewable of each country in the top 15 countries against their average.
 
-  *Analysis by Continent:
+  4.Analysis by Continent:
    
    * Group the top 15 countries into continents and compare those continents by population.
 
