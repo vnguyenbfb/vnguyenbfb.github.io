@@ -8,7 +8,7 @@ categories: media
 <img style="float:left" src="/assets/images/Image3c_small.jpg">
 
 In this project, we will use use Python to cleanse and prepare the dataset before running analysis on it. We will look into four areas of interest: 
-* By GDP,
+* By GDP
 * By Energy Supply
 * By Renewable Supply
 * By continent.  
@@ -47,7 +47,7 @@ In this project, we will use use Python to cleanse and prepare the dataset befor
 <br>
    
 ### 1. Introduction
-The energy datafile “Energy Indicators” is a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013, we will put the information into a DataFrame with the variable name of **Energy**. This datafile is in Excel format and available [here](https://docs.google.com/spreadsheets/d/1QkXYq9ptjwzIP36E9TNYbou940cIExcT/edit?usp=drive_link&ouid=106973170624396683384&rtpof=true&sd=true). 
+The energy datafile “Energy Indicators” is a list of indicators of energy supply and renewable electricity production from the United Nations for the year 2013. We will put the information into a DataFrame with the variable name of **Energy**. This datafile is in Excel format and available [here](https://docs.google.com/spreadsheets/d/1QkXYq9ptjwzIP36E9TNYbou940cIExcT/edit?usp=drive_link&ouid=106973170624396683384&rtpof=true&sd=true). 
 
 The GDP data is a csv containing countries' GDP from 1960 to 2015 from World Bank. We name this DataFrame **GDP**. The GDP datafile can be found [here](https://drive.google.com/file/d/1kZLhmyBRdh7tnO7VVv8jdTF623JDrQSM/view?usp=drive_link).
 
