@@ -213,8 +213,7 @@ Spain's GDP is almost the same as 10 years ago at 0.35% growth rate and Italy's 
 ```
 def avg_supply_per_capita():
     df = adding_avgGDP()
-    avgEnergySupplyPerCapita = df['Energy Supply per Capita'].mean()
-    return avgEnergySupplyPerCapita                                     
+    return df['Energy Supply per Capita'].mean()                                     
 avg_supply_per_capita()
 
 ```
