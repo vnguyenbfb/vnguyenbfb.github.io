@@ -263,7 +263,7 @@ Output:
  
 Brazil magnificently has the maximum % Renewable Energy (69.65%) while South Korea has the minimum % Renewable Energy (2.28%) out the top 15 GDP ranking countries. Brazil's % Renewable is quite far ahead of those of the two biggest economies which are the U.S (11.57%) and China (19.75%).
 
-We will find the mean of percent Renewable of the top 15 GDP ranking and compare their percent Renewable to that value.
+Here is how percent Renewable of each country in the top 15 GDP ranking looks compared to the average percent Renewable of the top 15 countries.
 ```
 def Compare_Renewable ():
     df = adding_avgGDP()
@@ -276,7 +276,7 @@ def Compare_Renewable ():
 Compare_Renewable ()
 ```
 Output: 
-(23.30477286666667)     
+(23.30477286666667) 
 
 Country  |                % Renewable |Compare % Renewable
 ---|---|---                                         
