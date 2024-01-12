@@ -11,13 +11,13 @@ ___
 **My Translation Business** <br>
 Position: Owner
 
-*06/2021 - 01/2022* <br>
-**Vietnamese Stand Together - Voluntary Project** <br>
-Position: Co-founder - Fund Raising for Protection for Healthcare Workers during COVID-19 Pandemic
-
 *06/2016 - 02-2022* <br>
 **Daytrader/Retail Investor - US Stocks** <br>
 Position: Momentum Daytrader
+
+*06/2021 - 01/2022* <br>
+**Vietnamese Stand Together - Voluntary Project** <br>
+Position: Co-founder - Fund Raising for Protection for Healthcare Workers during COVID-19 Pandemic
 
 *05/2012 - 03/2014* <br>
 **C&S Wholesale Grocers** <br>
