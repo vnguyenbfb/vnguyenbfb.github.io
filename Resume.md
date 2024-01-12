@@ -8,7 +8,7 @@ categories: media
 ## Work Experience
 ___ 
 *12/2011 – Present* <br>
-**My Translation Business** <br>
+**Translation Business** <br>
 Position: Owner
 
 *06/2016 - 02-2022* <br>
