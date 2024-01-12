@@ -15,8 +15,8 @@ Position: Owner
 **Vietnamese Stand Together - Voluntary Project** <br>
 Position: Co-founder - Fund Raising for Protection for Healthcare Workers during COVID-19 Pandemic
 
-*06/2016 - 12/2021* <br>
-**Retail Investor - US Stocks** <br>
+*06/2016 - 02-2022* <br>
+**Daytrader/Retail Investor - US Stocks** <br>
 Position: Momentum Daytrader
 
 *05/2012 - 03/2014* <br>
